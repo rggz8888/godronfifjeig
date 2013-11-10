@@ -1,0 +1,36 @@
+<!--{include header.htm}-->
+<div class="width">
+	<!--{include plugin_rename_nav.htm}-->
+	<div class="div" style="width: 788px;">
+		<div class="list">
+			<table class="table">
+				<tr class="header">
+					<td width="100">用户名</td>
+					<td width="100">申请名</td>
+					<td align="left">申请理由</td>
+					<td width="80">申请时间</td>
+					<td width="80">当前状态</td>
+				</tr>
+				<!--{if $renamelist}-->
+				<!--{loop $renamelist $rename}-->
+				<tr>
+					<td><a style="color:#2366A8" href="../?you-index-uid-$rename[uid].htm" target="_blank">$rename[username]</a></td>
+					<td>$rename[newname]</td>
+					<td>$rename[reason]</td>
+					<td>$rename[dateline_fmt]</td>
+					<td>$rename[status_str]</td>
+				</tr>
+				<!--{/loop}-->
+				<!--{else}-->
+				<tr>
+					<td colspan="5">无</td>
+				</tr>
+				<!--{/if}-->
+			</table>
+		</div>
+		<div class="page" style="text-align: center;">$pages</div>
+	</div>
+</div>
+<!--{include footer.htm}-->
+</body>
+</html>

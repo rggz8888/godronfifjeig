@@ -1,0 +1,112 @@
+<!--{include header.htm}-->
+<link href="view/my.css" type="text/css" rel="stylesheet" />
+<div class="width">
+	<!--{include bank_nav.inc.htm}-->
+	<div class="left border shadow bg2">
+		<!--{include bank_menu.inc.htm}-->
+	</div>
+	<div class="right">
+		<!--{include bank_header_nav.inc.htm}-->
+		<form action="?bank-loan.htm" method="post" id="bank_loan_form">
+		<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+		<div class="bg1 border shadow list">
+			<table class="table">
+				<tr class="header">
+					<td colspan="5">抵押贷款</td>
+				</tr>
+				<tr>
+					<td colspan="5">当前贷款利率为$config[loan]%，欢迎使用本行抵押贷款业务。</td>
+				</tr>
+				<tr>
+					<td width="100px" style="text-align: right">抵押积分</td>
+					<td width="100px">$input[credit]</td>
+					<td colspan="3"></td>
+				</tr>
+				<tr>
+					<td width="100px" style="text-align: right">贷款金额</td>
+					<td width="100px">$input[money]</td>
+					<td colspan="3"></td>
+				</tr>
+				<tr>
+					<td width="100px" style="text-align: right">贷款天数</td>
+					<td width="100px">$input[day]</td>
+					<td colspan="3"><input type="submit" class="button smallblue" value="确定" id="bank_loan_submit" /></td>
+				</tr>
+				<tr class="header">
+					<td colspan="5">我的记录</td>
+				</tr>
+				<tr>
+					<td colspan="5">
+						<table class="table">
+							<tr class="header">
+								<td width="60px">抵押积分</td>
+								<td width="60px">贷款金额</td>
+								<td width="60px">利率</td>
+								<td width="120px">生效时间</td>
+								<td width="120px">到期时间</td>
+								<td width="120px">需支付利息</td>
+								<td style="text-align: right"></td>
+								<td></td>
+							</tr>
+							<!--{if $datalist}-->
+							<!--{loop $datalist $data}-->
+							<tr>
+								<td>$data[credit]</td>
+								<td>$data[money]</td>
+								<td>$data[rate_str] %</td>
+								<td>$data[begintime_str]</td>
+								<td>$data[endtime_str]</td>
+								<td>$data[interest_str]</td>
+								<td>$data[status_str]</td>
+								<td style="text-align: right">[$data[status_src]]</td>
+							</tr>
+							<!--{/loop}-->
+							<!--{else}-->
+							<tr>
+								<td colspan="7" style="text-align: center">无</td>
+							</tr>
+							<!--{/if}-->
+						</table>
+					</td>
+				</tr>
+				<tr class="header">
+					<td colspan="5">注意事项</td>
+				</tr>
+				<tr>
+					<td colspan="5">1、贷款需要进行审批，申请不一定可以获得贷款。</td>
+				</tr>
+				<tr>
+					<td colspan="5">2、贷款利率以申请时的利率为准，不受银行后期利率变动影响。</td>
+				</tr>
+				<tr>
+					<td colspan="5">3、贷款利息计算从批准时间至还贷时间，还贷越早支付的利息越少，超期部分按双倍利息计算。</td>
+				</tr>
+				<tr>
+					<td colspan="5">4、还贷金额从现金中扣除，请先准备足够金额到现金中。</td>
+				</tr>
+				<tr>
+					<td colspan="5">5、到期不还者银行有权强行从用户银行帐号或者现金中扣除贷款，如果不够贷款的将给予中央银行处理，中央银行将会调整用户的论坛权限以及扩展积分用于抵押贷款。</td>
+				</tr>
+				<tr>
+					<td colspan="5">6、银行强行还贷如果从存款中扣除，银行不会为会员支付存款利息，存款利息从支付完贷款后计算，同时对于贷款到期不还的用户银行有权强行支取定期而不支付利息。</td>
+				</tr>
+			</table>
+		</div>
+		</form>
+	</div>
+</div>
+<!--{include footer.htm}-->
+<script type="text/javascript">
+$('#bank_loan_submit').click(function() {
+	$('#bank_loan_form').submit();
+	return false;
+});
+$('.cancel').click(function(){
+	if(!confirm("确定取消本条贷款业务？")){
+		return false;
+	}
+});
+</script>
+$conf[footer_js]
+</body>
+</html>

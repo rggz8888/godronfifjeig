@@ -1,0 +1,14 @@
+<!--{if isset($thread)}-->
+<script>
+$('#button_collect').click(function(){
+	$.get('?my-addcollect-fid-$thread[fid]-tid-$thread[tid]-ajax-1.htm', function(s) {
+			var json = json_decode(s);
+			if(error = json_error(json)) {alert(error); return false;}
+			if(json.status <= 0) {alert(json.message); return false;}
+			json = json.message;
+			//alert(json);
+			$('#collect_notice').html(json);
+	});	
+})
+</script>
+<!--{/if}-->

@@ -1,0 +1,13 @@
+<!--{include mobile_header.htm}-->
+ 
+	<ul class="bklb" id="sknav">
+		<!--{loop $conf[forumarr] $_fid $_name}-->
+			<li><a href="?forum-index-fid-$_fid.htm">$_name</a></li>
+		<!--{/loop}--><br style="clear:both">
+	</ul>
+ 
+	<div>
+	<!--{require mobile_thread_list.inc.htm}-->
+ 
+	</div>
+<!--{include mobile_footor.htm}-->

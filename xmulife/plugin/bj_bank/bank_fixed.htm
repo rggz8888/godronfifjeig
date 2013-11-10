@@ -1,0 +1,100 @@
+<!--{include header.htm}-->
+<link href="view/my.css" type="text/css" rel="stylesheet" />
+<div class="width">
+	<!--{include bank_nav.inc.htm}-->
+	<div class="left border shadow bg2">
+		<!--{include bank_menu.inc.htm}-->
+	</div>
+	<div class="right">
+		<!--{include bank_header_nav.inc.htm}-->
+		<form action="?bank-fixed.htm" method="post" id="bank_fixed_form">
+		<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+		<div class="bg1 border shadow list">
+			<table class="table">
+				<tr class="header">
+					<td colspan="5">定期储蓄</td>
+				</tr>
+				<tr>
+					<td colspan="5">当前定期利率为$config[fixed]%，欢迎使用定期储蓄。</td>
+				</tr>
+				<tr>
+					<td width="100px" style="text-align: right">操作金额</td>
+					<td width="100px">$input[money]</td>
+					<td colspan="3">$input[conf_fixed]<input type="button" class="button smallgrey" value="利息计算" id="conf_fee_button" /></td>
+				</tr>
+				<tr>
+					<td width="100px" style="text-align: right">定期天数</td>
+					<td width="100px">$input[day]</td>
+					<td colspan="3"><input type="submit" class="button smallblue" value="确定" id="conf_fixed_submit" /></td>
+				</tr>
+				<tr class="header">
+					<td colspan="5">我的记录</td>
+				</tr>
+				<tr>
+					<td colspan="5">
+						<table class="table">
+							<tr class="header">
+								<td width="60px">金额</td>
+								<td width="60px">利率</td>
+								<td width="120px">生效时间</td>
+								<td width="120px">到期时间</td>
+								<td width="120px">可得利息</td>
+								<td></td>
+							</tr>
+							<!--{if $datalist}-->
+							<!--{loop $datalist $data}-->
+							<tr>
+								<td>$data[money]</td>
+								<td>$data[rate_str]</td>
+								<td>$data[begintime_str]</td>
+								<td>$data[endtime_str]</td>
+								<td>$data[interest_str]</td>
+								<td style="text-align: right">[<a href="?bank-fixed-did-$data[did].htm" class="did">支取</a>]</td>
+							</tr>
+							<!--{/loop}-->
+							<!--{else}-->
+							<tr>
+								<td colspan="6" style="text-align: center">无</td>
+							</tr>
+							<!--{/if}-->
+						</table>
+					</td>
+				</tr>
+				<tr class="header">
+					<td colspan="5">注意事项</td>
+				</tr>
+				<tr>
+					<td colspan="5">1、定期利率以您存入时的利率计算，不受银行利率的调整影响。</td>
+				</tr>
+				<tr>
+					<td colspan="5">2、定期存储天数不得小于$config[minfixed]天。</td>
+				</tr>
+				<tr>
+					<td colspan="5">3、提前支取定期将不能获得利息。</td>
+				</tr>
+				<tr>
+					<td colspan="5">4、到期后支取定期利息也仅计算到定期到期之时，定期到期后的时间内没有任何利息。</td>
+				</tr>
+				<tr>
+					<td colspan="5">5、如果您定期未到期但希望使用资金可以使用贷款功能。</td>
+				</tr>
+			</table>
+		</div>
+		</form>
+	</div>
+</div>
+<!--{include footer.htm}-->
+<script type="text/javascript">
+$('#conf_fixed_submit').click(function() {
+	$('#bank_fixed_form').submit();
+	return false;
+});
+$('.did').click(function(){
+	if(!confirm("如果该笔定期存款未到期，将不能获得利息，请问是否继续？")){
+		return false;
+	}
+});
+</script>
+$conf[footer_js]
+</body>
+</html>

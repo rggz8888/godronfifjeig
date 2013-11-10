@@ -1,0 +1,85 @@
+<!--{json width:"300",height:"200",title:"改名服务"}-->
+
+<form action="?user-rename-ajax-1.htm" method="post" id="rename_form">
+	<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+	<div style="padding: 8px 10px;">
+		<p>新用户名：$echo</p>
+		<p><input type="text" name="newname" id="user_newname" tabindex="10" style="width: 160px;" value="$msg[newname]"$_checked[readonly] /></p>
+		<p>改名理由：</p>
+		<p><textarea rows="2" name="reason" id="user_reason" cols="40"$_checked[readonly]>$msg[reason]</textarea></p>
+		<!--{if $msg[status]}-->
+		<p>申请状态：$msg[status]</p>
+		<!--{/if}-->
+		<!--{if $msg[servicefees]}-->
+		<p id="servicefees">改名费用：$msg[servicefees] 枚金币（余额：$msg[golds]）</p>
+		<!--{/if}-->
+	</div>
+	<div style="padding: 8px 10px; height: 26px; text-align: center;">
+		<!--{if !$msg[status]}-->
+		<input type="submit" class="button smallblue" id="rename_submit" value="申请" />
+		<!--{/if}-->
+		<input type="button" class="button smallgrey" id="rename_cancel" value="关闭" />
+  	</div>
+</form>
+
+<script type="text/javascript">
+
+// 延迟执行的脚本，约定名字为：delay_execute()
+function delay_execute(dialog, recall) {
+	var ajaxhandle = null;
+	$('#rename_submit').click(function() {
+		$('.alert a.icon-close').click();
+		// 终止短消息循环
+		if(newpm_instance) newpm_instance.stop();
+		
+		$('#rename_submit').disable();
+		
+		var postdata = $("#rename_form").serialize();
+		$.post($('#rename_form').attr('action'), postdata,  function(s){
+			
+			$('#rename_submit').enable();
+			
+			var json = json_decode(s);
+			if(error = json_error(json)) {alert(error); return false;}
+			json = json.message;
+
+			if(json.status <= 0) {alert(json.message); return false;}
+			
+			if(json.username) {
+				$('#user_newname').alert(json.username).focus();
+				return false;
+			}
+			if(json.username_exists) {
+				$('#user_newname').alert(json.username_exists).focus();
+				return false;
+			}
+			if(json.reason) {
+				$('#user_reason').alert(json.reason).focus();
+				return false;
+			}
+			if(json.servicefees) {
+				$('#servicefees').alert(json.servicefees).focus();
+				return false;
+			}
+			
+			g_uid = 0;
+			dialog.set_body('<div class="ok">申请成功！</div>');
+			if(recall) {
+	 			dialog.close();
+				recall();
+			} else {
+				setTimeout(function(){
+		 			dialog.close();
+		 			window.location.reload();
+		 		}, 1000);
+			}
+			
+		});
+		return false;
+	});
+	
+	$('#rename_cancel').click(function() {
+		dialog.close();
+	});
+}
+</script>

@@ -1,0 +1,24 @@
+<!--{include mobile_header.htm}-->
+<p>
+<form action="?post-thread-fid-$fid.htm" method="post" >
+    <input type="hidden" name="MAX_FILE_SIZE" value="2097152" />
+	<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+	标题(200字以内)：<br/>
+	<input type="text" name="subject" /><br/>
+	<!--{if $forumselect}-->大版块：
+		$forumselect
+	<br/><!--{/if}-->
+	<!--{if $typeselect1 || $typeselect2 || $typeselect3 || $typeselect4}-->小版块：
+		<!--{loop $forum[types] $cateid $types}-->
+				<!--{if $cateid == 1 && $typeselect1}-->$typeselect1<!--{/if}-->
+				<!--{if $cateid == 2 && $typeselect2}-->$typeselect2<!--{/if}-->
+				<!--{if $cateid == 3 && $typeselect3}-->$typeselect3<!--{/if}-->
+				<!--{if $cateid == 4 && $typeselect4}-->$typeselect4<!--{/if}-->
+		<!--{/loop}-->
+	<br/><!--{/if}-->
+	内容：<br/>
+	<textarea name="message" cols="24" rows="3"></textarea><br/>
+	<input type="submit" value="发表新帖" />
+</form>
+</p><p><a href="?forum-index-fid-$fid.htm">返回版块</a></p>
+<!--{include mobile_footor.htm}-->

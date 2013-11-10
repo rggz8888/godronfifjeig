@@ -1,0 +1,12 @@
+<div class="zt"><!--{if !$fid}-->最新主题<!--{else}-->【$forum[name]】主题<!--{/if}--></div>
+	<ul class="skc">
+	
+		<!--{loop $toplist $thread}-->
+			<li class="s1"><!--{require mobile_thread_list_line.inc.htm}--></li>
+		<!--{/loop}-->
+		
+		<!--{loop $threadlist $thread}-->
+			<li class="s2"><!--{require mobile_thread_list_line.inc.htm}--></li>
+		<!--{/loop}-->
+	</ul>
+	<!--{if $fid}--><p>$pages</p><!--{/if}-->

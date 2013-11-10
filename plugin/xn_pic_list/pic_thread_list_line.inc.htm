@@ -1,0 +1,16 @@
+<li>
+<a href="?thread-index-fid-$thread[fid]-tid-$thread[tid].htm" class="subject_link $thread[color]" title="$thread[subject]" target="_blank">
+<!--{if $thread[coverimg]}-->
+<div class="imgcon">
+<img src="$thread[coverimg]" border="0">
+</div>
+<!--{else}-->
+<span class="nopic">$thread['brief']</span>
+<!--{/if}-->
+<!--{if $fid && $ismod}-->
+<input type="checkbox" name="fid_tid[]" value="$thread[fid]_$thread[tid]" />
+<!--{/if}-->
+$thread[subject]
+<!--{hook thread_list_line_inc_lastpage_after.htm}-->
+</a>
+</li>

@@ -1,0 +1,38 @@
+<!--{include header.htm}-->
+<div class="width">
+	<!--{include plugin_config_nav.inc.htm}-->
+	<div class="div" style="width: 788px;">
+		<div class="list">
+			<table class="table">
+				<tr class="header">
+					<td width="60px">申请人</td>
+					<td width="60px">抵押积分</td>
+					<td width="60px">贷款金额</td>
+					<td width="60px">利率</td>
+					<td width="120px">贷款天数</td>
+					<td></td>
+				</tr>
+				<!--{if $loanlist}-->
+				<!--{loop $loanlist $loan}-->
+				<tr>
+					<td width="60px"><a style="color:#2366A8" href="../?you-index-uid-$loan[user][uid].htm" target="_blank">$loan[user][username]</a></td>
+					<td width="60px">$loan[credit]</td>
+					<td width="60px">$loan[money]</td>
+					<td width="60px">$loan[rate_str] %</td>
+					<td width="120px">$loan[day]</td>
+					<td style="text-align: right"><a style="color:#2366A8" href="?plugin-setting-dir-bj_bank-type-loan-did-$loan[did]-act-1.htm">同意</a> | <a style="color:#2366A8" href="?plugin-setting-dir-bj_bank-type-loan-did-$loan[did]-act-0.htm">拒绝</a></td>
+				</tr>
+				<!--{/loop}-->
+				<!--{else}-->
+				<tr>
+					<td colspan="7">无</td>
+				</tr>
+				<!--{/if}-->
+			</table>
+		</div>
+		<div class="page" style="text-align: center;margin:10px;">$pages</div>
+	</div>
+</div>
+<!--{include footer.htm}-->
+</body>
+</html>

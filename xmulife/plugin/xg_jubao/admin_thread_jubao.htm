@@ -1,0 +1,38 @@
+<!--{include header.htm}-->
+
+<div class="width">
+	<div class="right">
+		<div class="list">
+			<table class="table">
+				<tr class="header">
+                    <td width="80">板块</td>
+					<td width="250">主题</td>
+					<td>留言</td>
+					<td width="80">时间</td>
+				</tr>
+				<!--{if $list}-->
+				<!--{loop $list $v}-->
+				<tr>
+                    <td><a href="../?forum-index-fid-$v[fid].htm" target="_blank">$v[forumname]</a></td>
+					<td><a href="../$v[url]" target="_blank">$v[subject]</a></td>
+					<td>$v[message]</td>
+					<td>$v[dateline_fmt]</td>
+				</tr>
+				<!--{/loop}-->
+				<!--{else}-->
+				<tr>
+					<td colspan="4">无</td>
+				</tr>
+				<!--{/if}-->
+			</table>
+		</div>
+		<div class="page" style="text-align: center;">$pages</div>
+	</div>
+</div>	
+
+<!--{include footer.htm}-->
+
+$conf[footer_js]
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!--{include header.htm}-->
+<link href="view/my.css" type="text/css" rel="stylesheet" />
+<div class="width">
+	<!--{include bank_nav.inc.htm}-->
+	<div class="left border shadow bg2">
+		<!--{include bank_menu.inc.htm}-->
+	</div>
+	<div class="right">
+		<!--{include bank_header_nav.inc.htm}-->
+		<form action="?bank-profile.htm" method="post" id="bank_open_form">
+		<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+		<div class="bg1 border shadow list">
+			<table class="table">
+				<tr class="header">
+					<td colspan="5">银行公告</td>
+				</tr>
+				<tr>
+					<td colspan="5"><pre>$config[notice]</pre></td>
+				</tr>
+				<tr class="header">
+					<td colspan="5">业务介绍</td>
+				</tr>
+				<tr>
+					<td width="100px" align="right">开户费用</td>
+					<td colspan="4">$config[poundage]</td>
+				</tr>
+				<tr>
+					<td align="right">存款利息</td>
+					<td colspan="4">$config[current]%</td>
+				</tr>
+				<tr>
+					<td align="right">贷款利息</td>
+					<td colspan="4">$config[loan]%</td>
+				</tr>
+				<tr>
+					<td align="right">转账手续费</td>
+					<td colspan="4">$config[transfer]%</td>
+				</tr>
+				<!--{if !$bank_status}-->
+				<tr class="header">
+					<td colspan="5">开户需知</td>
+				</tr>
+				<tr>
+					<td colspan="5">1、需要收取开户人 $config[poundage] 枚金币作为手续费。</td>
+				</tr>
+				<tr>
+					<td colspan="2"></td>
+					<td colspan="3"><input type="submit" class="button bigblue" id="bank_open_submit" value="开通银行帐户" /></td>
+				</tr>
+				<!--{/if}-->
+			</table>
+		</div>
+		</form>
+	</div>
+</div>
+<!--{include footer.htm}-->
+<script type="text/javascript">
+$('#bank_open_submit').click(function() {
+	<!--{if $config[poundage]}-->
+	if(confirm('确认支付 $config[poundage] 枚金币开通银行帐户？')){
+	<!--{else}-->
+	if(confirm('确认开通银行帐户？')){
+	<!--{/if}-->
+		$('#bank_open_form').submit();
+	}
+	return false;
+});
+</script>
+$conf[footer_js]
+</body>
+</html>

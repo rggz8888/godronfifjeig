@@ -1,0 +1,50 @@
+<!--{include header.htm}-->
+
+<link href="view/my.css" type="text/css" rel="stylesheet" />
+
+<div class="width">
+
+	<!--{include my_nav.inc.htm}-->
+
+	<div class="left border shadow bg2">
+		<!--{include my_menu.inc.htm}-->
+	</div>
+	
+	<div class="right">
+		<div class="page tab" style="margin-bottom: 4px;">
+			<!--{include my_pay.inc.htm}-->
+		</div>
+		<div class="list">
+			<table class="table">
+				<tr class="header">
+					<td width="100">时间</td>
+					<td width="100">金币</td>
+					<td align="left">描述</td>
+					<td width="60">事件现场</td>
+				</tr>
+				<!--{if $eventlist}-->
+				<!--{loop $eventlist $event}-->
+				<tr>
+					<td>$event[dateline_fmt]</td>
+					<td>$event[type] $event[golds] 枚</td>
+					<td>$event[message]</td>
+					<td><a href="?thread-index-fid-$event[fid]-tid-$event[tid]-page-$event[page].htm#message_$event[pid]" target="_blank">查看现场</a></td>
+				</tr>
+				<!--{/loop}-->
+				<!--{else}-->
+				<tr>
+					<td colspan="5">无</td>
+				</tr>
+				<!--{/if}-->
+			</table>
+		</div>
+		<div class="page" style="text-align: center;">$pages</div>
+	</div>
+</div>	
+
+<!--{include footer.htm}-->
+
+$conf[footer_js]
+
+</body>
+</html>

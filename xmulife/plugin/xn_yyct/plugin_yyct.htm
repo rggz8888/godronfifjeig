@@ -1,0 +1,115 @@
+<!--{include yyct_header.htm}-->
+	<!--{hook index_index_nav_before.htm}-->
+	
+	<table id="nav" cellpadding="0" cellspacing="0" style="margin-bottom: 4px;width:960px">
+		<tr>
+			<td class="left"></td>
+			<td class="center">
+				<a class="icon icon-home" href="./"></a>
+				<span class="sep"></span>
+				<!--{hook common_nav_center.htm}-->
+				<span>音乐畅听</span>
+				<!--{hook index_index_nav_center_after.htm}-->
+			</td>
+			<td class="center2">
+				<!--{include header_user.inc.htm}-->
+				<a href="?post-thread-fid-$fid-ajax-1.htm" target="_blank" onclick="return false;" id="create_thread"  rel="nofollow"><span class="icon icon-post-newthread"></span> 发新帖</a>
+			</td>
+			<td class="right"></td>
+		</tr>
+	</table>
+	
+	<!--{hook index_index_nav_after.htm}-->
+<link href="{$conf[plugin_url]}xn_yyct/css/music.css" rel="stylesheet" />	
+<body>
+<center>
+<div id="player" class="section"> 
+     <div class="tab pagetab" pagecount="2" pageunit="10" page="0"> 
+       <b page="-1" class="button prev inactive">上一页</b>  
+      <b page="1" class="button next inactive">下一页</b>  
+<a pid="1ting_mb" hidefocus="hidefocus" href="http://music.weibo.com/ting#public_4/" target="player-frame" page="1" title="微博音乐人 " class="item" style="display:none">
+<img class="logo" src="{$conf[plugin_url]}xn_yyct/img/logo/yinyueren.png" />
+<span class="title">微博音乐人 </span>
+</a>
+<a pid="xiami_mb" hidefocus="hidefocus" href="http://www.xiami.com/player/hao123/" target="player-frame" page="1" title="虾米音乐 " class="item" style="display:none;">
+<img class="logo" src="{$conf[plugin_url]}xn_yyct/img/logo/xiami.png" />
+<span class="title">虾米音乐 </span>
+</a>
+<!--<a pid="qq_mb" hidefocus="hidefocus" href="http://y.qq.com/webplayer/" target="player-frame" page="1" title="QQ音乐 " class="item" style="">
+<img class="logo" src="{$conf[plugin_url]}xn_yyct/img/logo/qq1.png" />
+<span class="title">QQ音乐 </span>
+</a>-->
+<a pid="douban_fm" hidefocus="hidefocus" href="http://douban.fm/partner/playerhao123" target="player-frame" page="0" title="豆瓣FM" class="item" style="">
+<img class="logo" src="{$conf[plugin_url]}xn_yyct/img/logo/douban.png" />
+<span class="title">豆瓣FM</span>
+</a>
+<a pid="kuwo_mb" hidefocus="hidefocus" href="http://player.kuwo.cn/webmusic/play?src=top" target="player-frame" page="0" title="酷我音乐" class="item" style="">
+<img class="logo" src="{$conf[plugin_url]}xn_yyct/img/logo/kuwomb.png" />
+<span class="title">酷我音乐 </span>
+</a>
+<a pid="kugou_mb" hidefocus="hidefocus" href="http://web.kugou.com/hao123.html" target="player-frame" page="0" title="酷狗音乐" class="item" style="">
+<img class="logo" src="{$conf[plugin_url]}xn_yyct/img/logo/newkugou-mb.png" />
+<span class="title">酷狗音乐 </span>
+</a>
+<a pid="yinyuetai_fm" hidefocus="hidefocus" href="http://www.yinyuetai.com/baidu" target="player-frame" page="0" title="音悦TV " class="item" style="">
+<img class="logo" src="{$conf[plugin_url]}xn_yyct/img/logo/green-64.png" />
+<span class="title">音悦TV </span>
+</a>
+<a pid="yinyuetai_fm" hidefocus="hidefocus" href="http://youku.fm/?www.xmulife.com" target="player-frame" page="0" title="优酷电台 " class="item" style="">
+<img class="logo" src="{$conf[plugin_url]}xn_yyct/img/logo/youku.png" />
+<span class="title">优酷电台</span>
+</a>
+<a pid="suixinting_fm" hidefocus="hidefocus" href="http://fm.baidu.com/?embed=www.xmulife.com" target="player-frame" page="0" title="百度随心听 " class="item" style="">
+<img class="logo" src="{$conf[plugin_url]}xn_yyct/img/logo/suixintingicon.png" />
+<span class="title">百度随心听 </span>
+</a>
+<a pid="duomi_mb" hidefocus="hidefocus" href="http://app.duomiyy.com/webradio/hao123/" target="player-frame" page="1" title="多米音乐" class="item" style="">
+<img class="logo" src="{$conf[plugin_url]}xn_yyct/img/logo/duomi.png" />
+<span class="title">多米音乐 </span>
+</a>
+<a pid="sina_fm" hidefocus="hidefocus" href="http://ting.sina.com.cn/radio/" target="player-frame" page="1" title="新浪乐库 " class="item" style="display:none">
+<img class="logo" src="{$conf[plugin_url]}xn_yyct/img/logo/sina.png" />
+<span class="title">新浪乐库 </span>
+</a>
+<a pid="xiami_fm" hidefocus="hidefocus" href="http://fm.qq.com/#199_1" target="player-frame" page="1" title="QQfm电台 " class="item" style="display:none;">
+<img class="logo" src="{$conf[plugin_url]}xn_yyct/img/logo/qqfm.png" />
+<span class="title">QQ FM </span>
+</a>
+<a pid="renren_fm" hidefocus="hidefocus" href="http://music.renren.com/baidufm_app.html?from=baiduapp2&bd_user=1728898718&bd_sig=bb9ee61a7520f69d9433dbbc6964f6b1&canvas_pos=platform" target="player-frame" page="1" title="人人电台 " class="item" style="display:none;">
+<img class="logo" src="{$conf[plugin_url]}xn_yyct/img/logo/renren.png" />
+<span class="title">人人电台 </span>
+</a>   
+<a pid="5sing_fm" hidefocus="hidefocus" href="http://open.5sing.com/baidu/tindex.aspx?bd_user=1728898718&bd_sig=7e4290d8b2794422d983f13dca3a965b&canvas_pos=platform" target="player-frame" page="1" title="5Sing听 " class="item" style="display:none;">
+<img class="logo" src="{$conf[plugin_url]}xn_yyct/img/logo/5sing.png" />
+<span class="title">5Sing听 </span>
+</a>  
+<a pid="beva_fm" hidefocus="hidefocus" href="http://app.beva.com/hao123/fm/index.html" target="player-frame" page="0" title="贝瓦电台 " class="item" style="">
+<img class="logo" src="{$conf[plugin_url]}xn_yyct/img/logo/beva.png" />
+<span class="title">贝瓦电台 </span>
+</a>
+</div>    
+  <div class="wrapper" style="display:none;">  
+         
+    <iframe  id="player-frame" name="player-frame" src="about:blank" frameborder="0" scrolling="no"></iframe>    
+  </div>  
+  </div>
+<!--end of #player-->        
+    <script type="text/javascript" src="{$conf[plugin_url]}xn_yyct/jQuery.1.8.2.min.js" charset="utf-8"></script>  
+	 <script type="text/javascript" src="{$conf[plugin_url]}xn_yyct/js/tangram-1.3.9.source0927.js"></script>   
+   <script type="text/javascript" src="{$conf[plugin_url]}xn_yyct/js/usertrack.js"></script>  
+  <script type="text/javascript" src="{$conf[plugin_url]}xn_yyct/js/sethome.js"></script>    
+<script type="text/javascript" src="{$conf[plugin_url]}xn_yyct/js/g.sug.js"></script>   
+ <script type="text/javascript" src="{$conf[plugin_url]}xn_yyct/js/base.js?v=1357368870.js"></script>
+<script type="text/javascript">var pageId = "hao123-erji-music";var pageTitle = "音乐";</script>
+<script type="text/javascript" src="js/erji-jsonce.js?v=temp1"></script> 
+ <script src="http://www.hao123.com/js/common/lib/1.7.2.jquery.min.js"></script> 
+ <script src="{$conf[plugin_url]}xn_yyct/js/music.js"></script>
+<!--QQ电台js加载-->
+ 
+<!--QQ电台js加载结束-->
+</center>					
+	<!--.main-wrap,#main End-->
+ <br />
+ 
+</body>
+<!--{include footer.htm}-->

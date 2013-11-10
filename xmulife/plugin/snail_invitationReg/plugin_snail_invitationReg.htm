@@ -1,0 +1,22 @@
+<!--{include header.htm}-->
+<div id="snailMain">
+	<div style="text-align:center;font-weight:bold;padding-bottom:15px;">邀请码注册-蜗牛插件管理面板</div>
+	<div id="snailForm" style="text-align:center;">
+			<p>当前数据库中共有邀请码：<span style="color:red;">$allCount</span>个，其中<span style="color:red;">$usedCount</span>个已被使用</p>
+			<form action="?plugin-setting-dir-$dir-do-creatOut.htm" method="post">
+			<!--防止伪造表单-->
+			<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" /> 
+			<p>生成数量：$input['creatNum']</p>
+			<p><input type="submit" name="outPutFile" value="生成并导出新生成邀请码" style="width:200px;" /></p>
+			</form>
+			<form action="?plugin-setting-dir-$dir-do-out.htm" method="post">
+			<!--防止伪造表单-->
+			<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" /> 
+			<p><input type="submit" name="outPutFile" value="导出所有未被使用的邀请码" style="width:200px;" /></p>
+			</form>
+		</dl>
+	</div>
+</div>
+<!--{include footer.htm}-->
+</body>
+</html>

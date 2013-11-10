@@ -1,0 +1,46 @@
+<!--{include header.htm}-->
+<div class="eventdiv">
+	<form action="?plugin-setting-dir-$dir.htm" method="post" id="conf_event_form">
+		<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+		<div class="div" style="width: 700px;">
+			<div class="header">设置</div>
+			<div class="body">
+				<dl>
+					<dt><label for="enable">是否贴内显示：</label></dt>
+					<dd>$input[postshow]</dd>
+					<dt><label for="enable">是否短消息通知：</label></dt>
+					<dd>$input[pmshow]</dd>
+					<dt><label for="trigger">触发事件概率：</label></dt>
+					<dd>$input[trigger]%（如设置60，则触发几率为60%，范围1-100）</dd>
+					<dt><label for="probability">获得/失去金币概率：</label></dt>
+					<dd>$input[probability]%（如设置70，则获得金币概率为70%，失去金币概率为30%，范围1-100）</dd>
+					<dt><label for="getevent">获得金币事件：</label></dt>
+					<dd>$input[getevent]</dd>
+					<dt><label for="loseevent">失去金币事件：</label></dt>
+					<dd>$input[loseevent]</dd>
+					<dt><label>事件描述变量：</label></dt>
+					<dd>#username#：用户名称<br />#golds#：获得、失去的金币数</dd>
+					<dt><label>事件描述例子：</label></dt>
+					<dd>1,8|#username#走在路上，不小心丢失了#golds#个金币。<br />说明：最小金币,最大金币|事件说明；每个事件一行。</dd>
+					<dt><label for="enable">删除插件时清空数据：</label></dt>
+					<dd>$input[cleardata]</dd>
+					<dt></dt>
+					<dd>
+						<input type="submit" class="button bigblue" value="确定" id="conf_event_submit" />
+						<input type="button" class="button biggrey" value="取消" onclick="history.back()" />
+						<div class="notice" id="notice" style="display: none;"></div>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</form>
+</div>
+<!--{include footer.htm}-->
+<script type="text/javascript">
+$('#conf_event_submit').click(function() {
+	$('#conf_event_form').submit();
+	return false;
+});
+</script>
+</body>
+</html>

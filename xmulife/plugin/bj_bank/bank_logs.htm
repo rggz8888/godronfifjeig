@@ -1,0 +1,43 @@
+<!--{include header.htm}-->
+<link href="view/my.css" type="text/css" rel="stylesheet" />
+<div class="width">
+	<!--{include bank_nav.inc.htm}-->
+	<div class="left border shadow bg2">
+		<!--{include bank_menu.inc.htm}-->
+	</div>
+	<div class="right">
+		<!--{include bank_header_nav.inc.htm}-->
+		<div class="bg1 border shadow list">
+			<table class="table">
+				<tr class="header">
+					<td width="60px">类型</td>
+					<td>描述</td>
+					<td width="100px">操作时间</td>
+				</tr>
+				<!--{if $logslist}-->
+				<!--{loop $logslist $logs}-->
+				<tr>
+					<td>$logs[type_str]</td>
+					<td>$logs[message]</td>
+					<td>$logs[dateline_fmt]</td>
+				</tr>
+				<!--{/loop}-->
+				<!--{else}-->
+				<tr>
+					<td colspan="3">无</td>
+				</tr>
+				<!--{/if}-->
+			</table>
+		</div>
+		<div class="page" style="text-align: center;margin:10px;">$pages</div>
+	</div>
+</div>
+<!--{include footer.htm}-->
+<script type="text/javascript">
+<!--{if !empty($opening)}-->
+	$('#opening').dialog();
+<!--{/if}-->
+</script>
+$conf[footer_js]
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!--{include header.htm}-->
+
+<link href="view/my.css" type="text/css" rel="stylesheet" />
+
+<div class="width">
+
+	<!--{include my_nav.inc.htm}-->
+
+	<div class="left border shadow bg2">
+		<!--{include my_menu.inc.htm}-->
+	</div>
+	
+	<div class="div">
+		<div class="header">快捷回复<!--{hook my_post_header_end.htm}--></div>
+		<form action="?my-quickreply.htm" method="post" id="my_quickreply_form">
+			<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+			<div class="body">
+					<dl>
+						<!--{loop $quickreply $key $val}-->
+							<dt><label for="quickreply$key">快捷回复 <!--{php echo ++$key;}-->：</label></dt>
+							<dd><input type="text" name="quickreply[]" id="quickreply$key" size="24" value="$val" title="请快捷回复内容" style="width: 320px;" /></dd>
+						<!--{/loop}-->
+						<dt></dt>
+						<dd>
+							<input type="submit" class="button bigblue" id="my_quickreply_submit" value="修改快捷回复" />
+							<input type="button" class="button biggrey" value="取消" onclick="history.back()" />
+							<div class="notice" id="notice" style="display: none;"></div>
+						</dd>
+					</dl>
+			</div>
+		</form>
+		<div class="footer"></div>
+	</div>
+</div>	
+
+<!--{include footer.htm}-->
+
+<script type="text/javascript">
+$('#my_quickreply_submit').click(function() {
+	$('#my_quickreply_form').submit();
+	return false;
+});
+</script>
+
+$conf[footer_js]
+
+</body>
+</html>

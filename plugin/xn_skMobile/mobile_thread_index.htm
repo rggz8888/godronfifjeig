@@ -1,0 +1,45 @@
+<!--{include mobile_header.htm}-->
+<ul class="bklb" id="sknav">
+		<!--{loop $conf[forumarr] $_fid $_name}-->
+			<li><a href="?forum-index-fid-$_fid.htm">$_name</a></li>
+		<!--{/loop}--><br style="clear:both">
+	</ul>
+ 
+<div>
+<h2>$thread[subject]</h2>
+	
+	<!--{loop $postlist $post}-->
+	<!--{php $u = isset($userlist[$post['uid']]) ? $userlist[$post['uid']] : array();}-->
+		<div style="border:1px #cccccc solid;">
+				<div class="padd"><span class="right">#$post[floor]楼</span>[<a href="?forum-index-fid-$fid-page-1.htm">$forum[name]</a>]，$u[username] , $post[dateline_fmt]</div>
+				<div class="padd">
+					<p>$post[message]</p>
+					<!--{if $thread[firstpid] != $post[pid]}--><p>$post[dateline_fmt]</p><!--{/if}-->
+				</div>
+				
+				<!--{if $mobile_islogined}-->
+					<p><a href="?post-post-fid-$fid-tid-$post[tid]-pid-$post[pid].htm">引用</a></p>
+				<!--{/if}-->
+		</div>
+	<!--{/loop}-->
+	
+	<p>
+		<p style="text-align: center;">$pages</p>
+		<!--{if $mobile_islogined}-->
+		<div class="skform">
+			<form action="?post-post-fid-$thread[fid]-tid-$thread[tid]-quickpost-1.htm" method="post" >
+				<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+				<input type="submit" value="快速回复"class="kshf" />
+				<textarea name="message" style="width:80%" rows="3"></textarea><br style="clear:both" />
+			</form>
+		</div>
+		<!--{/if}-->
+		<p style="text-align: center; padding: 8px;">
+			<a href="?forum-index-fid-$fid-page-1.htm">返回【$forum[name]】</a>
+		</p>
+	</p>
+	
+	
+</div>
+
+<!--{include mobile_footor.htm}-->

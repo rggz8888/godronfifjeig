@@ -1,0 +1,68 @@
+<!--{include header.htm}-->
+
+<div class="width">
+	
+	<!-- 数据表 -->
+	
+	<form action="?database-backup.htm" method="post" id="tablesform">
+		<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+		<div class="list" style="width: 780px; margin-top: 16px;">
+			<table class="table">
+  <tbody>
+    <thead> 
+    <tr  class="header">
+      <td width="5%"><input type="checkbox" value="1" title="全选" id="checkall" checked="checked" /></td>
+      <td width="*">数据表</td>
+      <td width="10%">类型</td>
+      <td width="12%">编码</td>
+      <td width="12%">记录条数</td>
+      <td width="12%">占用空间</td>
+    </tr>
+    </thead>
+      <!--{loop $list $vo}-->
+      <tr class="odd">
+        <td align="center"><input type="checkbox" name="tables[]" value="{$vo[Name]}" checked /></td>
+        <td>{$vo['Name']}</td>
+        <td class="align_c">{$vo[Engine]}</td>
+        <td class="align_c">{$vo[Collation]}</td>
+        <td class="align_c">{$vo[Rows]}</td>
+        <td class="align_c">{php echo misc::humansize($vo['Data_length']+$vo['Index_length']);}</td>
+      </tr>
+      <!--{/loop}-->
+  </tbody>
+</table>
+		</div>
+		<div style="width: 780px; margin-top: 0px; text-align: center;">
+			<div style="text-align: left;"> &nbsp;<input type="checkbox" value="1" title="全选" id="checkall2" checked="checked" /> 全选</div>
+			<p>
+				每卷大小：<input style="width:50px;" type="text" name="sizelimit" value="2048" />K
+				<input type="submit" value=" 开始备份 " class="button bigblue" id="databackup" />
+			</p>
+		</div>
+	</form>
+</div>
+
+<!--{include footer.htm}-->
+
+<script type="text/javascript">
+$('#srchubmit').click(function() {
+	$('#srchform').submit();
+	return false;
+});
+$('#checkall, #checkall2').click(function() {
+	$('#tablesform input[name="tables[]"]').attr('checked', this.checked);
+});
+$('#databackup').click(function() {
+	//$('#tablesform').attr('action', '?thread-delete.htm');
+	$('#tablesform').submit();
+	return false;
+});
+
+$('#mreplace').click(function() {
+	$('#resultform').attr('action', '?thread-replace.htm');
+	$('#resultform').submit();
+	return false;
+});
+</script>
+</body>
+</html>

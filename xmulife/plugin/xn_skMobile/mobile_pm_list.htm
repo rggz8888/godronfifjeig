@@ -1,0 +1,12 @@
+<!--{include mobile_header.htm}-->
+
+<!--{if $mobile_islogined}-->
+<p>消息列表($page/$totalpage)</p>
+
+<!--{loop $pmlist $eachpm}-->
+	<p><small>$eachpm['dateline']，$eachpm['message']</small></p>
+<!--{/loop}-->
+
+		<p>$pages</p>
+<!--{/if}-->
+<!--{include mobile_footor.htm}-->

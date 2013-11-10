@@ -1,0 +1,6 @@
+<?php
+		if($this->qh_mobile) {
+			$this->view->display('mobile_thread_index.htm');
+			return;
+		}
+?>

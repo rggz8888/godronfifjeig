@@ -1,0 +1,92 @@
+<!--{include header.htm}-->
+<div class="width">
+	<!--{include plugin_config_nav.inc.htm}-->
+	<form action="?plugin-setting-dir-$dir.htm?type=base" method="post" id="conf_bank_form">
+		<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+		<div class="div" style="width: 788px;">
+			<div class="list">
+				<table class="table">
+					<tr class="header">
+						<td colspan="4">基本设置</td>
+					</tr>
+					<tr style="display: none">
+						<td width="200px" style="text-align: right"><label for="close">是否关闭银行：</label></td>
+						<td colspan="3">$input[close]</td>
+					</tr>
+					<tr style="display: none">
+						<td style="text-align: right"><label for="closemessage">关闭银行通知：</label></td>
+						<td colspan="3">$input[closemessage]</td>
+					</tr>
+					<tr>
+						<td style="text-align: right"><label for="notice">银行公告：</label></td>
+						<td colspan="3">$input[notice]</td>
+					</tr>
+					<tr>
+						<td style="text-align: right"><label for="poundage">开户金额：</label></td>
+						<td colspan="3">$input[poundage]</td>
+					</tr>
+					<tr>
+						<td style="text-align: right"><label for="cleardata" style="color: red">删除插件是否清空数据：</label></td>
+						<td colspan="3">$input[cleardata]</td>
+					</tr>
+					<tr class="header">
+						<td colspan="4">活期储蓄设置</td>
+					</tr>
+					<tr>
+						<td style="text-align: right"><label for="current">活期储蓄利息：</label></td>
+						<td colspan="3">$input[current] %</td>
+					</tr>
+					<tr class="header">
+						<td colspan="4">定期储蓄设置</td>
+					</tr>
+					<tr>
+						<td style="text-align: right"><label for="fixed">定期储蓄利息：</label></td>
+						<td colspan="3">$input[fixed] %</td>
+					</tr>
+					<tr>
+						<td style="text-align: right"><label for="minfixed">最低储蓄天数：</label></td>
+						<td colspan="3">$input[minfixed]</td>
+					</tr>
+					<tr class="header">
+						<td colspan="4">转账汇款设置</td>
+					</tr>
+					<tr>
+						<td style="text-align: right"><label for="transfer">转账汇款手续费：</label></td>
+						<td colspan="3">$input[transfer] %</td>
+					</tr>
+					<tr>
+						<td style="text-align: right"><label for="mintransfer">最低转账金额：</label></td>
+						<td colspan="3">$input[mintransfer]</td>
+					</tr>
+					<tr>
+						<td style="text-align: right"><label for="pmtransfer">短消息通知对方：</label></td>
+						<td colspan="3">$input[pmtransfer] 0为不收费</td>
+					</tr>
+					<tr class="header">
+						<td colspan="4">抵押贷款设置</td>
+					</tr>
+					<tr>
+						<td style="text-align: right"><label for="loan">抵押贷款利息：</label></td>
+						<td colspan="3">$input[loan] %</td>
+					</tr>
+					<tr>
+						<td style="text-align: right"></td>
+						<td colspan="3">
+							<input type="submit" class="button bigblue" value="确定" id="conf_bank_submit" />
+							<input type="button" class="button biggrey" value="取消" onclick="history.back()" />
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</form>
+</div>
+<!--{include footer.htm}-->
+<script type="text/javascript">
+$('#conf_bank_submit').click(function() {
+	$('#conf_bank_form').submit();
+	return false;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="keywords" content="$_seo_keywords" />
+	<meta name="description" content="$_seo_description " />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<title><!--{loop $_title $title}-->$title <!--{/loop}--></title>
+	<script type="text/javascript">
+	var cookie_pre = '$conf[cookie_pre]';
+	var g_uid = $_user[uid];
+	</script>
+	<script type="text/javascript">
+function ReImgSize(){
+for (j=0;j<document.images.length;j++)
+{
+document.images[j].width=(document.images[j].width>360)?"360":document.images[j].width;
+}
+}
+</script>
+	<style type="text/css">
+	body{color:#8A6633;width:auto;margin:auto}
+	*{padding:0;margin:0}
+	ul{list-style:none;}
+	img{max-width:100%;height:auto;border:none}
+	a {color:#8A663E;text-decoration:none;}
+	a:hover {color:#cccccc;}
+	.right{float:right;}
+	.padd{ padding:10px 5px;}
+	h2{padding:10px;}
+	.tip{background:black}
+	.header{ background:#4488D3;   padding:10px; border-bottom:#3F84CF solid 1px; color:#ccc}
+	.header a{color:#fff}
+	.zt,.bk,.footer,.bkxx{background:#377ECC;color:#fff;border-top:#549CE6 solid 1px;padding:5px;}
+	.bk a{color:white}
+	.skc li{border-bottom:#eee dashed 1px;padding:5px; line-height:25px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+	.skc li.s1{ background:#DBE7FF}
+	.skc li.s2{}
+	ul.bklb{background:#D8E9F4;width:100%;}
+	ul.bklb li{ float:left;padding: 5px;}
+	.footer a{color:white;}
+	.sknav{ position:fixed;  top:0;   background:black;filter: Alpha(opacity=90);-moz-opacity:.9;opacity:0.9; }
+	.skform{background:#377ECC; border-top:#4488D3 solid 3px;padding:10px 0;  }
+	.skform .kshf{padding:15px 0;float:right}
+	.logout{ text-align:center;padding:20px 0}
+	.logout .sktc{padding:20px;}
+	.bkxxc{padding:10px;background:#d2DEfB}
+	</style>
+</head>
+<body>
+<DIV class="tip" name="top"><!-- 广告预留地 --></DIV>
+<div class="header">
+	<span class="right">
+	<!--{if $mobile_islogined}-->
+	 <small><a href="./?user-logout.htm" >退出</a></small>| 你好，$mobile_username 
+		<!--{if $mobile_news_num}-->
+			 <a href="?pm-ajaxlist-uid-2.htm">有$mobile_news_num条新消息！</a> 
+		<!--{else}-->
+			 <small><a href="?pm-ajaxlist-uid-2.htm">[消息列表]</a></small> 
+		<!--{/if}-->
+	<!--{else}--><a href="./?user-login.htm" >登录</a>|<a href="?user-create.htm">注册</a><!--{/if}--></span>
+	<A HREF="./"><IMG SRC=""   BORDER="0" ALT="XmuLife"></A>
+</div> <div class="bk"><a href="./" >首页</a> | 栏目</div>

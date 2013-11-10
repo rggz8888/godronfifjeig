@@ -1,0 +1,7 @@
+
+# BEGIN XIUNO
+RewriteEngine on
+RewriteRule ^/sitemap.xml$  /upload/sitemap.xml  [L]
+RewriteRule ^([^/]+)\.htm$ index.php?$1.htm [L]
+RewriteRule ^admin/([^/]+)\.htm$ admin/index.php?$1.htm [L]
+# END XIUNO

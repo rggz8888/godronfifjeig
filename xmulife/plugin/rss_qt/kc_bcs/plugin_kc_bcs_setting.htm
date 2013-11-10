@@ -1,0 +1,49 @@
+<!--{include header.htm}-->
+
+<div class="width">
+	<form action="?plugin-setting-dir-$dir.htm" method="post" id="conf_form">
+		<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+		<div class="div" style="width: 700px;">
+			<div class="header">百度云存储设置</div>
+			<div class="body">
+				<dl>
+					<dt><label for="ak">应用的API Key：</label></dt>
+					<dd>$input[ak]</dd>
+
+					<dt><label for="sk">应用的Secret Key：</label></dt>
+					<dd>$input[sk]</dd>
+
+					<dt><label for="bucket">云存储的bucket：</label></dt>
+					<dd>$input[bucket]</dd>
+
+					<dt><label for="remotepath">远程路径：</label></dt>
+					<dd>$input[remotepath]</dd>
+
+					<dt></dt>
+					<dd>
+						<input type="submit" class="button bigblue" id="conf_submit" value="确定" />
+						<input type="button" class="button biggrey" value="返回" onclick="window.location='?plugin-list.htm'" />
+						<div id="notice" class="notice" style="display: none;"></div>
+					</dd>
+
+					<dt></dt>
+					<dd>
+						<p>百度云存储申请地址：<a href="http://developer.baidu.com/cloud/stor" target="_blank">http://developer.baidu.com/cloud/stor</a></p>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</form>
+</div>
+
+<!--{include footer.htm}-->
+
+<script type="text/javascript">
+$('#conf_submit').click(function() {
+	$('#conf_form').submit();
+	return false;
+});
+
+</script>
+</body>
+</html>

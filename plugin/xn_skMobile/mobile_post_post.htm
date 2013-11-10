@@ -1,0 +1,18 @@
+<!--{include mobile_header.htm}-->
+
+<form action="?post-post-fid-$fid-tid-$tid-pid-$pid.htm" method="post">
+	<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+	<p>
+		<p>回复：$thread[subject]</p>
+		<p>内容：</p>
+		<p>
+		<textarea name="message" cols="24" rows="3"></textarea>
+		</p>
+		<p>
+		<input type="submit" value="回复" />
+		</p>
+	</p>
+</form>
+<p><a href="?thread-index-fid-$fid-tid-$tid.htm">返回帖子</a></p>
+
+<!--{include mobile_footor.htm}-->

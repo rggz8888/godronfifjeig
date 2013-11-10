@@ -1,0 +1,14 @@
+<!--{include mobile_header.htm}-->
+<ul class="bklb" id="sknav">
+		<!--{loop $conf[forumarr] $_fid $_name}-->
+			<li><a href="?forum-index-fid-$_fid.htm">$_name</a></li>
+		<!--{/loop}--><br style="clear:both">
+	</ul>
+ 
+	<form action="?user-logout.htm" method="post" class="logout">
+		<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+		<small><a href="/">返回首页</a></small><BR><BR><BR>
+		<input type="submit" value="确认退出" class="sktc"/>
+	</form>
+<CENTER class="padd">change by <A HREF="http://www.coolneng.com">shuke</A> 2013-11-7</CENTER>
+<!--{include mobile_footor.htm}-->

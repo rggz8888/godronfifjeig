@@ -1,0 +1,55 @@
+<!--{json width:"550",title:"举报帖子"}-->
+<form action="?thread-jubao-fid-$fid-pid-$pid-floor-$floor-ajax-1.htm" method="post" id="jubao_form_$pid">
+	<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+	<dl>
+		<dt><label>主题：</label></dt>
+		<dd>$thread[subject]</dd>
+		
+		<dt><label>楼层：</label></dt>
+		<dd>
+			$floor 楼
+		</dd>
+		
+		<dt><label>留言：</label></dt>
+		<dd>
+			<textarea name="message" id="message" style="width: 350px; height: 40px;" onkeyup="if(this.value.length > 64) {alert('最多只能输入64个字符。'); return false;}"></textarea>
+		</dd>
+		<dt></dt>
+		<dd>
+			<input type="submit" class="button bigblue" id="jubao_submit_$pid" value="确定" />
+			<input type="button" class="button biggrey" value="关闭" id="jubao_cancel_$pid"/>
+		</dd>
+	</dl>
+</form>
+
+<script type="text/javascript">
+function delay_execute(dialog, recall) {
+	// 延迟执行的脚本，约定名字为：delay_execute()
+
+	$('#jubao_submit_$pid').focus();
+	$('#jubao_submit_$pid').click(function() {
+		$('#jubao_submit_$pid').disable();
+		var postdata = $("#jubao_form_$pid").serialize();
+		$.post($('#jubao_form_$pid').attr('action'), postdata,  function(s){
+			$('#jubao_submit_$pid').enable();
+			var json = json_decode(s);
+			if(error = json_error(json)) {alert(error); return false;}
+			if(!json.status > 0) {
+				dialog.set_body('<div class="error">'+json.message+'！</div>');
+				return false;
+			}
+			dialog.set_body('<div class="ok">'+json.message+'！</div>');
+			setTimeout(function(){
+ 				dialog.close(true);
+	 			if(recall) recall();
+	 		}, 1000);
+		});
+		return false;
+	});
+	
+	$('#jubao_cancel_$pid').click(function() {
+		dialog.close(true);
+		return false;
+	});
+}
+</script>

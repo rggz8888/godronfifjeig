@@ -1,0 +1,40 @@
+<!--{include header.htm}-->
+<div class="width">
+	<!--{include plugin_config_nav.inc.htm}-->
+	<div class="div" style="width: 788px;">
+		<div class="list">
+			<table class="table">
+				<tr class="header">
+					<td width="60px">申请人</td>
+					<td width="60px">抵押积分</td>
+					<td width="60px">贷款金额</td>
+					<td width="60px">利率</td>
+					<td width="120px">贷款天数</td>
+					<td width="120px">利息</td>
+					<td></td>
+				</tr>
+				<!--{if $overduelist}-->
+				<!--{loop $overduelist $overdue}-->
+				<tr>
+					<td width="60px"><a style="color:#2366A8" href="../?you-index-uid-$loan[user][uid].htm" target="_blank">$overdue[user][username]</a></td>
+					<td width="60px">$overdue[credit]</td>
+					<td width="60px">$overdue[money]</td>
+					<td width="60px">$overdue[rate_str] %</td>
+					<td width="120px">$overdue[day]</td>
+					<td width="120px">$overdue[interest_str]</td>
+					<td style="text-align: right"><!--<a style="color:#2366A8" href="?plugin-setting-dir-bj_bank-type-overdue-did-$overdue[did]-act-1.htm">强制扣除</a> | --><a style="color:#2366A8" href="?plugin-setting-dir-bj_bank-type-overdue-did-$overdue[did]-act-0.htm">没收抵押</a></td>
+				</tr>
+				<!--{/loop}-->
+				<!--{else}-->
+				<tr>
+					<td colspan="7">无</td>
+				</tr>
+				<!--{/if}-->
+			</table>
+		</div>
+		<div class="page" style="text-align: center;margin:10px;">$pages</div>
+	</div>
+</div>
+<!--{include footer.htm}-->
+</body>
+</html>

@@ -1,0 +1,5 @@
+<script type="text/javascript">
+$("#quickreply").change(function() {
+    $("#quick_message").text( $("#quickreply").val() == '' ? '' : $("#quickreply").find('option:selected').text());
+});
+</script>

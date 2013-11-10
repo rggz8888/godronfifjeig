@@ -1,0 +1,104 @@
+<!--{include header.htm}-->
+<link href="view/my.css" type="text/css" rel="stylesheet" />
+<div class="width">
+	<!--{include bank_nav.inc.htm}-->
+	<div class="left border shadow bg2">
+		<!--{include bank_menu.inc.htm}-->
+	</div>
+	<div class="right">
+		<!--{include bank_header_nav.inc.htm}-->
+		<form action="?bank-transfer.htm" method="post" id="bank_transfer_form">
+		<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+		<div class="bg1 border shadow list">
+			<table class="table">
+				<tr class="header">
+					<td colspan="5">转账汇款</td>
+				</tr>
+				<tr>
+					<td colspan="5">当前汇款手续费率为$config[transfer]%，欢迎使用本行汇款业务。</td>
+				</tr>
+				<tr>
+					<td width="100px" style="text-align: right">操作金额</td>
+					<td width="100px">$input[money]</td>
+					<td colspan="2">$input[conf_transfer]<input type="button" class="button smallgrey" value="费用计算" id="conf_fee_button" /></td>
+				</tr>
+				<tr>
+					<td style="text-align: right">对方帐号</td>
+					<td>$input[tousername]</td>
+					<td colspan="2"></td>
+				</tr>
+				<tr>
+					<td style="text-align: right">短消息通知对方</td>
+					<td>$input[pmmsg] <!--{php echo $config[pmtransfer] ? '收费'.$config[pmtransfer].'枚金币' : '免费'}--></td>
+					<td colspan="2"><input type="submit" class="button smallblue" value="提交" id="conf_transfer_submit" /></td>
+				</tr>
+				<tr class="header">
+					<td colspan="5">注意事项</td>
+				</tr>
+				<tr>
+					<td colspan="5">1、汇款金额和手续费从您的现金中扣除。</td>
+				</tr>
+				<tr>
+					<td colspan="5">2、对方需在本行开户您才能给其汇款。</td>
+				</tr>
+				<tr>
+					<td colspan="5">3、汇款金额不能少于$config[mintransfer]枚金币。</td>
+				</tr>
+			</table>
+		</div>
+		</form>
+	</div>
+</div>
+<!--{include footer.htm}-->
+<script type="text/javascript">
+$('#conf_transfer_submit').click(function() {
+	$('#bank_transfer_form').submit();
+	return false;
+});
+$('#conf_fee_button').click(function() {
+	var regNum = /^[0-9]*[1-9][0-9]*$/;
+	var money = $('#money').val();
+	if(regNum.test(money)){
+		var tran = accDiv($("#conf_transfer").val(), 100);
+		alert(Math.floor(accMul(money, tran)));
+	}else{
+		alert("输入的金额有误，请重新输入。");
+	}
+	return false;
+});
+function accMul(arg1, arg2) {
+	var m = 0, s1 = arg1.toString(), s2 = arg2.toString();
+	try {
+		m += s1.split(".")[1].length;
+	}
+	catch (e) {
+	}
+	try {
+		m += s2.split(".")[1].length;
+	}
+	catch (e) {
+	}
+	return Number(s1.replace(".", "")) * Number(s2.replace(".", "")) / Math.pow(10, m);
+}
+function accDiv(arg1, arg2) {
+	var t1 = 0, t2 = 0, r1, r2;
+	try {
+		t1 = arg1.toString().split(".")[1].length;
+	}
+	catch (e) {
+	}
+	try {
+		t2 = arg2.toString().split(".")[1].length;
+	}
+	catch (e) {
+	}
+	with (Math) {
+		r1 = Number(arg1.toString().replace(".", ""));
+		r2 = Number(arg2.toString().replace(".", ""));
+		return (r1 / r2) * pow(10, t2 - t1);
+	}
+}
+</script>
+$conf[footer_js]
+</body>
+</html>

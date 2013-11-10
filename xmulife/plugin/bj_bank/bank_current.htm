@@ -1,0 +1,67 @@
+<!--{include header.htm}-->
+<link href="view/my.css" type="text/css" rel="stylesheet" />
+<div class="width">
+	<!--{include bank_nav.inc.htm}-->
+	<div class="left border shadow bg2">
+		<!--{include bank_menu.inc.htm}-->
+	</div>
+	<div class="right">
+		<!--{include bank_header_nav.inc.htm}-->
+		<form action="?bank-current.htm" method="post" id="bank_current_form">
+		<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+		<input type="hidden" name="button" />
+		<div class="bg1 border shadow list">
+			<table class="table">
+				<tr class="header">
+					<td colspan="5">活期储蓄</td>
+				</tr>
+				<tr>
+					<td colspan="5">您当前的存款金额为<strong style="color:#090">$_user[bank_deposit]</strong>，活期利率为$config[current]%，计息时间从$_user[bank_begintime_str]开始。</td>
+				</tr>
+				<tr>
+					<td width="100px" style="text-align: right">操作金额</td>
+					<td width="100px">$input[money]</td>
+					<td width="100px">$input[curorfix]</td>
+					<td colspan="2"><input type="submit" class="button smallblue" value="确定" id="conf_operate_submit" /></td>
+				</tr>
+				<tr>
+					<td style="text-align: right">当前利息</td>
+					<td colspan="2">$_user[bank_mycur][currate]</td>
+					<td colspan="2"><input type="submit" class="button smallblue" value="手动结息" id="conf_settle_submit" /></td>
+				</tr>
+				<tr class="header">
+					<td colspan="5">注意事项</td>
+				</tr>
+				<tr>
+					<td colspan="5">1、活期利率可能是按您存款多少而定，请注意银行设定。</td>
+				</tr>
+				<tr>
+					<td colspan="5">2、银行活期利率会随银行设定的改变而改变，利率不是一个稳定值。</td>
+				</tr>
+				<tr>
+					<td colspan="5">3、存取款操作时将自动结算利息。</td>
+				</tr>
+				<tr>
+					<td colspan="5">4、想拥有稳定的利率推荐使用定期储蓄。</td>
+				</tr>
+			</table>
+		</div>
+		</form>
+	</div>
+</div>
+<!--{include footer.htm}-->
+<script type="text/javascript">
+$('#conf_operate_submit').click(function() {
+	$('input[name=button]').val('operate');
+	$('#bank_current_form').submit();
+	return false;
+});
+$('#conf_settle_submit').click(function() {
+	$('input[name=button]').val('settle');
+	$('#bank_current_form').submit();
+	return false;
+});
+</script>
+$conf[footer_js]
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!--{include header.htm}-->
+<div class="width">
+	<!--{include plugin_config_nav.inc.htm}-->
+	<div class="div" style="width: 788px;">
+		<div class="list">
+			<table class="table">
+				<tr class="header">
+					<td width="100px">用户名</td>
+					<td width="60px">类型</td>
+					<td>描述</td>
+					<td width="100px">操作时间</td>
+				</tr>
+				<!--{if $logslist}-->
+				<!--{loop $logslist $logs}-->
+				<tr>
+					<td><a style="color:#2366A8" href="../?you-index-uid-$logs[user][uid].htm" target="_blank">$logs[user][username]</a></td>
+					<td>$logs[type_str]</td>
+					<td>$logs[message]</td>
+					<td>$logs[dateline_fmt]</td>
+				</tr>
+				<!--{/loop}-->
+				<!--{else}-->
+				<tr>
+					<td colspan="4">无</td>
+				</tr>
+				<!--{/if}-->
+			</table>
+		</div>
+		<div class="page" style="text-align: center;margin:10px;">$pages</div>
+	</div>
+</div>
+<!--{include footer.htm}-->
+<script type="text/javascript">
+$('#conf_bank_submit').click(function() {
+	$('#conf_bank_form').submit();
+	return false;
+});
+</script>
+</body>
+</html>

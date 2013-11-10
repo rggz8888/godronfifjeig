@@ -1,0 +1,50 @@
+<!--{include header.htm}-->
+<link href="view/my.css" type="text/css" rel="stylesheet" />
+<div class="width">
+	<!--{include bank_nav.inc.htm}-->
+	<div class="left border shadow bg2">
+		<!--{include bank_menu.inc.htm}-->
+	</div>
+	<div class="right">
+		<!--{include bank_header_nav.inc.htm}-->
+		<div class="bg1 border shadow">
+			<form action="?bank-opening.htm" method="post" id="bank_opening_form">
+				<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+				<div class="body" style="width: 500px;">
+					<dl>
+						<dt></dt>
+						<dd>
+							<ul>
+								<li>11</li>
+								<li>22</li>
+								<li>33</li>
+							</ul>
+						</dd>
+						<dt></dt>
+						<dd>
+							<input type="submit" class="button bigblue" id="bank_opening_submit" value="开通银行帐户" />
+							<div class="notice" id="notice" style="display: none;"></div>
+							<div class="ok" id="ok" style="display: none;"></div>
+						</dd>
+					</dl>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>	
+<!--{include footer.htm}-->
+<script type="text/javascript">
+$('#bank_opening_submit').click(function() {
+	<!--{if $bankstting[poundage]}-->
+	if(confirm('确认支付 $bankstting[poundage] 枚金币开通银行帐户？')){
+	<!--{else}-->
+	if(confirm('确认开通银行帐户？')){
+	<!--{/if}-->
+		$('#bank_opening_form').submit();
+	}
+	return false;
+});
+</script>
+$conf[footer_js]
+</body>
+</html>

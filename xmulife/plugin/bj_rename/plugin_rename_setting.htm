@@ -1,0 +1,35 @@
+<!--{include header.htm}-->
+<div class="width">
+	<!--{include plugin_rename_nav.htm}-->
+	<form action="?plugin-setting-dir-$dir.htm" method="post" id="conf_rename_form">
+		<input type="hidden" name="FORM_HASH" value="{FORM_HASH}" />
+		<div class="div" style="width: 788px;">
+			<div class="header">基本设置</div>
+			<div class="body">
+				<dl>
+					<dt><label for="servicefees">服务费用：</label></dt>
+					<dd>$input[servicefees] 0为不收取费用</dd>
+					<dt><label for="pmmessage">短消息通知：</label></dt>
+					<dd>$input[pmmessage] 管理员处理后，是否短消息通知用户。</dd>
+					<dt><label for="cleardata">删除插件时清空数据：</label></dt>
+					<dd>$input[cleardata]</dd>
+					<dt></dt>
+					<dd>
+						<input type="submit" class="button bigblue" value="确定" id="conf_rename_submit" />
+						<input type="button" class="button biggrey" value="取消" onclick="history.back()" />
+						<div class="notice" id="notice" style="display: none;"></div>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</form>
+</div>
+<!--{include footer.htm}-->
+<script type="text/javascript">
+$('#conf_rename_submit').click(function() {
+	$('#conf_rename_form').submit();
+	return false;
+});
+</script>
+</body>
+</html>
