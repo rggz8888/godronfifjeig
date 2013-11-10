@@ -1,13 +1,8 @@
- 
-<!--{if !$fid}-->
-<a href="?forum-index-fid-$thread[fid].htm"title="所在版块">$thread[forumname]</a>
+<!--仿9ilife.cn帖子前插入头像-->
+<!--{php $u = isset($userlist_mobile[$thread['uid']]) ? $userlist_mobile[$thread['uid']] : array('uid'=>0, 'username'=>'', 'groupname'=>'', 'avatar_small'=>'');}-->
+<!--{if $u[avatar_small]}-->
+<img src=$u[avatar_small]/> 
 <!--{else}-->
-[$thread[username]]
-<!--{/if}-->	
+<img src="/view/image/avatar_small.gif"/> 
+<!--{/if}-->
 <a href="?thread-index-fid-$thread[fid]-tid-$thread[tid].htm" >$thread[subject]</a>
-<!--{loop $thread[forum_types] $cateid $types}-->
-<!--{if $cateid == 1 && $thread[typename1]}--><a href="?forum-index-fid-$thread[fid]-typeid1-$thread[typeid1].htm">[{$thread[typename1]}]</a><!--{/if}-->
-<!--{if $cateid == 2 && $thread[typename2]}--><a href="?forum-index-fid-$thread[fid]-typeid2-$thread[typeid2].htm">[{$thread[typename2]}]</a><!--{/if}-->
-<!--{if $cateid == 3 && $thread[typename3]}--><a href="?forum-index-fid-$thread[fid]-typeid3-$thread[typeid3].htm">[{$thread[typename3]}]</a><!--{/if}-->
-<!--{if $cateid == 4 && $thread[typename4]}--><a href="?forum-index-fid-$thread[fid]-typeid4-$thread[typeid4].htm">[{$thread[typename4]}]</a><!--{/if}-->
-<!--{/loop}-->
