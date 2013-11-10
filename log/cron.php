@@ -1605,3 +1605,4 @@
 <?php exit;?>	2013-11-10 12:47	127.0.0.1	/	cron_1_next_time:2013-11-10 12:52	
 <?php exit;?>	2013-11-10 12:55	127.0.0.1	/pm-new-ajax-1.htm	cron_1_next_time:2013-11-10 13:00	
 <?php exit;?>	2013-11-10 13:00	127.0.0.1	/pm-new-ajax-1.htm	cron_1_next_time:2013-11-10 13:05	
+<?php exit;?>	2013-11-10 13:11	127.0.0.1	/pm-new-ajax-1.htm	cron_1_next_time:2013-11-10 13:16	
