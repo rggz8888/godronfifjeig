@@ -40,17 +40,37 @@
 			
 		</td>
 		<!--{hook thread_list_line_inc_subject_td_after.htm}-->
-		<td width="80" class="username">
+		<!--{php $u = isset($userlist_forum[$thread['uid']]) ? $userlist_forum[$thread['uid']] : array('uid'=>0, 'username'=>'', 'groupname'=>'', 'avatar_small'=>'');}-->
+		<td width="100" class="username">
+		    <table>
+			<tr>
+			<td>
+			<a href="?you-profile-uid-$thread[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[username]" rel="nofollow"><span class="avatar_small border bg1" {if $u[avatar_small]} style="background-image:url($u[avatar_small])"{/if}></span></a>
+			</td>
+			<td>
 			<span class="grey"><a href="?you-profile-uid-$thread[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[username]" rel="nofollow">$thread[username]</a></span>
 			<br /><span class="small {if $thread[color] == 'thread-new'}new{else}grey2{/if}">$thread[dateline_fmt]</span>
+			</td>
+			</tr>
+			</table>
 		</td>
-		<td width="80" class="lastpost">
+		<td width="100" class="lastpost">
 			<!--{if $thread[lastuid]}-->
+			<!--{php $lu = isset($lastuserlist_forum[$thread['lastuid']]) ? $lastuserlist_forum[$thread['lastuid']] : array('uid'=>0, 'username'=>'', 'groupname'=>'', 'avatar_small'=>'');}-->
+			<table>
+			<tr>
+			<td>
+			<a href="?you-profile-uid-$thread[lastuid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[lastusername]" rel="nofollow"><span class="avatar_small border bg1" {if $lu[avatar_small]} style="background-image:url($lu[avatar_small])"{/if}></span></a>
+			</td>
+			<td>
 			<span class="grey"><a href="?you-profile-uid-$thread[lastuid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[lastusername]" rel="nofollow">$thread[lastusername]</a></span>
 			<br /><span class="small grey2">$thread[lastpost_fmt]</span>
+			</td>
+			</tr>
+			</table>
 			<!--{/if}-->
 		</td>
-		<td width="80" class="views" align="center"><span class="small grey views" tid="$thread[tid]"></span></td>
+		<td width="100" class="views" align="center"><span class="small grey"></span><span class="small grey views" tid="$thread[tid]"></span></td>
 		<!--{hook thread_list_line_inc_views_after.htm}-->
 	</tr>
 </table>
