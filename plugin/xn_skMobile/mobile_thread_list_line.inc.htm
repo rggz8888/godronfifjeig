@@ -5,6 +5,9 @@
 [$thread[username]]
 <!--{/if}-->
 
+
+	
+<a href="?thread-index-fid-$thread[fid]-tid-$thread[tid].htm" >$thread[subject]</a>
 <!--{loop $thread[forum_types] $cateid $types}-->
 
 <!--{if $cateid == 1 && $thread[typename1]}--><a href="?forum-index-fid-$thread[fid]-typeid1-$thread[typeid1].htm">[{$thread[typename1]}]</a><!--{/if}-->
@@ -12,5 +15,3 @@
 <!--{if $cateid == 3 && $thread[typename3]}--><a href="?forum-index-fid-$thread[fid]-typeid3-$thread[typeid3].htm">[{$thread[typename3]}]</a><!--{/if}-->
 <!--{if $cateid == 4 && $thread[typename4]}--><a href="?forum-index-fid-$thread[fid]-typeid4-$thread[typeid4].htm">[{$thread[typename4]}]</a><!--{/if}-->
 <!--{/loop}-->
-	
-<a href="?thread-index-fid-$thread[fid]-tid-$thread[tid].htm" >$thread[subject]</a>
