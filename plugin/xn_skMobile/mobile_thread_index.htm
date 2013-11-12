@@ -30,14 +30,14 @@ function ReImgSize(){
 	
 	<!--{loop $postlist $post}-->
 	<!--{php $u = isset($userlist[$post['uid']]) ? $userlist[$post['uid']] : array();}-->
-		<div style="border:1px #cccccc solid;">
+		<div style="border-top:1px #cccccc solid;padding-top:5px;">
 				<p><font color=#000000><strong><a name="#$post[floor]">#$post[floor]楼，$u[username]</a></strong>($post[dateline_fmt])</font></p>
-				<div style="background-color:#cccccc;margin:10px;padding:5px;">
+				<div style="background-color:#cccccc;margin:10px 0px;padding:5px;">
 					<p>$post[message]</p>
 				</div>
 				
 				<!--{if $mobile_islogined}-->
-					<!-- <p><a href="?post-post-fid-$fid-tid-$post[tid]-pid-$post[pid].htm">引用</a></p> -->
+					 <!--<p><a href="?post-post-fid-$fid-tid-$post[tid]-pid-$post[pid].htm">引用</a></p> -->
 				<!--{/if}-->
 		</div>
 	<!--{/loop}-->
