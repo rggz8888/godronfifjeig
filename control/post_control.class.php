@@ -34,8 +34,8 @@ class post_control extends common_control {
 		
 		$groupid = $this->_user['groupid'];
 		
-		$fid =  core::gpc('fid', 'P') ?  intval(core::gpc('fid', 'P')) : intval(core::gpc('fid'));
-		//if(empty($fid)) {
+		$fid_current =  core::gpc('fid', 'P') ?  intval(core::gpc('fid', 'P')) : intval(core::gpc('fid'));
+		if(empty($fid_current)) {
 			//list($fid, $forumname) = each($this->conf['forumarr']); // 获取第一个板块
 			// 遍历查找有权限的板块
 			foreach($this->conf['forumarr'] as $_fid=>$_name) {
@@ -54,12 +54,29 @@ class post_control extends common_control {
 			}
 			$forumselect = form::get_select('fid', $this->conf['forumarr'], $fid);
 			$this->view->assign('forumselect', $forumselect);
-		//} else {
-			//$forumselect = '';
-			//$this->view->assign('forumselect', $forumselect);
-		//}
+			$forum = $this->mcache->read('forum', $fid);
+		} else {
+			foreach($this->conf['forumarr'] as $_fid=>$_name) {
+				if(!empty($this->conf['forumaccesson'][$_fid])) {
+					$access = $this->forum_access->read($_fid, $groupid);
+					if($access['allowthread']) {
+						$fid = $_fid;
+						break;
+					} else {
+						continue;
+					}
+				} else {
+					$fid = $_fid;
+					break;
+				}
+			}
+			$forumselect = form::get_select('fid', $this->conf['forumarr'], $fid_current);
+			$this->view->assign('forumselect', $forumselect);
+			$forum = $this->mcache->read('forum', $fid_current);
+			
+		}
 		
-		$forum = $this->mcache->read('forum', $fid);
+		
 		
 		$typeid1 = intval(core::gpc('typeid1', 'R'));
 		$typeid2 = intval(core::gpc('typeid2', 'R'));
