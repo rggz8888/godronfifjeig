@@ -1,8 +1,22 @@
-<!--仿9ilife.cn帖子前插入头像-->
+ 
+<style type="text/css">
+.comments-count {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 2px; LINE-HEIGHT: 12px; BACKGROUND-COLOR: #c4c4c4; PADDING-LEFT: 0px; WIDTH: 30px; PADDING-RIGHT: 0px; DISPLAY: inline-block; COLOR: white; FONT-SIZE: 12px; FONT-WEIGHT: bold; PADDING-TOP: 2px; border-radius: 12px 12px 12px 12px; -moz-border-radius: 12px 12px 12px 12px
+}
+</style>
+<p>
 <!--{php $u = isset($userlist_mobile[$thread['uid']]) ? $userlist_mobile[$thread['uid']] : array('uid'=>0, 'username'=>'', 'groupname'=>'', 'avatar_small'=>'');}-->
-<!--{if $u[avatar_small]}-->
-<img src=$u[avatar_small]/> 
-<!--{else}-->
-<img src="/view/image/avatar_small.gif"/> 
-<!--{/if}-->
+			<!--{if $u[avatar_small]}-->
+			    <img src=$u[avatar_small]/> 
+			<!--{else}-->
+			    <img src="$conf['static_url']view/image/avatar_small.gif"/> 
+            <!--{/if}-->
 <a href="?thread-index-fid-$thread[fid]-tid-$thread[tid].htm" >$thread[subject]</a>
+<span class="comments-count">$thread[posts_fmt]</span>
+			<br/>
+			<!--{if !$fid}-->
+			分类：<a href="?forum-index-fid-$thread[fid].htm" ><font color=#808080>$thread[forumname]</font></a>
+			<!--{else}-->
+			作者：$thread[username]
+			<!--{/if}-->
+</p>

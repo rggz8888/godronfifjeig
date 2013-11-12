@@ -45,25 +45,7 @@
 				
 				// 更新 $attach 上传文件的pid
 				$attachnum = $imagenum = 0;
-				$aidarr = $this->attach->get_aid_from_tmp($uid);
-				foreach($aidarr as $fid_aid) {
-					$arr = explode('_', $fid_aid);
-					$fid = intval($arr[0]);
-					$aid = intval($arr[1]);
-					$attach = $this->attach->read($fid, $aid);
-					if(empty($attach)) continue;
-					if($attach['uid'] != $uid) continue;
-					$attach['fid'] = $post['fid'];
-					$attach['pid'] = $post['pid'];
-					$attach['tid'] = $post['tid'];
-					if($attach['isimage'] == 1) {
-						$imagenum++;
-					} else {
-						$attachnum++;
-					}
-					$this->attach->db_cache_update("attach-fid-$fid-aid-$aid", $attach);
-				}
-				$this->attach->clear_aid_from_tmp($uid);
+				list($attachnum, $imagenum) = $this->process_attach($fid, $tid, $pid, $uid);
 				
 				// 加入到 thread_type
 				$this->thread_type_data->xcreate($fid, $tid, $typeid1, $typeid2, $typeid3, $typeid4);
