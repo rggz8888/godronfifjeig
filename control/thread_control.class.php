@@ -86,6 +86,7 @@ class thread_control extends common_control {
 		foreach($userlist as &$user) {
 			if(empty($user)) continue;
 			$this->user->format($user);
+			$this->user->format_follow($user,$this->_user['uid'],$user['uid']);//帖子页面调用是否关注参数。
 			$userlist[$user['uid']] = $user;
 		}
 		$uid && !empty($userlist[$uid]) && $this->_user = $userlist[$uid];
