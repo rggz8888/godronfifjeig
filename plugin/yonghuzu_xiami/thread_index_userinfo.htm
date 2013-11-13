@@ -1,0 +1,26 @@
+<div><!--<img src="/plugin/yonghuzu_xiami/img/$u[groupid].gif">-->
+	<div>
+	<div class="{if $u[groupid] < 6}purple{else}grey{/if}">$u[groupname]</div>
+   <span>金币 $u[golds]</span><br />
+   <span>积分 $u[credits]</span><br />
+   <span>主题
+   <a href="../?you-thread-uid-$u[uid].htm" target="_blank">$u[threads]</a></span><br />
+   <span>帖子
+   <a href="../?you-post-uid-$u[uid].htm" target="_blank">$u[posts]</a></span><br />
+   
+   <!--{if $_user[uid] && $_user[uid] != $u[uid]}-->
+   
+   
+				<!--{if $u[followstatus] == 0}-->
+					<input type="button"  class="button1 ajaxtoggle" href="../?follow-create-uid-$u[uid]-ajax-1.htm" value="关注Ta" href2="../?follow-delete-uid-$u[uid]-ajax-1.htm" value2="取消关注" class2="button1 ajaxtoggle" />
+				<!--{elseif $u[followstatus] == 1}-->
+					<input type="button"  class="button1 ajaxtoggle" href="../?follow-delete-uid-$u[uid]-ajax-1.htm" value="取消关注" href2="../?follow-delete-uid-$u[uid]-ajax-1.htm" value2="关注Ta" class2="button1 ajaxtoggle" />
+				<!--{elseif $u[followstatus] == 2}-->
+					<input type="button"  class="button1 ajaxtoggle" href="../?follow-create-uid-$u[uid]-ajax-1.htm" value="互相关注" href2="../?follow-delete-uid-$u[uid]-ajax-1.htm" value2="取消互相关注" class2="button1 ajaxtoggle" />
+				<!--{elseif $u[followstatus] == 3}-->
+					<input type="button"  class="button1 ajaxtoggle" href="../?follow-delete-uid-$u[uid]-ajax-1.htm" value="取消互相关注" href2="../?follow-delete-uid-$u[uid]-ajax-1.htm" value2="互相关注" class2="button1 ajaxtoggle" />
+				<!--{/if}-->
+	<!--{/if}-->
+   </div>
+
+</div></div>
