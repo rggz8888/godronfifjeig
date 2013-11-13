@@ -1,0 +1,1 @@
+原thread_index_message_end.htm文件已整合至collect插件下。
