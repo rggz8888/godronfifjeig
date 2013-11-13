@@ -1,0 +1,1 @@
+原thread_index_message_after已整合进collect目录内
