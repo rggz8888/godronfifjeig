@@ -1,3 +1,6 @@
+//以下同步至新浪微博代码
+$post2weibo = core::gpc('post2weibo','P');
+if($post2weibo){
 function postData($url, $data){  
 		$headers = array( "Authorization: Basic ' . 'YWRtaW5AeG11bGlmZS5jb206MjAxM3htdWxpZmV3ZWlibw=='" ); 
         $ch = curl_init();      
@@ -25,4 +28,4 @@ function postData($url, $data){
 	$status = '【'.mb_strimwidth(strip_tags($title),0,60,'...').'】'. mb_strimwidth(strip_tags( $message),0, 140,'...').' |原文'.$link;// . ' 全文地址:' . get_permalink($post_ID);
    	$data = array( 'status' => $status, 'source'=>'2453695664' );
 	$data_query = http_build_query($data,"","&");
-    $json_data = postData($url, $data_query);
+    $json_data = postData($url, $data_query);}
