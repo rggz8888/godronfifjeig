@@ -16,13 +16,13 @@ body{font-size: 12px; font-family: "微软雅黑"; _font-family: "宋体"; *font
 table {font-size:inherit; line-height:inherit}
 input,textarea {font-family:inherit;}*/
 body {width: 100%; height: 100%; margin: 0; padding: 0; background: #3D4351; line-height: 1.5; overflow-x: hidden;}
-body, textarea, td{font-size: 13px; font-family: Georgia,"Times New Roman",Times,"Songti SC","微软雅黑"; _font-family: Georgia,"Times New Roman",Times,"Songti SC","宋体"; *font-family: Georgia,"Times New Roman",Times,"Songti SC","宋体"; color: #303030;}
+body, textarea, td{font-size: 13px; font-family: "微软雅黑"; _font-family: "宋体"; *font-family: "宋体"; color: #303030;}
 img, object{margin: 0px; border: 0px; vertical-align: bottom;}
 object {cursor: pointer;}
 input {margin: 0px;}
 a {text-decoration: none; color: #3D4351; filter:none; outline-style:none;}
 a:hover {text-decoration: underline; color: #00BA53;}
-h1,h2,h3,h4,h5,p,body,textarea {margin: 0px; padding: 0px; text-indent: 0px; }
+h1,h2,h3,h4,h5,p,body,textarea {margin: 0px; padding: 0px; text-indent: 0px;/* background:#f3f3f3;*/}
 hr {height:1px; border:none; border-top:1px solid #E0E0E0; margin:0 auto; *margin:0 auto -14px auto; float:none; *float:left; display:block; clear: both;}
 .hr {height: 1px; overflow: hidden; background: #E0E0E0; clear: both;}
 h1 {font-size:24px; margin-top: 12px;}
@@ -162,7 +162,7 @@ span.icon-newpm, span.icon-newpm:hover {background-image: url(image/icon-newpm.g
 
 /* 翻页 */
 .page {padding-bottom: 8px; overflow: visible; clear: both;}
-.page a, .page a.checked{display: inline-block; padding: 3px 12px; margin-right: 2px; border: 1px solid #49535E;  background: url(image/page.gif) 0px 0px repeat-x; color: #E9E9E9; -moz-border-radius: 4px; -khtml-border-radius: 2px; -webkit-border-radius: 4px; border-radius: 4px;}
+.page a, .page a.checked{display: inline-block; padding: 2px 12px; margin-right: 2px; border: 1px solid #49535E;  background: url(image/page.gif) 0px 0px repeat-x; color: #E9E9E9; -moz-border-radius: 4px; -khtml-border-radius: 2px; -webkit-border-radius: 4px; border-radius: 4px;}
 .page a:hover, .page a.checked{color: #E9E9E9; background-position: 0px -30px; font-weight: 800;}
 
 /* 精华手册使用的mini翻页 */
@@ -207,12 +207,12 @@ a.button.smallgrey:active span{background-position: 0 -550px;}
 /* 常见的组合 */
 
 /* 一块内容的样式 */
-div.div {margin: auto; margin-bottom: 12px; background: #FAFAFA; overflow: hidden; _zoom: 1; border: 1px solid #C8C8C8; -moz-border-radius: 4px; -khtml-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;}
+div.div {margin: auto; margin-bottom: 12px; background: #FAFAFA; overflow: hidden; _zoom: 1; border: 1px solid #C8C8C8;/* -moz-border-radius: 4px; -khtml-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;*/}
 div.div div.header {padding: 6px; border-bottom: 1px solid #C8C8C8; height: 16px; line-height: 16px; overflow: hidden; text-shadow: 1px 1px 0 #FFFFFF; }
 div.div div.header span.left {}
 div.div div.header span.right {width: 300px; float: right; text-align: right;}
 div.div div.body {padding: 4px; background: #FFFFFF; overflow: hidden;}
-div.div div.footer {height: 4px; overflow: hidden;}
+div.div div.footer {/*height: 4px; overflow: hidden;*/}
 
 /* 表单两列 */
 dl {display: block; margin-top: 4px; overflow: visible; clear: both; width: 100%; }
@@ -264,19 +264,19 @@ span.avatar_huge {width: 120px; height: 120px; background: url(image/avatar_huge
 span.nopic {width: 54px; height: 54px; background: url(image/nopic.gif) no-repeat; cursor: pointer; display: inline-block;}
 
 /* 页面架构, 从上到下，几大块： #header, #menu, #body, #footer */
-#menu {width: 100%; height: 57px; background: #222222; overflow: hidden;}
+#menu {width: 100%; height: 36px; background: #222222; overflow: hidden;}
 #logo {display: block; width: 88px; height: 42px; margin-right: 8px;}
 	#menu td.left {width: 0px;}
 	#menu td.logo {width: 88px; vertical-align: top;}
 	#menu td.center {width:100%}
-	#menu td.center a{ float: left; font-size:16px; line-height: 57px; height: 57px; padding: 0 15px; color: #fff;  }
+	#menu td.center a{ float: left; font-size:16px; line-height: 36px; height: 36px; padding: 0 15px; color: #fff;  }
 	#menu td.center a:hover {color: #fff; text-decoration: none; background: #339dd2;}
 	#menu td.center a.checked {color:#339dd2;}
 	#menu td.center a.checked:hover {background: transparent; cursor: default;}
 	/*#menu td.center a.checked{cursor: default; color: #FFFFFF}*/
 	menu td.center span.sep {display:none;}
 	/*#menu td.center span.sep {height: 42px; float: left; width: 2px; background: #484B5A;}*/
-	#menu td.center2 {width: 262px;height: 57px;float: right;}
+	#menu td.center2 {width: 129px;text-align: right; /*line-height: 42px;*/ white-space:nowrap;  vertical-align: top;}
 		#search_form {margin: 0px; padding: 0px;}
 		#search {width: 118px; margin-top: 6px; padding:0px; }
 		#search.hover{background-position: 0px -23px; cursor: default;}
@@ -284,7 +284,7 @@ span.nopic {width: 54px; height: 54px; background: url(image/nopic.gif) no-repea
 	#menu td.right {width: 0px;; text-align: right; line-height: 42px; white-space:nowrap;}
 	
 #body {background:#f3f3f3 ; overflow: hidden; padding-top: 8px; padding-bottom: 8px;}
-	#nav {width: 100%; margin: auto; height: 18px; text-shadow: 1px 1px 0 #FFFFFF; }
+	#nav {width: 100%; margin: auto; height: 18px; /*text-shadow: 1px 1px 0 #FFFFFF;*/ }
 	#nav td{}
 	#nav td.left {width: 0px; background-position: 0px 0px;}
 	#nav td.center span.sep {width: 10px; height: 18px; line-height: 18px; background: url(image/nav.gif) -10px -8px; display: inline-block; overflow: hidden; vertical-align:middle; margin-top:-1px\9; margin-top:-0px\0; *margin-top: -2px; _margin-top: -2px; margin-right: 4px;}
@@ -301,7 +301,7 @@ span.nopic {width: 54px; height: 54px; background: url(image/nopic.gif) no-repea
 	#user {color: #AEB2BE; font-size: 12px; *margin-top: 8px;}
 	#user a {color: #AAAAAA; margin-left: 20px;}
 	#create_thread {margin-left: 20px;}
-#footer {width: 100%; /*height: 59px; */margin: auto; background: #222222; overflow: hidden;}
+#footer {width: 100%; /*height: 59px; */margin: auto;/* background: #f3f3f3;*/ overflow: hidden;border-top:1px solid #c8c8c8;}
 #footer td{color: #888888; padding-top: 10px; padding-bottom: 10px;}
 #footer pre {background: none repeat scroll 0 0 #4C525F; border: 1px solid #363C4A; color: #7D828E; margin: 8px;}
 #footer td.right {text-align: right;}
@@ -327,7 +327,7 @@ span.nopic {width: 54px; height: 54px; background: url(image/nopic.gif) no-repea
 .threadlist td{white-space: nowrap; overflow: hidden;}
 .threadlist table .subject{font-size: 16px; padding-left: 8px;}
 #threadtype {margin-bottom: 2px; margin-top: 0px;}
-#threadtype a{text-shadow: 0 1px #FFFFFF; padding-left: 0px; padding-right: 8px;}
+#threadtype a{/*text-shadow: 0 1px #FFFFFF;*/ padding-left: 0px; padding-right: 8px;color: #16A0EB;}
 #threadtype div{ line-height: 20px; }
 #threadtype a.checked{font-weight: 100; color: #00BA53;}
 .threadlist table .threadlist_rep_num {
@@ -353,12 +353,9 @@ margin-left: 10px;
 .post .message {margin-top: 4px; margin-bottom: 4px; font-size:14px; line-height: 1.5}
 div.attachlist {}
 div.modlist {}
-p,ul,li,body,a,small,H1,H2,H3,H4,dl,dt,dd,em,form {
-    list-style:none; font-style:normal; margin:0; padding:0; 
-}
-IMG {
-    border:0; margin:0; padding:0; 
-}
+
+/*海报墙*/
+IMG {border:0; margin:0; padding:0;}
 UL.pic LI {
     display:inline; width:231px;height:377px; text-align:center; float:left; overflow:hidden; margin: 3px 2px 7px 2px;
     border: 1px solid #999;
