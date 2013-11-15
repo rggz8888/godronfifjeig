@@ -111,7 +111,8 @@ class ueditor_control extends common_control {
 				$md5name = md5($aid.'_'.$this->conf['auth_key']);
 				$fileurl = image::get_dir($aid).'/'.$md5name.'.gif';
 				$destfile = '/attach/'.$fileurl;
-				$response = $this->attach->bcs_upload($destfile, $file['tmp_name'], array('filename' => $file['name']));
+				//$response = $this->attach->bcs_upload($destfile, $file['tmp_name'], array('filename' => $file['name']));
+				$response = $this->attach->bcs_upload($destfile, $file['tmp_name']);
 				if($response->isOK()) {
 					$r = array();
 					//$r['filesize'] = filesize($file['tmp_name']);
@@ -133,8 +134,10 @@ class ueditor_control extends common_control {
 				$destfile = '/attach/'.$fileurl;
 				$thumbfile = image::thumb_name($destfile);
 
-				$response = $this->attach->bcs_upload($destfile, $file['tmp_name'].$imgtype, array('filename' => $file['name']));
-				$response2 = $this->attach->bcs_upload($thumbfile, $file['tmp_name'].'_thumb'.$imgtype, array('filename' => image::thumb_name($file['name'])));
+				//$response = $this->attach->bcs_upload($destfile, $file['tmp_name'].$imgtype, array('filename' => $file['name']));
+				$response = $this->attach->bcs_upload($destfile, $file['tmp_name'].$imgtype);
+				//$response2 = $this->attach->bcs_upload($thumbfile, $file['tmp_name'].'_thumb'.$imgtype, array('filename' => image::thumb_name($file['name'])));
+				$response2 = $this->attach->bcs_upload($thumbfile, $file['tmp_name'].'_thumb'.$imgtype);
 				if(!$response->isOK() || !$response2->isOK()) {
 					// 回滚
 					$this->attach->delete($fid, $aid);
