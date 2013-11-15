@@ -1,14 +1,10 @@
-	public function check_sign(&$sign) {
+	public function check_sign($groupid,&$sign) {
 		if(!empty($sign)) {
+			if($groupid==11||$groupid==5||$groupid==6)
 			core::htmlspecialchars($sign);
 			if(utf8::strlen($sign) > 200) {
 				return '签名长度不能超过200个字符';
 			} 
-			/**
-			elseif(!check::is_url($homepage)) {
-							return '网址格式不正确！';
-						}
-			*/
 		}
 		return '';
 	}

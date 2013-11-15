@@ -1,6 +1,7 @@
 			$sign = core::gpc('sign', 'P');
 			$sign = $this->user->html_safe($sign);
-			$error['sign'] = $this->user->check_sign($sign);
+			$groupid = $user['groupid'];
+			$error['sign'] = $this->user->check_sign($groupid,$sign);
 			if(!array_filter($error)) {
 				$user = $this->user->read($uid);
 				$user['sign'] = $sign;
