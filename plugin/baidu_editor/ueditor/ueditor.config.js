@@ -181,7 +181,7 @@
         //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的从新定义
         
         // 通用站点:
-        , toolbars: [["undo","redo","bold","italic","underline","forecolor","fontsize","fontfamily","justifyleft","justifycenter","justifyright","justifyjustify","insertunorderedlist","insertorderedlist","removeformat","unlink","link","insertimage","attachment","insertvideo","music","gmap","snapscreen","fullscreen","emotion","blockquote","inserttable",,"source"],[]]
+        , toolbars: [["undo","redo","bold","italic","underline","forecolor","backcolor","fontsize","fontfamily","justifyleft","justifycenter","justifyright","justifyjustify","insertunorderedlist","insertorderedlist","link","unlink","insertimage","attachment","music","insertvideo","inserttable","emotion","template","formatmatch","gmap","insertcode","source","fullscreen","preview"],[]]
        
         // 技术站点:
         // , toolbars: [["undo","redo","bold","italic","underline","forecolor","fontsize","fontfamily","justifyleft","justifycenter","justifyright","insertunorderedlist","insertorderedlist","removeformat","unlink","link","insertimage","snapscreen","attachment","gmap","fullscreen","emotion","blockquote","insertcode","inserttable","source"],[]]
