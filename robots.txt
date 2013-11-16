@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /conf/
 Disallow: /service/
 Disallow: /log/
 Disallow: /tmp/
