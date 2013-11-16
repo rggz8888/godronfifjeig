@@ -85,7 +85,7 @@
 				$thumbfile = image::thumb_name($destfile);
 
 				$response = $this->attach->bcs_upload($destfile, $file['tmp_name'].$imgtype);
-				$response2 = $this->attach->bcs_upload($thumbfile, $file['tmp_name'].'_thumb'.$imgtype));
+				$response2 = $this->attach->bcs_upload($thumbfile, $file['tmp_name'].'_thumb'.$imgtype);
 				if(!$response->isOK() || !$response2->isOK()) {
 					// 回滚
 					$this->attach->delete($fid, $aid);
