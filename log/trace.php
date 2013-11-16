@@ -2529,3 +2529,863 @@ Array
     [timeoffset] => +08
 )
  - 0.633
+
+
+---------------------------------------------------------------------------------
+<?php exit;?>
+---------------------------------------------------------------------------------
+/?ueditor-uploadimage-ajax-1.htm
+POST:Array
+(
+    [dir] => 1
+    [param2] => value2
+    [param1] => value1
+    [fileName] => QQ截图20131108185911.png
+    [Filename] => QQ截图20131108185911.png
+    [pictitle] => QQ截图20131108185911.png
+    [Upload] => Submit Query
+)
+
+SQL:Array
+(
+    [0] => SET names utf8, sql_mode=''
+    [1] => SELECT * FROM xiuno_runtime WHERE k='runtime' LIMIT 1
+    [2] => SELECT * FROM xiuno_group WHERE groupid='1' LIMIT 1
+    [3] => SELECT * FROM xiuno_user WHERE uid='1' LIMIT 1
+    [4] => UPDATE xiuno_framework_maxid SET maxid=maxid+'1' WHERE name='attach' LIMIT 1
+    [5] => UPDATE xiuno_framework_count SET count = '72' WHERE name='attach' LIMIT 1
+    [6] => SELECT * FROM xiuno_attach WHERE fid='0' AND aid='293' LIMIT 1
+    [7] => INSERT INTO xiuno_attach SET fid='0',tid='0',pid='0',filesize='0',width='0',height='0',filename='',orgfilename='QQ截图20131108185911.png',filetype='image',dateline='1384084703',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='293'
+    [8] => SELECT * FROM xiuno_kv WHERE k='kc_bcs_conf' LIMIT 1
+    [9] => UPDATE xiuno_attach SET fid='0',tid='0',pid='0',filesize='13840',width='384',height='274',filename='000/000/74659fd4dc5849dd8e12bc704790a741.png',orgfilename='QQ截图20131108185911.png',filetype='image',dateline='1384084703',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='293' WHERE fid='0' AND aid='293' LIMIT 1
+)
+
+Array
+(
+    [bbs_sid] => fc937019ec05d4a7
+    [bbs_lastday] => 1384058526
+    [bbs_qh_mobile] => 2
+    [bdshare_firstime] => 1384058915425
+    [bbs_page] => 1
+    [bbs_auth] => 7WNL%2BCNkSCuQlNbe9k%2Bz19BkdziZCYwbA9SmlZaMJt%2BZBp5%252FaX1PrGAjZy68Dn2xVRjEwG2dgDI%3D
+    [bbs_lastonlineupdate] => 1384084641
+    [bbs_admin_auth] => 5ySiPtK840tkgtCh4u0j%252FQC8b84IO%252FC0
+    [AJSTAT_ok_pages] => 2
+    [AJSTAT_ok_times] => 2
+    [timeoffset] => +08
+)
+ - 1.186
+
+
+---------------------------------------------------------------------------------
+<?php exit;?>
+---------------------------------------------------------------------------------
+/?ueditor-uploadimage-ajax-1.htm
+POST:Array
+(
+    [dir] => 1
+    [fileName] => icon.png
+    [param2] => value2
+    [param1] => value1
+    [Filename] => icon.png
+    [pictitle] => icon.png
+    [Upload] => Submit Query
+)
+
+SQL:Array
+(
+    [0] => SET names utf8, sql_mode=''
+    [1] => SELECT * FROM xiuno_runtime WHERE k='runtime' LIMIT 1
+    [2] => SELECT * FROM xiuno_group WHERE groupid='1' LIMIT 1
+    [3] => SELECT * FROM xiuno_user WHERE uid='1' LIMIT 1
+    [4] => UPDATE xiuno_framework_maxid SET maxid=maxid+'1' WHERE name='attach' LIMIT 1
+    [5] => UPDATE xiuno_framework_count SET count = '73' WHERE name='attach' LIMIT 1
+    [6] => SELECT * FROM xiuno_attach WHERE fid='0' AND aid='294' LIMIT 1
+    [7] => INSERT INTO xiuno_attach SET fid='0',tid='0',pid='0',filesize='0',width='0',height='0',filename='',orgfilename='icon.png',filetype='image',dateline='1384085177',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='294'
+    [8] => SELECT * FROM xiuno_kv WHERE k='kc_bcs_conf' LIMIT 1
+    [9] => UPDATE xiuno_attach SET fid='0',tid='0',pid='0',filesize='3196',width='54',height='54',filename='000/000/c0427d87d625bbd710b2e1e41d0b3e0f.png',orgfilename='icon.png',filetype='image',dateline='1384085177',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='294' WHERE fid='0' AND aid='294' LIMIT 1
+)
+
+Array
+(
+    [bbs_sid] => fc937019ec05d4a7
+    [bbs_lastday] => 1384058526
+    [bbs_qh_mobile] => 2
+    [bdshare_firstime] => 1384058915425
+    [bbs_page] => 1
+    [bbs_auth] => 7WNL%2BCNkSCuQlNbe9k%2Bz19BkdziZCYwbA9SmlZaMJt%2BZBp5%252FaX1PrGAjZy68Dn2xVRjEwG2dgDI%3D
+    [bbs_admin_auth] => 5ySiPtK840tkgtCh4u0j%252FQC8b84IO%252FC0
+    [bbs_lastonlineupdate] => 1384084943
+    [AJSTAT_ok_pages] => 8
+    [AJSTAT_ok_times] => 2
+    [timeoffset] => +08
+)
+ - 0.748
+
+
+---------------------------------------------------------------------------------
+<?php exit;?>
+---------------------------------------------------------------------------------
+/?ueditor-uploadimage-ajax-1.htm
+POST:Array
+(
+    [dir] => 1
+    [param2] => value2
+    [param1] => value1
+    [fileName] => 1.gif
+    [Filename] => 1.gif
+    [pictitle] => 1.gif
+    [Upload] => Submit Query
+)
+
+SQL:Array
+(
+    [0] => SET names utf8, sql_mode=''
+    [1] => SELECT * FROM xiuno_runtime WHERE k='runtime' LIMIT 1
+    [2] => SELECT * FROM xiuno_group WHERE groupid='1' LIMIT 1
+    [3] => SELECT * FROM xiuno_user WHERE uid='1' LIMIT 1
+    [4] => UPDATE xiuno_framework_maxid SET maxid=maxid+'1' WHERE name='attach' LIMIT 1
+    [5] => UPDATE xiuno_framework_count SET count = '73' WHERE name='attach' LIMIT 1
+    [6] => SELECT * FROM xiuno_attach WHERE fid='0' AND aid='295' LIMIT 1
+    [7] => INSERT INTO xiuno_attach SET fid='0',tid='0',pid='0',filesize='0',width='0',height='0',filename='',orgfilename='1.gif',filetype='image',dateline='1384085497',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='295'
+    [8] => SELECT * FROM xiuno_kv WHERE k='kc_bcs_conf' LIMIT 1
+    [9] => UPDATE xiuno_attach SET fid='0',tid='0',pid='0',filesize='1361',width='20',height='20',filename='000/000/e6ed5a242f2139ad2fa2fc656897a823.gif',orgfilename='1.gif',filetype='image',dateline='1384085497',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='295' WHERE fid='0' AND aid='295' LIMIT 1
+)
+
+Array
+(
+    [bbs_sid] => fc937019ec05d4a7
+    [bbs_lastday] => 1384058526
+    [bbs_qh_mobile] => 2
+    [bdshare_firstime] => 1384058915425
+    [bbs_page] => 1
+    [bbs_auth] => 7WNL%2BCNkSCuQlNbe9k%2Bz19BkdziZCYwbA9SmlZaMJt%2BZBp5%252FaX1PrGAjZy68Dn2xVRjEwG2dgDI%3D
+    [bbs_admin_auth] => 5ySiPtK840tkgtCh4u0j%252FQC8b84IO%252FC0
+    [bbs_lastonlineupdate] => 1384085245
+    [AJSTAT_ok_pages] => 11
+    [AJSTAT_ok_times] => 2
+    [timeoffset] => +08
+)
+ - 1.181
+
+
+---------------------------------------------------------------------------------
+<?php exit;?>
+---------------------------------------------------------------------------------
+/?ueditor-uploadimage-ajax-1.htm
+POST:Array
+(
+    [dir] => 1
+    [param2] => value2
+    [param1] => value1
+    [fileName] => 11.gif
+    [Filename] => 11.gif
+    [pictitle] => 11.gif
+    [Upload] => Submit Query
+)
+
+SQL:Array
+(
+    [0] => SET names utf8, sql_mode=''
+    [1] => SELECT * FROM xiuno_runtime WHERE k='runtime' LIMIT 1
+    [2] => SELECT * FROM xiuno_group WHERE groupid='1' LIMIT 1
+    [3] => SELECT * FROM xiuno_user WHERE uid='1' LIMIT 1
+    [4] => UPDATE xiuno_framework_maxid SET maxid=maxid+'1' WHERE name='attach' LIMIT 1
+    [5] => UPDATE xiuno_framework_count SET count = '73' WHERE name='attach' LIMIT 1
+    [6] => SELECT * FROM xiuno_attach WHERE fid='0' AND aid='296' LIMIT 1
+    [7] => INSERT INTO xiuno_attach SET fid='0',tid='0',pid='0',filesize='0',width='0',height='0',filename='',orgfilename='11.gif',filetype='image',dateline='1384085603',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='296'
+    [8] => SELECT * FROM xiuno_kv WHERE k='kc_bcs_conf' LIMIT 1
+    [9] => UPDATE xiuno_attach SET fid='0',tid='0',pid='0',filesize='2761',width='20',height='20',filename='000/000/41057ef04dc2ad62adfd2faf223c6c02.gif',orgfilename='11.gif',filetype='image',dateline='1384085603',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='296' WHERE fid='0' AND aid='296' LIMIT 1
+)
+
+Array
+(
+    [bbs_sid] => fc937019ec05d4a7
+    [bbs_lastday] => 1384058526
+    [bbs_qh_mobile] => 2
+    [bdshare_firstime] => 1384058915425
+    [bbs_page] => 1
+    [bbs_auth] => 7WNL%2BCNkSCuQlNbe9k%2Bz19BkdziZCYwbA9SmlZaMJt%2BZBp5%252FaX1PrGAjZy68Dn2xVRjEwG2dgDI%3D
+    [bbs_admin_auth] => 5ySiPtK840tkgtCh4u0j%252FQC8b84IO%252FC0
+    [bbs_lastonlineupdate] => 1384085550
+    [AJSTAT_ok_pages] => 13
+    [AJSTAT_ok_times] => 2
+    [timeoffset] => +08
+)
+ - 1.403
+
+
+---------------------------------------------------------------------------------
+<?php exit;?>
+---------------------------------------------------------------------------------
+/?ueditor-uploadimage-ajax-1.htm
+POST:Array
+(
+    [dir] => 1
+    [param2] => value2
+    [param1] => value1
+    [fileName] => 18.gif
+    [Filename] => 18.gif
+    [pictitle] => 18.gif
+    [Upload] => Submit Query
+)
+
+SQL:Array
+(
+    [0] => SET names utf8, sql_mode=''
+    [1] => SELECT * FROM xiuno_runtime WHERE k='runtime' LIMIT 1
+    [2] => SELECT * FROM xiuno_group WHERE groupid='1' LIMIT 1
+    [3] => SELECT * FROM xiuno_user WHERE uid='1' LIMIT 1
+    [4] => UPDATE xiuno_framework_maxid SET maxid=maxid+'1' WHERE name='attach' LIMIT 1
+    [5] => UPDATE xiuno_framework_count SET count = '73' WHERE name='attach' LIMIT 1
+    [6] => SELECT * FROM xiuno_attach WHERE fid='0' AND aid='297' LIMIT 1
+    [7] => INSERT INTO xiuno_attach SET fid='0',tid='0',pid='0',filesize='0',width='0',height='0',filename='',orgfilename='18.gif',filetype='image',dateline='1384085788',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='297'
+    [8] => SELECT * FROM xiuno_kv WHERE k='kc_bcs_conf' LIMIT 1
+    [9] => UPDATE xiuno_attach SET fid='0',tid='0',pid='0',filesize='1346',width='20',height='20',filename='000/000/3165ff812028096fec2dcfdcbed35cfb.gif',orgfilename='18.gif',filetype='image',dateline='1384085788',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='297' WHERE fid='0' AND aid='297' LIMIT 1
+)
+
+Array
+(
+    [bbs_sid] => fc937019ec05d4a7
+    [bbs_lastday] => 1384058526
+    [bbs_qh_mobile] => 2
+    [bdshare_firstime] => 1384058915425
+    [bbs_page] => 1
+    [bbs_auth] => 7WNL%2BCNkSCuQlNbe9k%2Bz19BkdziZCYwbA9SmlZaMJt%2BZBp5%252FaX1PrGAjZy68Dn2xVRjEwG2dgDI%3D
+    [bbs_admin_auth] => 5ySiPtK840tkgtCh4u0j%252FQC8b84IO%252FC0
+    [bbs_lastonlineupdate] => 1384085550
+    [AJSTAT_ok_pages] => 15
+    [AJSTAT_ok_times] => 2
+    [timeoffset] => +08
+)
+ - 1.329
+
+
+---------------------------------------------------------------------------------
+<?php exit;?>
+---------------------------------------------------------------------------------
+/?ueditor-uploadimage-ajax-1.htm
+POST:Array
+(
+    [dir] => 1
+    [param2] => value2
+    [param1] => value1
+    [fileName] => 18.gif
+    [Filename] => 18.gif
+    [pictitle] => 18.gif
+    [Upload] => Submit Query
+)
+
+SQL:Array
+(
+    [0] => SET names utf8, sql_mode=''
+    [1] => SELECT * FROM xiuno_runtime WHERE k='runtime' LIMIT 1
+    [2] => SELECT * FROM xiuno_group WHERE groupid='1' LIMIT 1
+    [3] => SELECT * FROM xiuno_user WHERE uid='1' LIMIT 1
+    [4] => UPDATE xiuno_framework_maxid SET maxid=maxid+'1' WHERE name='attach' LIMIT 1
+    [5] => UPDATE xiuno_framework_count SET count = '73' WHERE name='attach' LIMIT 1
+    [6] => SELECT * FROM xiuno_attach WHERE fid='0' AND aid='298' LIMIT 1
+    [7] => INSERT INTO xiuno_attach SET fid='0',tid='0',pid='0',filesize='0',width='0',height='0',filename='',orgfilename='18.gif',filetype='image',dateline='1384085962',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='298'
+    [8] => SELECT * FROM xiuno_kv WHERE k='kc_bcs_conf' LIMIT 1
+    [9] => UPDATE xiuno_attach SET fid='0',tid='0',pid='0',filesize='1346',width='20',height='20',filename='000/000/469dcc61f1db899cd2898d3a328440dd.gif',orgfilename='18.gif',filetype='image',dateline='1384085962',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='298' WHERE fid='0' AND aid='298' LIMIT 1
+)
+
+Array
+(
+    [bbs_sid] => fc937019ec05d4a7
+    [bbs_lastday] => 1384058526
+    [bbs_qh_mobile] => 2
+    [bdshare_firstime] => 1384058915425
+    [bbs_auth] => 7WNL%2BCNkSCuQlNbe9k%2Bz19BkdziZCYwbA9SmlZaMJt%2BZBp5%252FaX1PrGAjZy68Dn2xVRjEwG2dgDI%3D
+    [bbs_admin_auth] => 5ySiPtK840tkgtCh4u0j%252FQC8b84IO%252FC0
+    [bbs_lastonlineupdate] => 1384085884
+    [bbs_page] => 1
+    [AJSTAT_ok_pages] => 17
+    [AJSTAT_ok_times] => 2
+    [timeoffset] => +08
+)
+ - 1.090
+
+
+---------------------------------------------------------------------------------
+<?php exit;?>
+---------------------------------------------------------------------------------
+/?ueditor-uploadimage-ajax-1.htm
+POST:Array
+(
+    [dir] => 1
+    [param2] => value2
+    [param1] => value1
+    [fileName] => 11.gif
+    [Filename] => 11.gif
+    [pictitle] => 11.gif
+    [Upload] => Submit Query
+)
+
+SQL:Array
+(
+    [0] => SET names utf8, sql_mode=''
+    [1] => SELECT * FROM xiuno_runtime WHERE k='runtime' LIMIT 1
+    [2] => SELECT * FROM xiuno_group WHERE groupid='1' LIMIT 1
+    [3] => SELECT * FROM xiuno_user WHERE uid='1' LIMIT 1
+    [4] => UPDATE xiuno_framework_maxid SET maxid=maxid+'1' WHERE name='attach' LIMIT 1
+    [5] => UPDATE xiuno_framework_count SET count = '74' WHERE name='attach' LIMIT 1
+    [6] => SELECT * FROM xiuno_attach WHERE fid='0' AND aid='299' LIMIT 1
+    [7] => INSERT INTO xiuno_attach SET fid='0',tid='0',pid='0',filesize='0',width='0',height='0',filename='',orgfilename='11.gif',filetype='image',dateline='1384086225',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='299'
+    [8] => SELECT * FROM xiuno_kv WHERE k='kc_bcs_conf' LIMIT 1
+    [9] => UPDATE xiuno_attach SET fid='0',tid='0',pid='0',filesize='2761',width='20',height='20',filename='000/000/4c65384adb611dc6b048974cd01b6212.gif',orgfilename='11.gif',filetype='image',dateline='1384086225',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='299' WHERE fid='0' AND aid='299' LIMIT 1
+)
+
+Array
+(
+    [bbs_sid] => fc937019ec05d4a7
+    [bbs_lastday] => 1384058526
+    [bbs_qh_mobile] => 2
+    [bdshare_firstime] => 1384058915425
+    [bbs_auth] => 7WNL%2BCNkSCuQlNbe9k%2Bz19BkdziZCYwbA9SmlZaMJt%2BZBp5%252FaX1PrGAjZy68Dn2xVRjEwG2dgDI%3D
+    [bbs_admin_auth] => 5ySiPtK840tkgtCh4u0j%252FQC8b84IO%252FC0
+    [bbs_page] => 1
+    [AJSTAT_ok_pages] => 21
+    [AJSTAT_ok_times] => 2
+    [timeoffset] => +08
+    [bbs_lastonlineupdate] => 1384086203
+)
+ - 1.953
+
+
+---------------------------------------------------------------------------------
+<?php exit;?>
+---------------------------------------------------------------------------------
+/?ueditor-uploadimage-ajax-1.htm
+POST:Array
+(
+    [param2] => value2
+    [param1] => value1
+    [fileName] => LOGO_64x64.png
+    [dir] => 1
+    [Filename] => LOGO_64x64.png
+    [pictitle] => LOGO_64x64.png
+    [Upload] => Submit Query
+)
+
+SQL:Array
+(
+    [0] => SET names utf8, sql_mode=''
+    [1] => SELECT * FROM xiuno_runtime WHERE k='runtime' LIMIT 1
+    [2] => SELECT channelid FROM xiuno_cms_channel LIMIT 0, 20
+    [3] => SELECT * FROM xiuno_cms_channel WHERE channelid='1'
+    [4] => SELECT * FROM xiuno_group WHERE groupid='1' LIMIT 1
+    [5] => SELECT * FROM xiuno_user WHERE uid='1' LIMIT 1
+    [6] => UPDATE xiuno_framework_maxid SET maxid=maxid+'1' WHERE name='attach' LIMIT 1
+    [7] => UPDATE xiuno_framework_count SET count = '76' WHERE name='attach' LIMIT 1
+    [8] => SELECT * FROM xiuno_attach WHERE fid='0' AND aid='301' LIMIT 1
+    [9] => INSERT INTO xiuno_attach SET fid='0',tid='0',pid='0',filesize='0',width='0',height='0',filename='',orgfilename='LOGO_64x64.png',filetype='image',dateline='1384426532',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='301'
+    [10] => SELECT * FROM xiuno_kv WHERE k='kc_bcs_conf' LIMIT 1
+    [11] => UPDATE xiuno_attach SET fid='0',tid='0',pid='0',filesize='3469',width='64',height='64',filename='000/000/c1a59b65b9b11e69a776e8030a426d6c.png',orgfilename='LOGO_64x64.png',filetype='image',dateline='1384426532',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='301' WHERE fid='0' AND aid='301' LIMIT 1
+)
+
+Array
+(
+    [bbs_sid] => fc937019ec05d4a7
+    [bbs_qh_mobile] => 2
+    [bdshare_firstime] => 1384058915425
+    [bbs_auth] => 7WNL%2BCNkSCuQlNbe9k%2Bz19BkdziZCYwbA9SmlZaMJt%2BZBp5%252FaX1PrGAjZy68Dn2xVRjEwG2dgDI%3D
+    [MUSIC_CUS] => xiami_mb
+    [bbs_lastday] => 1384420150
+    [bbs_admin_auth] => M4Pb6xcGc%252Fujv3CcGZKMWnF42OKnEz5X
+    [bbs_page] => 1
+    [AJSTAT_ok_pages] => 7
+    [AJSTAT_ok_times] => 14
+    [timeoffset] => +08
+    [jiathis_rdc] => {"http://127.0.0.1/thread-index-fid-5-tid-204.htm":0|1384424663882,"http://127.0.0.1/thread-index-fid-5-tid-208-typeid1-0-typeid2-164-typeid3-0-typeid4-0.htm":"0|1384426229176"}
+    [bbs_lastonlineupdate] => 1384426517
+)
+ - 0.639
+
+
+---------------------------------------------------------------------------------
+<?php exit;?>
+---------------------------------------------------------------------------------
+/?ueditor-uploadimage-ajax-1.htm
+POST:Array
+(
+    [dir] => 1
+    [param2] => value2
+    [param1] => value1
+    [fileName] => avatar_huge.gif
+    [Filename] => avatar_huge.gif
+    [pictitle] => avatar_huge.gif
+    [Upload] => Submit Query
+)
+
+SQL:Array
+(
+    [0] => SET names utf8, sql_mode=''
+    [1] => SELECT * FROM xiuno_runtime WHERE k='runtime' LIMIT 1
+    [2] => SELECT channelid FROM xiuno_cms_channel LIMIT 0, 20
+    [3] => SELECT * FROM xiuno_cms_channel WHERE channelid='1'
+    [4] => SELECT * FROM xiuno_group WHERE groupid='1' LIMIT 1
+    [5] => SELECT * FROM xiuno_user WHERE uid='1' LIMIT 1
+    [6] => UPDATE xiuno_framework_maxid SET maxid=maxid+'1' WHERE name='attach' LIMIT 1
+    [7] => UPDATE xiuno_framework_count SET count = '77' WHERE name='attach' LIMIT 1
+    [8] => SELECT * FROM xiuno_attach WHERE fid='0' AND aid='302' LIMIT 1
+    [9] => INSERT INTO xiuno_attach SET fid='0',tid='0',pid='0',filesize='0',width='0',height='0',filename='',orgfilename='avatar_huge.gif',filetype='image',dateline='1384498647',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='302'
+    [10] => SELECT * FROM xiuno_kv WHERE k='kc_bcs_conf' LIMIT 1
+    [11] => UPDATE xiuno_attach SET fid='0',tid='0',pid='0',filesize='8788',width='120',height='120',filename='000/000/63ae6d3cb4e12d2ceab9a8264c7e57e4.gif',orgfilename='avatar_huge.gif',filetype='image',dateline='1384498647',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='302' WHERE fid='0' AND aid='302' LIMIT 1
+)
+
+Array
+(
+    [bbs_sid] => fc937019ec05d4a7
+    [bbs_qh_mobile] => 2
+    [bdshare_firstime] => 1384058915425
+    [bbs_auth] => 7WNL%2BCNkSCuQlNbe9k%2Bz19BkdziZCYwbA9SmlZaMJt%2BZBp5%252FaX1PrGAjZy68Dn2xVRjEwG2dgDI%3D
+    [MUSIC_CUS] => xiami_mb
+    [bbs_lastday] => 1384420150
+    [bbs_page] => 1
+    [AJSTAT_ok_pages] => 4
+    [AJSTAT_ok_times] => 17
+    [timeoffset] => +08
+    [jiathis_rdc] => {"http://127.0.0.1/thread-index-fid-5-tid-207.htm":"0|1384498331951"}
+    [bbs_lastonlineupdate] => 1384498616
+)
+ - 0.784
+
+
+---------------------------------------------------------------------------------
+<?php exit;?>
+---------------------------------------------------------------------------------
+/?ueditor-uploadimage-ajax-1.htm
+POST:Array
+(
+    [dir] => 1
+    [param2] => value2
+    [param1] => value1
+    [fileName] => avatar_huge.gif
+    [Filename] => avatar_huge.gif
+    [pictitle] => avatar_huge.gif
+    [Upload] => Submit Query
+)
+
+SQL:Array
+(
+    [0] => SET names utf8, sql_mode=''
+    [1] => SELECT * FROM xiuno_runtime WHERE k='runtime' LIMIT 1
+    [2] => SELECT channelid FROM xiuno_cms_channel LIMIT 0, 20
+    [3] => SELECT * FROM xiuno_cms_channel WHERE channelid='1'
+    [4] => SELECT * FROM xiuno_group WHERE groupid='1' LIMIT 1
+    [5] => SELECT * FROM xiuno_user WHERE uid='1' LIMIT 1
+    [6] => UPDATE xiuno_framework_maxid SET maxid=maxid+'1' WHERE name='attach' LIMIT 1
+    [7] => UPDATE xiuno_framework_count SET count = '78' WHERE name='attach' LIMIT 1
+    [8] => SELECT * FROM xiuno_attach WHERE fid='0' AND aid='303' LIMIT 1
+    [9] => INSERT INTO xiuno_attach SET fid='0',tid='0',pid='0',filesize='0',width='0',height='0',filename='',orgfilename='avatar_huge.gif',filetype='image',dateline='1384500621',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='303'
+    [10] => SELECT * FROM xiuno_kv WHERE k='kc_bcs_conf' LIMIT 1
+    [11] => UPDATE xiuno_attach SET fid='0',tid='0',pid='0',filesize='8788',width='120',height='120',filename='000/000/b108eaf32e639dcb3798549775663343.gif',orgfilename='avatar_huge.gif',filetype='image',dateline='1384500621',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='303' WHERE fid='0' AND aid='303' LIMIT 1
+)
+
+Array
+(
+    [bbs_sid] => fc937019ec05d4a7
+    [bbs_qh_mobile] => 2
+    [bdshare_firstime] => 1384058915425
+    [bbs_auth] => 7WNL%2BCNkSCuQlNbe9k%2Bz19BkdziZCYwbA9SmlZaMJt%2BZBp5%252FaX1PrGAjZy68Dn2xVRjEwG2dgDI%3D
+    [MUSIC_CUS] => xiami_mb
+    [bbs_lastday] => 1384420150
+    [bbs_page] => 1
+    [AJSTAT_ok_pages] => 7
+    [AJSTAT_ok_times] => 17
+    [timeoffset] => +08
+    [jiathis_rdc] => {"http://127.0.0.1/thread-index-fid-5-tid-207.htm":1518862639,"http://127.0.0.1/thread-index-fid-5-tid-207-page-1-scrollbottom-1.htm":0|1384498658121,"http://127.0.0.1/thread-index-fid-5-tid-194.htm":"0|1384498843640"}
+    [bbs_lastonlineupdate] => 1384500612
+)
+ - 1.448
+
+
+---------------------------------------------------------------------------------
+<?php exit;?>
+---------------------------------------------------------------------------------
+/?ueditor-uploadimage-ajax-1.htm
+POST:Array
+(
+    [dir] => 1
+    [param2] => value2
+    [param1] => value1
+    [fileName] => LOGO_64x64.png
+    [Filename] => LOGO_64x64.png
+    [pictitle] => LOGO_64x64.png
+    [Upload] => Submit Query
+)
+
+SQL:Array
+(
+    [0] => SET names utf8, sql_mode=''
+    [1] => SELECT * FROM xiuno_runtime WHERE k='runtime' LIMIT 1
+    [2] => SELECT channelid FROM xiuno_cms_channel LIMIT 0, 20
+    [3] => SELECT * FROM xiuno_cms_channel WHERE channelid='1'
+    [4] => SELECT * FROM xiuno_group WHERE groupid='1' LIMIT 1
+    [5] => SELECT * FROM xiuno_user WHERE uid='1' LIMIT 1
+    [6] => UPDATE xiuno_framework_maxid SET maxid=maxid+'1' WHERE name='attach' LIMIT 1
+    [7] => UPDATE xiuno_framework_count SET count = '79' WHERE name='attach' LIMIT 1
+    [8] => SELECT * FROM xiuno_attach WHERE fid='0' AND aid='304' LIMIT 1
+    [9] => INSERT INTO xiuno_attach SET fid='0',tid='0',pid='0',filesize='0',width='0',height='0',filename='',orgfilename='LOGO_64x64.png',filetype='image',dateline='1384500678',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='304'
+    [10] => SELECT * FROM xiuno_kv WHERE k='kc_bcs_conf' LIMIT 1
+    [11] => UPDATE xiuno_attach SET fid='0',tid='0',pid='0',filesize='3469',width='64',height='64',filename='000/000/1c2545698c2276b0f5ff5fa0808f5aa7.png',orgfilename='LOGO_64x64.png',filetype='image',dateline='1384500678',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='304' WHERE fid='0' AND aid='304' LIMIT 1
+)
+
+Array
+(
+    [bbs_sid] => fc937019ec05d4a7
+    [bbs_qh_mobile] => 2
+    [bdshare_firstime] => 1384058915425
+    [bbs_auth] => 7WNL%2BCNkSCuQlNbe9k%2Bz19BkdziZCYwbA9SmlZaMJt%2BZBp5%252FaX1PrGAjZy68Dn2xVRjEwG2dgDI%3D
+    [MUSIC_CUS] => xiami_mb
+    [bbs_lastday] => 1384420150
+    [bbs_page] => 1
+    [bbs_lastonlineupdate] => 1384500612
+    [AJSTAT_ok_pages] => 8
+    [AJSTAT_ok_times] => 17
+    [timeoffset] => +08
+    [jiathis_rdc] => {"http://127.0.0.1/thread-index-fid-5-tid-207.htm":1518862639,"http://127.0.0.1/thread-index-fid-5-tid-207-page-1-scrollbottom-1.htm":1519188809,"http://127.0.0.1/thread-index-fid-5-tid-194.htm":0|1384498843640,"http://127.0.0.1/thread-index-fid-5-tid-194-page-1-scrollbottom-1.htm":"0|1384500640957"}
+)
+ - 1.285
+
+
+---------------------------------------------------------------------------------
+<?php exit;?>
+---------------------------------------------------------------------------------
+/?ueditor-uploadimage-ajax-1.htm
+POST:Array
+(
+    [dir] => 1
+    [fileName] => logo.jpg
+    [param2] => value2
+    [param1] => value1
+    [Filename] => logo.jpg
+    [pictitle] => logo.jpg
+    [Upload] => Submit Query
+)
+
+SQL:Array
+(
+    [0] => SET names utf8, sql_mode=''
+    [1] => SELECT * FROM xiuno_runtime WHERE k='runtime' LIMIT 1
+    [2] => SELECT channelid FROM xiuno_cms_channel LIMIT 0, 20
+    [3] => SELECT * FROM xiuno_cms_channel WHERE channelid='1'
+    [4] => SELECT * FROM xiuno_group WHERE groupid='1' LIMIT 1
+    [5] => SELECT * FROM xiuno_user WHERE uid='1' LIMIT 1
+    [6] => UPDATE xiuno_framework_maxid SET maxid=maxid+'1' WHERE name='attach' LIMIT 1
+    [7] => UPDATE xiuno_framework_count SET count = '80' WHERE name='attach' LIMIT 1
+    [8] => SELECT * FROM xiuno_attach WHERE fid='0' AND aid='305' LIMIT 1
+    [9] => INSERT INTO xiuno_attach SET fid='0',tid='0',pid='0',filesize='0',width='0',height='0',filename='',orgfilename='logo.jpg',filetype='image',dateline='1384500871',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='305'
+    [10] => SELECT * FROM xiuno_kv WHERE k='kc_bcs_conf' LIMIT 1
+    [11] => UPDATE xiuno_attach SET fid='0',tid='0',pid='0',filesize='27691',width='800',height='800',filename='000/000/5d3c9ca05e9765204683ae31dbebc2a8.jpg',orgfilename='logo.jpg',filetype='image',dateline='1384500871',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='305' WHERE fid='0' AND aid='305' LIMIT 1
+)
+
+Array
+(
+    [bbs_sid] => fc937019ec05d4a7
+    [bbs_qh_mobile] => 2
+    [bdshare_firstime] => 1384058915425
+    [bbs_auth] => 7WNL%2BCNkSCuQlNbe9k%2Bz19BkdziZCYwbA9SmlZaMJt%2BZBp5%252FaX1PrGAjZy68Dn2xVRjEwG2dgDI%3D
+    [MUSIC_CUS] => xiami_mb
+    [bbs_lastday] => 1384420150
+    [bbs_page] => 1
+    [bbs_lastonlineupdate] => 1384500612
+    [jiathis_rdc] => {"http://127.0.0.1/thread-index-fid-5-tid-207.htm":1518862639,"http://127.0.0.1/thread-index-fid-5-tid-207-page-1-scrollbottom-1.htm":1519188809,"http://127.0.0.1/thread-index-fid-5-tid-194.htm":0|1384498843640,"http://127.0.0.1/thread-index-fid-5-tid-194-page-1-scrollbottom-1.htm":"0|1384500640957"}
+    [AJSTAT_ok_pages] => 9
+    [AJSTAT_ok_times] => 17
+    [timeoffset] => +08
+)
+ - 0.996
+
+
+---------------------------------------------------------------------------------
+<?php exit;?>
+---------------------------------------------------------------------------------
+/?ueditor-uploadimage-ajax-1.htm
+POST:Array
+(
+    [dir] => 1
+    [param2] => value2
+    [param1] => value1
+    [fileName] => LOGO_64x64.png
+    [Filename] => LOGO_64x64.png
+    [pictitle] => LOGO_64x64.png
+    [Upload] => Submit Query
+)
+
+SQL:Array
+(
+    [0] => SET names utf8, sql_mode=''
+    [1] => SELECT * FROM xiuno_runtime WHERE k='runtime' LIMIT 1
+    [2] => SELECT channelid FROM xiuno_cms_channel LIMIT 0, 20
+    [3] => SELECT * FROM xiuno_cms_channel WHERE channelid='1'
+    [4] => SELECT * FROM xiuno_group WHERE groupid='1' LIMIT 1
+    [5] => SELECT * FROM xiuno_user WHERE uid='1' LIMIT 1
+    [6] => UPDATE xiuno_framework_maxid SET maxid=maxid+'1' WHERE name='attach' LIMIT 1
+    [7] => UPDATE xiuno_framework_count SET count = '81' WHERE name='attach' LIMIT 1
+    [8] => SELECT * FROM xiuno_attach WHERE fid='0' AND aid='306' LIMIT 1
+    [9] => INSERT INTO xiuno_attach SET fid='0',tid='0',pid='0',filesize='0',width='0',height='0',filename='',orgfilename='LOGO_64x64.png',filetype='image',dateline='1384501592',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='306'
+    [10] => SELECT * FROM xiuno_kv WHERE k='kc_bcs_conf' LIMIT 1
+    [11] => UPDATE xiuno_attach SET fid='0',tid='0',pid='0',filesize='3469',width='64',height='64',filename='000/000/0d2b7018b1ab8df0e2d81cf1ec8cf2de.png',orgfilename='LOGO_64x64.png',filetype='image',dateline='1384501592',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='306' WHERE fid='0' AND aid='306' LIMIT 1
+)
+
+Array
+(
+    [bbs_sid] => fc937019ec05d4a7
+    [bbs_qh_mobile] => 2
+    [bdshare_firstime] => 1384058915425
+    [bbs_auth] => 7WNL%2BCNkSCuQlNbe9k%2Bz19BkdziZCYwbA9SmlZaMJt%2BZBp5%252FaX1PrGAjZy68Dn2xVRjEwG2dgDI%3D
+    [MUSIC_CUS] => xiami_mb
+    [bbs_lastday] => 1384420150
+    [bbs_page] => 1
+    [AJSTAT_ok_pages] => 10
+    [AJSTAT_ok_times] => 17
+    [timeoffset] => +08
+    [jiathis_rdc] => {"http://127.0.0.1/thread-index-fid-5-tid-207.htm":1518862639,"http://127.0.0.1/thread-index-fid-5-tid-207-page-1-scrollbottom-1.htm":1519188809,"http://127.0.0.1/thread-index-fid-5-tid-194.htm":1519374328,"http://127.0.0.1/thread-index-fid-5-tid-194-page-1-scrollbottom-1.htm":"0|1384500896128"}
+    [bbs_lastonlineupdate] => 1384501541
+)
+ - 1.322
+
+
+---------------------------------------------------------------------------------
+<?php exit;?>
+---------------------------------------------------------------------------------
+/?ueditor-uploadimage-ajax-1.htm
+POST:Array
+(
+    [dir] => 1
+    [fileName] => 1312038972402.jpg
+    [param2] => value2
+    [param1] => value1
+    [Filename] => 1312038972402.jpg
+    [pictitle] => 1312038972402.jpg
+    [Upload] => Submit Query
+)
+
+SQL:Array
+(
+    [0] => SET names utf8, sql_mode=''
+    [1] => SELECT * FROM xiuno_runtime WHERE k='runtime' LIMIT 1
+    [2] => SELECT channelid FROM xiuno_cms_channel LIMIT 0, 20
+    [3] => SELECT * FROM xiuno_cms_channel WHERE channelid='1'
+    [4] => SELECT * FROM xiuno_group WHERE groupid='1' LIMIT 1
+    [5] => SELECT * FROM xiuno_user WHERE uid='1' LIMIT 1
+    [6] => UPDATE xiuno_framework_maxid SET maxid=maxid+'1' WHERE name='attach' LIMIT 1
+    [7] => UPDATE xiuno_framework_count SET count = '82' WHERE name='attach' LIMIT 1
+    [8] => SELECT * FROM xiuno_attach WHERE fid='0' AND aid='307' LIMIT 1
+    [9] => INSERT INTO xiuno_attach SET fid='0',tid='0',pid='0',filesize='0',width='0',height='0',filename='',orgfilename='1312038972402.jpg',filetype='image',dateline='1384502999',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='307'
+    [10] => SELECT * FROM xiuno_kv WHERE k='kc_bcs_conf' LIMIT 1
+    [11] => UPDATE xiuno_attach SET fid='0',tid='0',pid='0',filesize='53243',width='848',height='259',filename='000/000/9b6ff595a9e5e6492a8b7bd433a0a5d6.jpg',orgfilename='1312038972402.jpg',filetype='image',dateline='1384502999',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='307' WHERE fid='0' AND aid='307' LIMIT 1
+)
+
+Array
+(
+    [bbs_sid] => fc937019ec05d4a7
+    [bbs_qh_mobile] => 2
+    [bdshare_firstime] => 1384058915425
+    [bbs_auth] => 7WNL%2BCNkSCuQlNbe9k%2Bz19BkdziZCYwbA9SmlZaMJt%2BZBp5%252FaX1PrGAjZy68Dn2xVRjEwG2dgDI%3D
+    [MUSIC_CUS] => xiami_mb
+    [bbs_lastday] => 1384420150
+    [bbs_page] => 1
+    [AJSTAT_ok_pages] => 11
+    [AJSTAT_ok_times] => 17
+    [timeoffset] => +08
+    [jiathis_rdc] => {"http://127.0.0.1/thread-index-fid-5-tid-207.htm":1518862639,"http://127.0.0.1/thread-index-fid-5-tid-207-page-1-scrollbottom-1.htm":1519188809,"http://127.0.0.1/thread-index-fid-5-tid-194.htm":1519374328,"http://127.0.0.1/thread-index-fid-5-tid-194-page-1-scrollbottom-1.htm":"0|1384501615253"}
+    [bbs_lastonlineupdate] => 1384502902
+)
+ - 1.356
+
+
+---------------------------------------------------------------------------------
+<?php exit;?>
+---------------------------------------------------------------------------------
+/?ueditor-uploadimage-ajax-1.htm
+POST:Array
+(
+    [dir] => 1
+    [param2] => value2
+    [param1] => value1
+    [fileName] => 16-16.png
+    [Filename] => 16-16.png
+    [pictitle] => 16-16.png
+    [Upload] => Submit Query
+)
+
+SQL:Array
+(
+    [0] => SET names utf8, sql_mode=''
+    [1] => SELECT * FROM xiuno_runtime WHERE k='runtime' LIMIT 1
+    [2] => SELECT channelid FROM xiuno_cms_channel LIMIT 0, 20
+    [3] => SELECT * FROM xiuno_cms_channel WHERE channelid='1'
+    [4] => SELECT * FROM xiuno_group WHERE groupid='1' LIMIT 1
+    [5] => SELECT * FROM xiuno_user WHERE uid='1' LIMIT 1
+    [6] => UPDATE xiuno_framework_maxid SET maxid=maxid+'1' WHERE name='attach' LIMIT 1
+    [7] => UPDATE xiuno_framework_count SET count = '83' WHERE name='attach' LIMIT 1
+    [8] => SELECT * FROM xiuno_attach WHERE fid='0' AND aid='308' LIMIT 1
+    [9] => INSERT INTO xiuno_attach SET fid='0',tid='0',pid='0',filesize='0',width='0',height='0',filename='',orgfilename='16-16.png',filetype='image',dateline='1384504511',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='308'
+    [10] => SELECT * FROM xiuno_kv WHERE k='kc_bcs_conf' LIMIT 1
+    [11] => UPDATE xiuno_attach SET fid='0',tid='0',pid='0',filesize='89',width='16',height='16',filename='000/000/7a522211a54006f957a8d3e34fe50da3.png',orgfilename='16-16.png',filetype='image',dateline='1384504511',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='308' WHERE fid='0' AND aid='308' LIMIT 1
+)
+
+Array
+(
+    [bbs_sid] => fc937019ec05d4a7
+    [bbs_qh_mobile] => 2
+    [bdshare_firstime] => 1384058915425
+    [bbs_auth] => 7WNL%2BCNkSCuQlNbe9k%2Bz19BkdziZCYwbA9SmlZaMJt%2BZBp5%252FaX1PrGAjZy68Dn2xVRjEwG2dgDI%3D
+    [MUSIC_CUS] => xiami_mb
+    [bbs_lastday] => 1384420150
+    [bbs_page] => 1
+    [AJSTAT_ok_pages] => 12
+    [AJSTAT_ok_times] => 17
+    [timeoffset] => +08
+    [jiathis_rdc] => {"http://127.0.0.1/thread-index-fid-5-tid-207.htm":1518862639,"http://127.0.0.1/thread-index-fid-5-tid-207-page-1-scrollbottom-1.htm":1519188809,"http://127.0.0.1/thread-index-fid-5-tid-194.htm":1519374328,"http://127.0.0.1/thread-index-fid-5-tid-194-page-1-scrollbottom-1.htm":"0|1384503023287"}
+    [bbs_lastonlineupdate] => 1384504309
+)
+ - 1.201
+
+
+---------------------------------------------------------------------------------
+<?php exit;?>
+---------------------------------------------------------------------------------
+/?ueditor-uploadimage-ajax-1.htm
+POST:Array
+(
+    [dir] => 1
+    [param2] => value2
+    [param1] => value1
+    [fileName] => 16-16.png
+    [Filename] => 16-16.png
+    [pictitle] => 16-16.png
+    [Upload] => Submit Query
+)
+
+SQL:Array
+(
+    [0] => SET names utf8, sql_mode=''
+    [1] => SELECT * FROM xiuno_runtime WHERE k='runtime' LIMIT 1
+    [2] => SELECT channelid FROM xiuno_cms_channel LIMIT 0, 20
+    [3] => SELECT * FROM xiuno_cms_channel WHERE channelid='1'
+    [4] => SELECT * FROM xiuno_group WHERE groupid='1' LIMIT 1
+    [5] => SELECT * FROM xiuno_user WHERE uid='1' LIMIT 1
+    [6] => UPDATE xiuno_framework_maxid SET maxid=maxid+'1' WHERE name='attach' LIMIT 1
+    [7] => UPDATE xiuno_framework_count SET count = '84' WHERE name='attach' LIMIT 1
+    [8] => SELECT * FROM xiuno_attach WHERE fid='0' AND aid='309' LIMIT 1
+    [9] => INSERT INTO xiuno_attach SET fid='0',tid='0',pid='0',filesize='0',width='0',height='0',filename='',orgfilename='16-16.png',filetype='image',dateline='1384505052',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='309'
+    [10] => SELECT * FROM xiuno_kv WHERE k='kc_bcs_conf' LIMIT 1
+    [11] => UPDATE xiuno_attach SET fid='0',tid='0',pid='0',filesize='89',width='16',height='16',filename='000/000/bae9ca208896821607c243203f09d849.png',orgfilename='16-16.png',filetype='image',dateline='1384505052',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='309' WHERE fid='0' AND aid='309' LIMIT 1
+)
+
+Array
+(
+    [bbs_sid] => fc937019ec05d4a7
+    [bbs_qh_mobile] => 2
+    [bdshare_firstime] => 1384058915425
+    [bbs_auth] => 7WNL%2BCNkSCuQlNbe9k%2Bz19BkdziZCYwbA9SmlZaMJt%2BZBp5%252FaX1PrGAjZy68Dn2xVRjEwG2dgDI%3D
+    [MUSIC_CUS] => xiami_mb
+    [bbs_lastday] => 1384420150
+    [bbs_page] => 1
+    [AJSTAT_ok_pages] => 13
+    [AJSTAT_ok_times] => 17
+    [timeoffset] => +08
+    [jiathis_rdc] => {"http://127.0.0.1/thread-index-fid-5-tid-207.htm":1518862639,"http://127.0.0.1/thread-index-fid-5-tid-207-page-1-scrollbottom-1.htm":1519188809,"http://127.0.0.1/thread-index-fid-5-tid-194.htm":1519374328,"http://127.0.0.1/thread-index-fid-5-tid-194-page-1-scrollbottom-1.htm":"0|1384504532030"}
+    [bbs_lastonlineupdate] => 1384505028
+)
+ - 1.473
+
+
+---------------------------------------------------------------------------------
+<?php exit;?>
+---------------------------------------------------------------------------------
+/?ueditor-uploadimage-ajax-1.htm
+POST:Array
+(
+    [dir] => 1
+    [param2] => value2
+    [param1] => value1
+    [fileName] => 16-16.png
+    [Filename] => 16-16.png
+    [pictitle] => 16-16.png
+    [Upload] => Submit Query
+)
+
+SQL:Array
+(
+    [0] => SET names utf8, sql_mode=''
+    [1] => SELECT * FROM xiuno_runtime WHERE k='runtime' LIMIT 1
+    [2] => SELECT channelid FROM xiuno_cms_channel LIMIT 0, 20
+    [3] => SELECT * FROM xiuno_cms_channel WHERE channelid='1'
+    [4] => SELECT * FROM xiuno_group WHERE groupid='1' LIMIT 1
+    [5] => SELECT * FROM xiuno_user WHERE uid='1' LIMIT 1
+    [6] => UPDATE xiuno_framework_maxid SET maxid=maxid+'1' WHERE name='attach' LIMIT 1
+    [7] => UPDATE xiuno_framework_count SET count = '85' WHERE name='attach' LIMIT 1
+    [8] => SELECT * FROM xiuno_attach WHERE fid='0' AND aid='310' LIMIT 1
+    [9] => INSERT INTO xiuno_attach SET fid='0',tid='0',pid='0',filesize='0',width='0',height='0',filename='',orgfilename='16-16.png',filetype='image',dateline='1384576966',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='310'
+    [10] => SELECT * FROM xiuno_kv WHERE k='kc_bcs_conf' LIMIT 1
+    [11] => UPDATE xiuno_attach SET fid='0',tid='0',pid='0',filesize='89',width='16',height='16',filename='000/000/55db64b6def141e4427760023c849cdc.png',orgfilename='16-16.png',filetype='image',dateline='1384576966',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='310' WHERE fid='0' AND aid='310' LIMIT 1
+)
+
+Array
+(
+    [bbs_sid] => fc937019ec05d4a7
+    [bbs_qh_mobile] => 2
+    [bdshare_firstime] => 1384058915425
+    [bbs_auth] => 7WNL%2BCNkSCuQlNbe9k%2Bz19BkdziZCYwbA9SmlZaMJt%2BZBp5%252FaX1PrGAjZy68Dn2xVRjEwG2dgDI%3D
+    [MUSIC_CUS] => xiami_mb
+    [bbs_lastday] => 1384506555
+    [bbs_page] => 1
+    [AJSTAT_ok_pages] => 3
+    [AJSTAT_ok_times] => 18
+    [bbs_lastonlineupdate] => 1384576898
+    [timeoffset] => +08
+)
+ - 1.242
+
+
+---------------------------------------------------------------------------------
+<?php exit;?>
+---------------------------------------------------------------------------------
+/?ueditor-uploadimage-ajax-1.htm
+POST:Array
+(
+    [dir] => 1
+    [fileName] => 6.jpg
+    [param2] => value2
+    [param1] => value1
+    [Filename] => 6.jpg
+    [pictitle] => 6.jpg
+    [Upload] => Submit Query
+)
+
+SQL:Array
+(
+    [0] => SET names utf8, sql_mode=''
+    [1] => SELECT * FROM xiuno_runtime WHERE k='runtime' LIMIT 1
+    [2] => SELECT channelid FROM xiuno_cms_channel LIMIT 0, 20
+    [3] => SELECT * FROM xiuno_cms_channel WHERE channelid='1'
+    [4] => SELECT * FROM xiuno_group WHERE groupid='1' LIMIT 1
+    [5] => SELECT * FROM xiuno_user WHERE uid='1' LIMIT 1
+    [6] => UPDATE xiuno_framework_maxid SET maxid=maxid+'1' WHERE name='attach' LIMIT 1
+    [7] => UPDATE xiuno_framework_count SET count = '86' WHERE name='attach' LIMIT 1
+    [8] => SELECT * FROM xiuno_attach WHERE fid='0' AND aid='311' LIMIT 1
+    [9] => INSERT INTO xiuno_attach SET fid='0',tid='0',pid='0',filesize='0',width='0',height='0',filename='',orgfilename='6.jpg',filetype='image',dateline='1384577368',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='311'
+    [10] => SELECT * FROM xiuno_kv WHERE k='kc_bcs_conf' LIMIT 1
+    [11] => UPDATE xiuno_attach SET fid='0',tid='0',pid='0',filesize='112208',width='1112',height='707',filename='000/000/2c959e83f9586ba97dac9586794f4385.jpg',orgfilename='6.jpg',filetype='image',dateline='1384577368',comment='',downloads='0',isimage='1',golds='0',uid='1',aid='311' WHERE fid='0' AND aid='311' LIMIT 1
+)
+
+Array
+(
+    [bbs_sid] => fc937019ec05d4a7
+    [bbs_qh_mobile] => 2
+    [bdshare_firstime] => 1384058915425
+    [bbs_auth] => 7WNL%2BCNkSCuQlNbe9k%2Bz19BkdziZCYwbA9SmlZaMJt%2BZBp5%252FaX1PrGAjZy68Dn2xVRjEwG2dgDI%3D
+    [MUSIC_CUS] => xiami_mb
+    [bbs_lastday] => 1384506555
+    [bbs_page] => 1
+    [AJSTAT_ok_pages] => 3
+    [AJSTAT_ok_times] => 18
+    [bbs_lastonlineupdate] => 1384577315
+    [timeoffset] => +08
+)
+ - 1.134
