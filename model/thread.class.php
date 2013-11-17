@@ -59,6 +59,7 @@ class thread extends base_model {
 		if($error) {
 			return $error;
 		}
+		$subject = trim($subject);
 		if(empty($subject)) {
 			return '标题不能为空。';
 		}
