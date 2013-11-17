@@ -1,8 +1,8 @@
 
-UL,LI{PADDING: 0px;MARGIN: 0px;}
-UL LI {LIST-STYLE-TYPE: none}
-a{color:#333;text-decoration:none;}
-a:hover{color:#f30;}
+.TopBottomMenu UL,LI{PADDING: 0px;MARGIN: 0px;}
+.TopBottomMenu UL LI {LIST-STYLE-TYPE: none}
+.TopBottomMenu a{color:#333;text-decoration:none;}
+.TopBottomMenu a:hover{color:#f30;}
 
 
 		#top-bottom-menu{
