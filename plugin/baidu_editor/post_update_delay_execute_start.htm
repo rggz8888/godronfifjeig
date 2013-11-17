@@ -2,7 +2,7 @@ var attachnum = $attachnum;
 var pid = $pid;
 
 window.UEDITOR_HOME_URL = "$conf[plugin_url]baidu_editor/ueditor/";
-$.xload('plugin/baidu_editor/ueditor/ueditor.config.js', 'plugin/baidu_editor/ueditor/ueditor.all.min.js', 'view/js/swfupload/swfupload.js', function() {
+$.xload('$conf[static_url]plugin/baidu_editor/ueditor/ueditor.config.js', '$conf[static_url]plugin/baidu_editor/ueditor/ueditor.all.min.js', 'view/js/swfupload/swfupload.js', function() {
 	window.UEDITOR_CONFIG.snapscreenServerUrl = '?ueditor-uploadimage-$conf[cookie_pre]sid-$_sid-$conf[cookie_pre]auth-$_auth-ajax-1.htm';
 	var editor = new UE.ui.Editor();
 	window.editor = editor;
