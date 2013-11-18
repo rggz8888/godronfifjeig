@@ -181,8 +181,8 @@ class thread extends base_model {
 		$ruser[$uid]['golds'] += $this->conf['golds_policy_thread'];
 		if($thread['digest'] > 0) {
 			$ruser[$uid]['digests']++;
-			$ruser[$uid]['credits'] += $this->conf['credits_policy_digest_'.$thread['digest']];
-			$ruser[$uid]['golds'] += $this->conf['golds_policy_digest_'.$thread['digest']];
+			$thread['firstpid'] != $post['pid'] && $ruser[$post['uid']]['credits'] += $this->conf['credits_policy_post'];
+			$thread['firstpid'] != $post['pid'] && $ruser[$post['uid']]['golds'] += $this->conf['golds_policy_post'];
 		}
 		$ruser[$uid]['threads']++;
 		
