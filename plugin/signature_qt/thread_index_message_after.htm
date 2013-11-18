@@ -1,9 +1,24 @@
+<div style="clear:both"></div>
+<!--{if $post[xtime]}-->
+<br>
+<center><font color="#c0c0c0">本帖最后由&nbsp;$post[xusername]&nbsp;于&nbsp;$post[xtime]&nbsp;编辑过</font></center>
+<br>
+<!--{/if}-->
+<!--{if $thread[firstpid] == $post[pid]}-->
+<br/><br/>
+<!-- JiaThis Button BEGIN 喜欢按钮 -->
+<div class="jiathis_style">
+	<a class="jiathis_like_tsina" data="width=120"></a>
+	<a class="jiathis_like_qzone"></a>
+</div>
+<!--{/if}-->
 <!--{if $u[sign]}-->
 <style type="text/css">
 <!--
 .STYLE1 {
 	color: #FF0000;
 	font-size: 24px;
+	
 }
 .STYLE2 {
 	font-size: 14px;
@@ -23,7 +38,7 @@ max-height:200px;
 }
 -->
 </style>
-<div class="STYLE1" style="align=center;">
+<div class="STYLE1" style="align:center;">
   <p>&nbsp;</p>
   <!--<h1 class="STYLE4"><img src="plugin/signature_qt/jb.gif" width="60" height="20" /></h1>-->
   <p class="STYLE2">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
