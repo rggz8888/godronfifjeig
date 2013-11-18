@@ -40,18 +40,19 @@ class group extends base_model {
 	}*/
 	
 	public function get_groupid_by_credits($groupid, $credits) {
-		// 根据用户组积分范围升级
-		if($groupid > 10) {
-			$grouplist = $this->get_list();
-			foreach($grouplist as $group) {
-				if($group['groupid'] < 11) continue;
-				if($credits >= $group['creditsfrom'] && $credits < $group['creditsto']) {
-					return $group['groupid'];
-				}
+        // 根据用户组积分范围升级
+        if($groupid > 10 && $groupid < 1000) {
+        $grouplist = $this->get_list();
+        foreach($grouplist as $group) {
+			if($group['groupid'] < 11 || $group['groupid'] > 1000) continue;
+			if($credits >= $group['creditsfrom'] && $credits < $group['creditsto']) {
+							return $group['groupid'];
 			}
-		}
-		return $groupid;
-	}
+                                                }
+            }
+        return $groupid;
+    }
+               
 	
 	public function check_name(&$name) {
 		if(empty($name)) {
