@@ -44,14 +44,14 @@ function postData($url, $data){
         return $handles;      
     }
 	$url = 'https://api.weibo.com/2/statuses/update.json';//POST指向的链接   
-	$link = 'http://www.xmulife.com/?thread-index-fid-'.$thread['fid'].'-tid-'.$thread['tid'].'.htm';//帖子地址。
+	$link = 'http://www.xmulife.com/thread-index-fid-'.$thread['fid'].'-tid-'.$thread['tid'].'.htm';//帖子地址。
 	//$len_sub = strlen($thread['subject'])/2;
 	//$len_mes = strlen($post['message'])/2;
 	//$len_limite = 125 - $len_sub - $len_mes;
 	//if($len_limite < 0) $len_limite = 0;
 	$title = str_replace("\t", " ", str_replace("\n", " ", str_replace("&nbsp;", " ", $thread['subject'])));
 	$message = str_replace("\t", " ", str_replace("\n", " ", str_replace("&nbsp;", " ", $post['message'])));
-	$status = '【'.mb_strimwidth(strip_tags($title),0,60,'...').'】'. mb_strimwidth(strip_tags( $message),0, 140,'...').' |原文'.$link;// . ' 全文地址:' . get_permalink($post_ID);
+	$status = '【'.mb_strimwidth(strip_tags($title),0,60,'...').'】'. mb_strimwidth(strip_tags( $message),0, 220,'...').' |原文'.$link;// . ' 全文地址:' . get_permalink($post_ID);
    	$data = array( 'status' => $status, 'source'=>'2453695664' );
 	$data_query = http_build_query($data,"","&");
     $json_data = postData($url, $data_query);}
