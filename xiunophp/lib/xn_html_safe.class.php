@@ -1681,6 +1681,7 @@ class xn_html_safe {
 			'list-style'=>array('list', 'none', array('disc', 'circle', 'square', 'decimal', 'lower-roman', 'upper-roman', 'none')),
 			'text-align'=>array('list', 'left', array('left', 'right', 'center', 'justify')),
 			'text-indent'=>array('range', 0, array(0, 100)),
+			'float'=>array('list', 'none',array('left', 'right', 'none', 'inherit')),
 		);
 		$safehtml = new HTML_White($white_tag, $white_value, $white_css);
 		$result = $safehtml->parse($doc);
