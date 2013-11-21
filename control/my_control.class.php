@@ -142,8 +142,8 @@ class my_control extends common_control {
 	public function on_post() {
 		$this->_checked['my_post'] = 'class="checked"';
 		
-		$this->_title[] = '我的帖子';
-		$this->_nav[] = '我的帖子';
+		$this->_title[] = '参与主题';
+		$this->_nav[] = '参与主题';
 		
 		// hook my_post_before.php
 		
