@@ -1,6 +1,15 @@
 <!--{if $fid && $ismod}-->
 <script type="text/javascript">
 
+// 管理员账号登录时可控制显示帖子管理选框
+$('#modit').click(function() {
+	if($(this).is(':checked')){
+	$('#body input[name="fid_tid[]"]').attr('style', 'display:inline-block;');
+	$('#mod_checkall').attr('style', 'display:inline-block');}
+	else{
+	$('#body input[name="fid_tid[]"]').attr('style', 'display:none');
+	$('#body #mod_checkall').attr('style', 'display:none');}
+});
 // 二级置顶，三级置顶，检查 fid，如果fid不等于当前fid，则只能选择一篇
 $('#mod_checkall').click(function() {
 	$('#body input[name="fid_tid[]"]').attr('checked', this.checked);

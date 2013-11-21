@@ -1,0 +1,7 @@
+<!--{json width:"940",title:"$thread[subject]"}-->	
+		
+<!--{loop $postlist $post}-->
+	<!--{php $u = isset($userlist[$post['uid']]) ? $userlist[$post['uid']] : array();}-->
+<div id="message_$post[pid]" class="bg1 border post message"><!--{hook thread_index_message_before.htm}-->$post[message]<!--{hook thread_index_message_end.htm}--></div>
+<!--{/loop}-->
+<a href="?thread-index-fid-$fid-tid-$tid.htm"><b><font size=3> 查看详情 </font></b></a>
