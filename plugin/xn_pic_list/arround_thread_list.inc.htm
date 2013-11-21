@@ -1,0 +1,62 @@
+<style>
+@import url($conf[static_url]plugin/xn_pic_list/arround/css/common-base20.css);
+@import url($conf[static_url]plugin/xn_pic_list/arround/css/buy4.css);
+ul.threadlist {font-size: 14px; line-height: 1.6; margin: 0px; _margin-left: 16px;}
+</style>
+	
+<div class="div" style="border:0px;margin-top:10px">	
+		<!--{hook thread_list_threadlist_before.htm}-->
+		<!--{if !empty($forum[types])}-->
+	
+		<!--{loop $forum[types] $cateid $types}-->
+		<!--{if $types}-->
+		<div id=netbuy-body class="netbuy-body l-w">
+			
+  
+					
+					<!--{loop $types $typeid $typename}-->
+					<DL class=netbuy-box>
+					<DD class=decorate></DD>
+					<!--{if $cateid == 1}--><DT><A name=express>$typename</A>
+					<!--{loop $threadlist $thread}-->
+					<!--{require thread_list_line.inc.htm}-->
+					<!--{/loop}-->
+					
+					</DT><!--{/if}-->
+					</dl>
+					<!--{/loop}-->
+					
+		</div>
+		<!--{/if}-->
+		<!--{/loop}-->
+	
+	<!--{/if}-->
+			
+		
+		<!--{hook thread_list_threadlist_after.htm}-->
+
+	
+<div class="footer"></div>
+</div>
+<!--{if !empty($pages)}-->
+<div class="page" style="margin: auto; margin-top: 8px; text-align: center; clear: both;">$pages</div>
+<!--{/if}-->
+<!--{hook thread_list_after.htm}-->
+
+<!--{if $fid && $ismod}-->
+<div style="text-align: center; margin-top: 8px;">
+	<input type="checkbox" name="modit" id="modit"  /><label for="modit" >管理</label>
+	<input type="checkbox" name="checkall" id="mod_checkall" style="display:none"  /><label for="mod_checkall">全选</label>
+	<input type="button" class="button smallblue" id="mod_top"  value="置顶" />
+	<!--{if !empty($forum[typecates])}-->
+	<input type="button" class="button smallblue" id="mod_type"  value="主题分类" />
+	<!--{/if}-->
+	<input type="button" class="button smallblue" id="mod_digest"  value="精华" />
+	<input type="button" class="button smallblue" id="mod_move"  value="移动" />
+	<!--{hook thread_list_mod_before_delete.htm}-->
+	<input type="button" class="button smallblue" id="mod_delete"  value="删除" />
+	<!--{hook thread_list_mod_end.htm}-->
+</div>
+<!--{/if}-->
+
+<!--{hook thread_list_mod_after.htm}-->

@@ -1,0 +1,47 @@
+.m-ft {
+	CLEAR: both
+}
+BODY {
+	BACKGROUND-COLOR: #fff; 
+}
+.netbuy-body {
+	FONT-SIZE: 14px
+}
+.netbuy-box {
+	BORDER-BOTTOM: #dfdfe0 1px solid; POSITION: relative; BORDER-LEFT: #dfdfe0 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 130px; WIDTH: 828px; PADDING-RIGHT: 0px; MARGIN-BOTTOM: -1px; FLOAT: left; BORDER-TOP: #ced9f1 1px solid; BORDER-RIGHT: #dfdfe0 1px solid; PADDING-TOP: 3px;background:#fdfdfd;
+}
+.netbuy-box:hover {
+	BACKGROUND-COLOR: #f7faff
+}
+.netbuy-box-hover {
+	BACKGROUND-COLOR: #f7faff
+}
+.netbuy-box DT {
+	POSITION: absolute; PADDING-LEFT: 10px; WIDTH: 60px;  no-repeat 0px -248px; HEIGHT: 18px; COLOR: #333; FONT-SIZE: 14px; OVERFLOW: hidden; TOP: 14px; FONT-WEIGHT: bold; LEFT: 0px
+}
+.netbuy-box DD {
+	POSITION: relative; WIDTH: 164px; MARGIN-BOTTOM: -1px; FLOAT: left;padding-right:1px;height:40px;overflow:hidden;
+}
+.netbuy-box DD I {
+	BORDER-BOTTOM: #ced9f1 1px solid; POSITION: absolute; WIDTH: 130px; BOTTOM: 0px; HEIGHT: 0px; FONT-SIZE: 0px; OVERFLOW: hidden; LEFT: 0px
+}
+.netbuy-box A {
+	LINE-HEIGHT: 40px; COLOR: #20AEFC;text-decoration:none;
+}
+.netbuy-box DD A {
+	LETTER-SPACING: 1px;text-decoration:none;
+}
+.netbuy-box DT A {
+	LINE-HEIGHT: normal; CURSOR: default
+}
+.netbuy-box DT A:hover {
+	COLOR: #333; TEXT-DECORATION: none
+}
+.netbuy-box A:hover {
+	LETTER-SPACING: 0px; color:#F30; FONT-WEIGHT: bold
+}
+.netbuy-box DD.decorate {
+	/*BORDER-BOTTOM: #f8f8f8 1px solid;*/ POSITION: absolute; WIDTH: 948px; MARGIN-BOTTOM: 0px; FLOAT: none; HEIGHT: 0px; FONT-SIZE: 0px; OVERFLOW: hidden; BORDER-TOP: #f0f0f0 1px solid; TOP: 0px; LEFT: 0px
+}
+
+.netbuy-body img {vertical-align:middle; }

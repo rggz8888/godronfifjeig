@@ -65,7 +65,8 @@
 
 <!--{if $fid && $ismod}-->
 <div style="text-align: center; margin-top: 8px;">
-	<input type="checkbox" name="checkall" id="mod_checkall" /><label for="mod_checkall">全选</label>
+	<input type="checkbox" name="modit" id="modit"  /><label for="modit" >管理</label>
+	<input type="checkbox" name="checkall" id="mod_checkall" style="display:none"/><label for="mod_checkall">全选</label>
 	<input type="button" class="button smallblue" id="mod_top"  value="置顶" />
 	<!--{if !empty($forum[typecates])}-->
 	<input type="button" class="button smallblue" id="mod_type"  value="主题分类" />

@@ -8,7 +8,7 @@
 <span class="nopic">$thread['brief']</span>
 <!--{/if}-->
 <!--{if $fid && $ismod}-->
-<input type="checkbox" name="fid_tid[]" value="$thread[fid]_$thread[tid]" />
+<input type="checkbox" name="fid_tid[]" value="$thread[fid]_$thread[tid]" style="display:none"/>
 <!--{/if}-->
 $thread[subject]
 <!--{hook thread_list_line_inc_lastpage_after.htm}-->

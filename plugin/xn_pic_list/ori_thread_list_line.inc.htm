@@ -4,7 +4,7 @@
 		<td valign="middle" align="center" width="70"><div class="threadlist_rep_num" title="帖子回复数"><a href="?comment-index-fid-$thread[fid]-tid-$thread[tid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[subject]" rel="nofollow"><span class="small grey">$thread[posts_fmt]</span></a></div></td>
 		<td valign="middle" class="subject">
 			<!--{if $fid && $ismod}-->
-			<input type="checkbox" name="fid_tid[]" value="$thread[fid]_$thread[tid]" />
+			<input type="checkbox" name="fid_tid[]" value="$thread[fid]_$thread[tid]" style="display:none" />
 			<!--{/if}-->
 		
 			<!--{hook thread_list_line_inc_subject_icon_before.htm}-->

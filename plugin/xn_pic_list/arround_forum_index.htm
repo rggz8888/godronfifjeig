@@ -1,0 +1,68 @@
+<!--{include header.htm}-->
+
+<!--{hook forum_index_start.htm}-->
+<div class="width">
+
+	<!--{hook forum_index_nav_before.htm}-->
+	<table id="nav" cellpadding="0" cellspacing="0" style="margin-bottom: 4px;">
+		<tr>
+			<td class="left"></td>
+			<td class="center">
+				<a class="icon icon-home" href="./"></a>
+				<span class="sep"></span>
+				<!--{hook common_nav_center.htm}-->
+				<span>$forum[name]</span>
+				<!--{hook forum_index_nav_center.htm}-->
+			</td>
+			<td class="center2">
+				<!--{include header_user.inc.htm}-->
+				<a href="?post-thread-fid-$fid-typeid1-$typeid1-typeid2-$typeid2-typeid3-$typeid3-typeid4-$typeid4-ajax-1.htm" target="_blank" onclick="return false;" id="create_thread" rel="nofollow"><span class="icon icon-post-newthread"></span> 发新帖</a>
+			</td>
+			<td class="right"></td>
+		</tr>
+	</table>
+	
+	<!--{hook forum_index_nav_after.htm}-->
+	
+		
+	<!--{require thread_list.inc.htm}-->
+	
+	<!--{if $page == 1}-->
+	<div class="div" style="margin-top: 8px;">
+		<div class="header">版块信息</div>
+		<div class="body">
+			<p>
+				<span>
+					<span class="grey">版块名称：</span><b>$forum[name]</b> &nbsp; <span class="grey2">|</span> 
+					<span class="grey">主题：</span><b>$forum[threads]</b> &nbsp;  <span class="grey2">|</span> 
+					<span class="grey">帖子：</span><b>$forum[posts]</b> &nbsp;  <span class="grey2">|</span> 
+					<span class="grey">今日帖子：</span><span class="new bold">$forum[todayposts]</span> &nbsp;
+					<!--{if $forum[modlist]}-->
+					  <span class="grey2">|</span> 
+					  <span class="grey">版主：</span><!--{loop $forum[modlist] $modid $modname}--><a href="?you-profile-uid-$modid-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" rel="nofollow">$modname</a> <!--{/loop}-->
+					<!--{/if}-->
+				</span>
+			</p>
+			<!--{if $forum[brief]}-->
+			<p style="margin-top: 8px;">
+				<span class="grey">版块介绍：$forum[brief]</span>
+			</p>
+			<!--{/if}-->
+		</div>
+		<div class="footer"></div>
+	</div>
+	<!--{/if}-->
+	
+</div>	
+
+<!--{include footer.htm}-->
+
+<!--{require thread_list_js.inc.htm}-->
+
+<script type="text/javascript">
+
+</script>
+<!--{hook forum_index_end.htm}-->
+
+</body>
+</html>
