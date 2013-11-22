@@ -5,7 +5,7 @@
 <!--{if $fid && $ismod}-->
 <input type="checkbox" name="fid_tid[]" value="$thread[fid]_$thread[tid]" style="display:none" />
 <!--{/if}-->
-<a href="?thread-arround-fid-$thread[fid]-tid-$thread[tid]-ajax-1.htm" class="ajaxdialog" ajaxdialog="{position: 'center', modal: false}" onclick="return false;">$thread[subject]</a><i></i>
+<a href="?thread-arround-fid-$thread[fid]-tid-$thread[tid]-ajax-1.htm" class="ajaxdialog" ajaxdialog="{position: 'center', modal: true}" onclick="return false;">$thread[subject]</a><i></i>
 </dd>
 <!--{/if}-->
 <!--{hook thread_list_line_inc_end.htm}-->
