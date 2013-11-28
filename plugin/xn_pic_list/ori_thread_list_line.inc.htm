@@ -1,7 +1,7 @@
 <!--{hook thread_list_line_inc_start.htm}-->
 <table width="100%" cellspacing="0" cellpadding="2" tid="$thread[tid]" class="thread" lastpost="$thread[lastpost]" style="table-layout: fixed;">
 	<tr height="32">
-		<td valign="middle" align="center" width="70"><div class="threadlist_rep_num" title="帖子回复数"><a href="?comment-index-fid-$thread[fid]-tid-$thread[tid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[subject]" rel="nofollow"><span class="small grey">$thread[posts_fmt]</span></a></div></td>
+		<td valign="middle" align="center" width="70"><div class="threadlist_rep_num" title="帖子回复数"><span class="small grey">$thread[posts_fmt]</span></div></td>
 		<td valign="middle" class="subject">
 			<!--{if $fid && $ismod}-->
 			<input type="checkbox" name="fid_tid[]" value="$thread[fid]_$thread[tid]" style="display:none" />
