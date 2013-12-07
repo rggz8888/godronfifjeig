@@ -283,7 +283,7 @@ span.nopic {width: 54px; height: 54px; background: url(image/nopic.gif) no-repea
 		#search input{width: 118px;height: 24px;line-height: 24px\9;border: 0px;background: #fff;padding: 0 5px;outline: none;}
 	#menu td.right {width: 0px;; text-align: right; line-height: 42px; white-space:nowrap;}
 	
-#body {background:#f3f3f3 ; overflow: hidden; padding-top: 8px; padding-bottom: 8px;}
+#body {background:#E7E7E7 ; overflow: hidden; padding-top: 8px; padding-bottom: 8px;}
 	#nav {width: 100%; margin: auto; height: 18px; /*text-shadow: 1px 1px 0 #FFFFFF;*/ }
 	#nav td{}
 	#nav td.left {width: 0px; background-position: 0px 0px;}
@@ -301,7 +301,7 @@ span.nopic {width: 54px; height: 54px; background: url(image/nopic.gif) no-repea
 	#user {color: #AEB2BE; font-size: 12px; *margin-top: 8px;}
 	#user a {color: #AAAAAA; margin-left: 20px;}
 	#create_thread {margin-left: 20px;}
-#footer {width: 100%; /*height: 59px; */margin: auto;/* background: #f3f3f3;*/ overflow: hidden;border-top:1px solid #c8c8c8;}
+#footer {width: 100%; /*height: 59px; */margin: auto; background: #f3f3f3; overflow: hidden;border-top:1px solid #c8c8c8;}
 #footer td{color: #888888; padding-top: 10px; padding-bottom: 10px;}
 #footer pre {background: none repeat scroll 0 0 #4C525F; border: 1px solid #363C4A; color: #7D828E; margin: 8px;}
 #footer td.right {text-align: right;}
@@ -357,7 +357,10 @@ div.modlist {}
 /*海报墙*/
 IMG {border:0; margin:0; padding:0;}
 UL.pic LI {
-    display:inline; width:231px;height:377px; text-align:center; float:left; overflow:hidden; margin: 3px 2px 7px 2px;
+    display:inline; 
+    width: 428px;
+    height: 588px; text-align:center; float:left; overflow:hidden; 
+    margin: 3px 2px 7px 2px;
     border: 1px solid #999;
     background-color: #ccc;
     border-radius: 4px;
@@ -371,7 +374,7 @@ UL.pic LI img {
 }*/
 span.nopic {
 width: 100%;
-height: 325px;
+height: 580px;
 background: #ccc;
 cursor: pointer;
 display: inline-block;
@@ -381,6 +384,6 @@ overflow:hidden;
 
 }
 .imgcon {
-	height: 327px;
+	/* height: 327px; */
 	margin-bottom: 6px;
 }
