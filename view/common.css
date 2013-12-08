@@ -355,18 +355,30 @@ div.attachlist {}
 div.modlist {}
 
 /*海报墙*/
-IMG {border:0; margin:0; padding:0;}
+.c_inner UL,LI{
+	margin:0;
+	padding:0;
+}
 UL.pic LI {
     display:inline; 
-    width: 428px;
-    height: 588px; text-align:center; float:left; overflow:hidden; 
+    width: 469px;
+    height: 645px; 
+	text-align:center; 
+	float:left; 
+	overflow:hidden; 
     margin: 3px 2px 7px 2px;
     border: 1px solid #999;
     background-color: #ccc;
     border-radius: 4px;
 }
 UL.pic LI img {
-    background:#fff; display:block; width:100%; margin-bottom:6px;
+    background:#fff; 
+	display:block; 
+	width:100%; 
+	margin-bottom:6px;
+	border:0; 
+	margin:0; 
+	padding:0;
     /* padding: 1px; */
 }
 /*UL.pic LI A:hover img {
@@ -374,7 +386,7 @@ UL.pic LI img {
 }*/
 span.nopic {
 width: 100%;
-height: 580px;
+height: 635px;
 background: #ccc;
 cursor: pointer;
 display: inline-block;
