@@ -1,16 +1,24 @@
-<li>
+<div class="item">
 <a href="?thread-index-fid-$thread[fid]-tid-$thread[tid].htm" class="subject_link $thread[color]" title="$thread[subject]" target="_blank">
 <!--{if $thread[coverimg]}-->
-<div class="imgcon">
 <img src="$thread[coverimg]" border="0">
-</div>
+<h3>
+<a href="?you-profile-uid-$u[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}"  rel="nofollow"><span class="avatar_small border bg1" {if $u[avatar_small]} style="background-image:url($u[avatar_small])"{/if}></span></a>
+<a href="?you-profile-uid-$u[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}"  rel="nofollow"><font color=f96487>($thread[username])</font></a> <font size=2>发布于 $thread[dateline_fmt]</font>
+</h3>
 <!--{else}-->
-<span class="nopic">$thread['brief']</span>
+<p>
+$thread['brief']
+</p>
+<h3>
+<a href="?you-profile-uid-$u[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}"  rel="nofollow"><span class="avatar_small border bg1" {if $u[avatar_small]} style="background-image:url($u[avatar_small])"{/if}></span></a>
+<a href="?you-profile-uid-$u[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}"  rel="nofollow"><font color=f96487>($thread[username])</font></a> <font size=2>发布于 $thread[dateline_fmt]</font>
+</h3>
 <!--{/if}-->
 <!--{if $fid && $ismod}-->
 <input type="checkbox" name="fid_tid[]" value="$thread[fid]_$thread[tid]" style="display:none"/>
 <!--{/if}-->
-$thread[subject]
+
 <!--{hook thread_list_line_inc_lastpage_after.htm}-->
 </a>
-</li>
+</div>

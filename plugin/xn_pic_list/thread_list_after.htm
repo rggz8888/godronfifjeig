@@ -1,0 +1,11 @@
+<script src="$conf[static_url]plugin/xn_pic_list/js/jquery-1.9.1.min.js"></script>
+<script src="$conf[static_url]plugin/xn_pic_list/js/jquery.grid-a-licious.js"></script>
+<script type="text/javascript">
+$(".pic").gridalicious({
+	gutter: 10,  
+    width: 460,  
+    animate: true,
+});  
+$(".pic .item img").css('width','auto');//本行用于注释掉gridalicious的img100%属性。
+$(".pic .item img").css('max-width','100%');//本行限制图片宽度。
+</script>
