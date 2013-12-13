@@ -49,8 +49,8 @@
 			$arr['fid'] = $fid;
 			$arr['aid'] = $aid;
 			$arr['filename'] = $pathadd.'/'.$filename;
-			//$arr['filesize'] = filesize($file['tmp_name']);
-			$r['filesize'] = $file['size'];
+			$arr['filesize'] = filesize($file['tmp_name']);
+			//$r['filesize'] = $file['size'];
 			$this->attach->update($arr);
 
 			$response = $this->attach->bcs_upload($destfile, $file['tmp_name'], array('filename' => $file['name']));
