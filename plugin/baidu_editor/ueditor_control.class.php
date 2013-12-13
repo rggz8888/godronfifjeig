@@ -115,8 +115,8 @@ class ueditor_control extends common_control {
 				$response = $this->attach->bcs_upload($destfile, $file['tmp_name']);
 				if($response->isOK()) {
 					$r = array();
-					//$r['filesize'] = filesize($file['tmp_name']);
-					$r['filesize'] = $file['size'];
+					$r['filesize'] = filesize($file['tmp_name']);
+					//$r['filesize'] = $file['size'];
 					$r['width'] = $imginfo[0];
 					$r['height'] = $imginfo[1];
 					$r['fileurl'] = $fileurl;
