@@ -97,7 +97,7 @@ font-size: 14px;
 									<!--
 									<span class="grey middle"><a href="?you-profile-uid-$thread[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[username]" rel="nofollow">$thread[username]</a></span>
 									-->
-									<a href="?you-profile-uid-$thread[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[username]" rel="nofollow"><span class="avatar_small border bg1" {if="" $u[avatar_small]}="" style="background-image:url($u[avatar_small])" {="" if}=""></span></a>
+									<a href="?you-profile-uid-$thread[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[username]" rel="nofollow"><span class="avatar_small border bg1" {if $u[avatar_small]} style="background-image:url($u[avatar_small])"{/if}></span></a>
 
 									<span class="grey middle">(<a href="?you-profile-uid-$thread[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[username]" rel="nofollow">$thread[username_fmt]</a>)</span>
                                     <!--
@@ -123,7 +123,7 @@ font-size: 14px;
 					<!--{loop $userlist1 $u}-->
 					<td class="member-list">
                         <div class="pic">
-                           <a href="?you-profile-uid-$u[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$u[username]" rel="nofollow"><span class="avatar_middle border bg1" {if="" $u[avatar_middle]}="" style="background-image:url($u[avatar_middle])" {="" if}=""></span></a>
+                           <a href="?you-profile-uid-$u[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$u[username]" rel="nofollow"><span class="avatar_middle border bg1" {if $u[avatar_middle]} style="background-image:url($u[avatar_middle])"{/if}></span></a>
                          </div>
 
                          <div class="name">
@@ -136,7 +136,7 @@ font-size: 14px;
 					<!--{loop $userlist2 $u}-->
 					<td class="member-list">
                         <div class="pic">
-                           <a href="?you-profile-uid-$u[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$u[username]" rel="nofollow"><span class="avatar_middle border bg1" {if="" $u[avatar_middle]}="" style="background-image:url($u[avatar_middle])" {="" if}=""></span></a>
+                           <a href="?you-profile-uid-$u[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$u[username]" rel="nofollow"><span class="avatar_middle border bg1" {if $u[avatar_middle]} style="background-image:url($u[avatar_middle])"{/if}></span></a>
                          </div>
 
                          <div class="name">
@@ -153,7 +153,7 @@ font-size: 14px;
 				<div class="div">
 					<div class="header">
 					    <div style="float:left;">图文帖子</div>
-					    <div style="font-size:12px;float:right;"><a href="?index-tuwen.htm" $_checked[forum_tuwen]="" id="menu_forum_list"><font color="#1597F2">查看更多&gt;&gt;</font></a></div>
+					    <div style="font-size:12px;float:right;"><a href="?index-tuwen.htm" $_checked[forum_tuwen]id="menu_forum_list"><font color="#1597F2">查看更多&gt;&gt;</font></a></div>
 					</div>
 					<div class="body threadlist">
 					<table width="100%" cellspacing="0" cellpadding="0" class="thread" style="table-layout: fixed;">
@@ -163,7 +163,7 @@ font-size: 14px;
 					<td class="member-list">
                         <div class="pic">
                            <a href="?thread-index-fid-$post[fid]-tid-$post[tid].htm" target="_blank" rel="nofollow" title="$post[message_fmt]">
-						   <img src="$img" height="66" style="margin-left: 3px;" {if="" trim($post[message_fmt])}="" alt="$post[message_fmt]" {="" if}="">
+						   <img src="$img" height="66" style="margin-left: 3px;" {if trim($post[message_fmt])} alt="$post[message_fmt]" {/if}>
 						   </a>
                          </div>
 					</td>
@@ -175,7 +175,7 @@ font-size: 14px;
 					<td class="member-list">
                         <div class="pic">
                            <a href="?thread-index-fid-$post[fid]-tid-$post[tid].htm" target="_blank" rel="nofollow" title="$post[message_fmt]">	
-						   <img src="$img" height="66" style="margin-left: 3px;" {if="" trim($post[message_fmt])}="" alt="$post[message_fmt]" {="" if}="">
+						   <img src="$img" height="66" style="margin-left: 3px;" {if trim($post[message_fmt])} alt="$post[message_fmt]" {/if}>
 						   </a>
                          </div>
 					</td>
@@ -187,7 +187,7 @@ font-size: 14px;
 					<td class="member-list">
                         <div class="pic">
                            <a href="?thread-index-fid-$post[fid]-tid-$post[tid].htm" target="_blank" rel="nofollow" title="$post[message_fmt]">	
-						   <img src="$img" height="66" style="margin-left: 3px;" {if="" trim($post[message_fmt])}="" alt="$post[message_fmt]" {="" if}="">
+						   <img src="$img" height="66" style="margin-left: 3px;" {if trim($post[message_fmt])} alt="$post[message_fmt]" {/if}>
 						   </a>
                          </div>
 					</td>
@@ -223,7 +223,7 @@ font-size: 14px;
 									<!--
 									<span class="grey middle"><a href="?you-profile-uid-$thread[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[username]" rel="nofollow">$thread[username]</a></span>
 									-->
-									<a href="?you-profile-uid-$thread[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[username]" rel="nofollow"><span class="avatar_small border bg1" {if="" $du[avatar_small]}="" style="background-image:url($du[avatar_small])" {="" if}=""></span></a>
+									<a href="?you-profile-uid-$thread[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[username]" rel="nofollow"><span class="avatar_small border bg1" {if $du[avatar_small]}style="background-image:url($du[avatar_small])" {/if}></span></a>
 
 									<span class="grey middle">(<a href="?you-profile-uid-$thread[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[username]" rel="nofollow">$thread[username_fmt]</a>)</span>
                                     <!--
