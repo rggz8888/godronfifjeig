@@ -1,0 +1,200 @@
+<!--{include header.htm}-->
+<!--[if lt IE 9]> 
+<style type="text/css">
+.wf-main{
+    position: relative;
+    margin: 0 auto;
+    width: 990px;
+    overflow: hidden;
+}
+.wf-main .wf-cld{
+    position: absolute;
+    margin-bottom: 10px;
+    padding:5px 8px;
+    width: 200px;
+    left: -9999px;
+    top: -9999px;
+    line-height:18px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background-color: #ccc;
+    overflow: hidden;
+}
+.wf-main .wf-cld img{
+	height:238px;
+}
+</style>
+<![endif]-->
+
+<style type="text/css">
+.wf-main .wf-cld{
+    margin-bottom: 10px;
+    padding:5px 8px;
+    line-height:18px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background-color: #ccc;
+    overflow: hidden;
+}
+</style>
+
+<!--{hook forum_list_start.htm}-->
+<div class="width">
+
+	<!--{hook forum_list_nav_before.htm}-->
+	<table id="nav" cellpadding="0" cellspacing="0" style="margin-bottom: 4px;">
+		<tr>
+			<td class="left"></td>
+			<td class="center">
+				<a class="icon icon-home" href="./"></a>
+				<span class="sep"></span>
+				<span>图文帖子</span>
+				<!--{hook forum_list_nav_center.htm}-->
+			</td>
+			<td class="center2">
+				<!--{include header_user.inc.htm}-->
+				<!--
+				<a href="?post-thread-fid-$fid-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{fullicon: true}" onclick="return false;" id="create_thread" ><span class="icon icon-post-newthread"></span> 发新帖</a>
+				-->
+			</td>
+			<td class="right"></td>
+		</tr>
+	</table>
+	
+	<!--{hook forum_list_nav_after.htm}-->
+
+</div>	
+<div style="text-align:center;">
+<!--{hook tuwen_list_nav_after_ad.htm}-->
+</div>
+
+<div class="width">
+    <div class="wf-main" id="wf-main">
+    <!--{loop $postlist_tuwen $post}-->
+	<!--{php $img = $imglist_tuwen[$post[pid]];}-->
+    <!--{php $u = isset($userlist_tuwen[$post['uid']]) ? $userlist_tuwen[$post['uid']] : array('uid'=>0, 'username'=>'', 'groupname'=>'', 'avatar_small'=>'');}-->
+    <div class="wf-cld">
+	   <a href="?thread-index-fid-$post[fid]-tid-$post[tid].htm" target="_blank" rel="nofollow">
+
+	   <img src="$img" {if trim($post[message_fmt])} alt="$post[message_fmt]" {/if} />
+
+	   </a>
+	   <p>
+	   <h3>
+	   <a href="?you-profile-uid-$u[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}"  rel="nofollow"><span class="avatar_small border bg1" {if $u[avatar_small]} style="background-image:url($u[avatar_small])"{/if}></span></a>
+	   <a href="?you-profile-uid-$u[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}"  rel="nofollow"><font color=f96487>($u[username])</font></a> <font size=2>发布于 $post[dateline_fmt]</font>
+	   </h3>
+	   <!--{if $post[message_fmt]}-->
+	   $post[message_fmt]
+	   <!--{/if}-->
+	   </p>
+	</div>
+	<!--{/loop}-->
+    </div>
+	<div class="page" style="text-align: center;">$pages</div>
+</div>
+<!--[if lt IE 9]>
+<script type="text/javascript">
+function Waterfall(param){
+    this.id = typeof param.container == 'string' ? document.getElementById(param.container) : param.container;
+    this.colWidth = param.colWidth;
+    this.colCount = param.colCount || 4;
+    this.cls = param.cls && param.cls != '' ? param.cls : 'wf-cld';
+    this.init();
+}
+Waterfall.prototype = {
+    getByClass:function(cls,p){
+        var arr = [],reg = new RegExp("(^|\\s+)" + cls + "(\\s+|$)","g");
+        var nodes = p.getElementsByTagName("*"),len = nodes.length;
+        for(var i = 0; i < len; i++){
+            if(reg.test(nodes[i].className)){
+                arr.push(nodes[i]);
+                reg.lastIndex = 0;
+            }
+        }
+        return arr;
+    },
+    maxArr:function(arr){
+        var len = arr.length,temp = arr[0];
+        for(var ii= 1; ii < len; ii++){
+            if(temp < arr[ii]){
+                temp = arr[ii];
+            }
+        }
+        return temp;
+    },
+    getMar:function(node){
+        var dis = 0;
+        if(node.currentStyle){
+            dis = parseInt(node.currentStyle.marginBottom);
+        }else if(document.defaultView){
+            dis = parseInt(document.defaultView.getComputedStyle(node,null).marginBottom);
+        }
+        return dis;
+    },
+	getMinCol:function(arr){
+		var ca = arr,cl = ca.length,temp = ca[0],minc = 0;
+		for(var ci = 0; ci < cl; ci++){
+			if(temp > ca[ci]){
+				temp = ca[ci];
+				minc = ci;
+			}
+		}
+		return minc;
+	},
+    init:function(){
+        var _this = this;
+        var col = [],//列高
+		    iArr = [];//索引
+        var nodes = _this.getByClass(_this.cls,_this.id),len = nodes.length;
+        for(var i = 0; i < _this.colCount; i++){
+            col[i] = 0;
+        }
+        for(var i = 0; i < len; i++){
+            nodes[i].h = nodes[i].offsetHeight + _this.getMar(nodes[i]);
+            iArr[i] = i;
+        }
+		
+		for(var i = 0; i < len; i++){
+			var ming = _this.getMinCol(col);
+			nodes[i].style.left = ming * _this.colWidth + "px";
+			nodes[i].style.top = col[ming] + "px";
+			col[ming] += nodes[i].h;
+		}
+		
+		_this.id.style.height = _this.maxArr(col) + "px";
+    }
+};
+
+new Waterfall({
+    "container":"wf-main",
+    "colWidth":244,
+    "colCount":4	
+});
+</script>
+<![endif]-->
+<script type="text/javascript">
+var ie = (function(){
+ 
+    var undef,
+        v = 3,
+        div = document.createElement('div'),
+        all = div.getElementsByTagName('i');
+    
+    while (
+        div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',
+        all[0]
+    );
+    
+    return v > 4 ? v : 100;
+    
+}());
+if (ie ===100||ie > 9 ){
+document.write('<script src="$conf[plugin_url]tuwen/js/jquery-1.9.1.min.js"><\/script><script src="$conf[plugin_url]tuwen/js/jquery.grid-a-licious.js"><\/script><script type="text/javascript">$("#wf-main").gridalicious({selector: ".wf-cld",gutter: 10,width: 200,animate: true,});$(".wf-cld img").css("width","auto");$(".wf-cld img").css("max-width","100%");<\/script>');
+}
+</script>
+<!--{hook forum_list_end.htm}-->
+<!--{include footer.htm}-->
+$conf[footer_js]
+</body>
+</html>
