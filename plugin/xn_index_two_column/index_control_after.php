@@ -67,7 +67,7 @@
 				$unset1++;
 				continue;
 			}
-			$thread['subject_fmt'] = utf8::substr($thread['subject'], 0, 18);
+			$thread['subject_fmt'] = utf8::substr($thread['subject'], 0, 15);
 			$readtids .= ','.$thread['tid'];
 		}
 		
@@ -75,7 +75,29 @@
 		$click_server = $this->conf['click_server']."?db=tid&r=$readtids";
 		
 		$pages = misc::simple_pages("?index-digest.htm", $n, $page, $pagesize);
+		
+		//查询发帖用户信息
 
+        $uids = misc::arrlist_key_values($digestlist, '', 'uid');
+        $uids = array_unique($uids);
+        $userlist_forum = $this->user->mget($uids);
+        foreach($userlist_forum as &$user) {
+	       $this->user->format($user);
+	       $userlist_forum[$user['uid']] = $user;
+        }
+
+        //查询最后回帖用户信息
+        $lastuids = misc::arrlist_key_values($digestlist, '', 'lastuid');
+        $lastuids = array_unique($lastuids);
+        $lastuserlist_forum = $this->user->mget($lastuids);
+        foreach($lastuserlist_forum as &$user) {
+	    $this->user->format($user);
+	       if($user) $lastuserlist_forum[$user['uid']] = $user;
+        }
+
+        $this->view->assign('userlist_forum', $userlist_forum);
+        $this->view->assign('lastuserlist_forum', $lastuserlist_forum);
+		
 		// 在线会员
 		$ismod = ($this->_user['groupid'] > 0 && $this->_user['groupid'] <= 4);
 		$fid = 0;

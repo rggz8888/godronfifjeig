@@ -1,49 +1,92 @@
 <!--{include header.htm}-->
-
 <!--{hook index_index_start.htm}-->
+<style type="text/css">
+.comments-count {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 2px; LINE-HEIGHT: 12px; BACKGROUND-COLOR: #C6BFEE; PADDING-LEFT: 0px; WIDTH: 30px; PADDING-RIGHT: 0px; DISPLAY: inline-block; COLOR: white; FONT-SIZE: 12px; FONT-WEIGHT: bold; PADDING-TOP: 2px; border-radius: 12px 12px 12px 12px; -moz-border-radius: 12px 12px 12px 12px
+}
 
+.member-list .pic {
+  margin-bottom: 5px;
+  margin-left: 5px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.member-list .name {
+  clear: both;
+  text-align: center;
+}
+
+.tags {height:76x;width:100%;max-height:76px;}
+
+.tags li{float:left;white-space:nowrap;}
+
+.tags a {
+	background: rgb(238, 238, 238); margin: 6px 5px 5px 6px; padding: 2px 8px; color: rgb(0, 0, 0); float: left; display: block; white-space: nowrap;
+}
+.tags a:hover {
+	background: rgb(51, 102, 153); color: rgb(255, 255, 255);
+}
+
+.pos {height:51px;width:100%;max-height:51px;}
+
+.pos li{float:left;white-space:nowrap;}
+
+.pos a {
+	background: rgb(238, 238, 238); margin: 6px 5px 4px 4px; padding: 2px 8px; color: rgb(0, 0, 0); float: left; display: block; white-space: nowrap;
+}
+.pos a:hover {
+	background: rgb(51, 102, 153); color: rgb(255, 255, 255);
+}
+.threadlist table .subject {
+font-size: 14px;
+}
+</style>
 <div class="width">
 
 	<!--{hook index_index_nav_before.htm}-->
 	
 	<table id="nav" cellpadding="0" cellspacing="0" style="margin-bottom: 4px;">
-		<tr>
+		<tbody><tr>
 			<td class="left"></td>
 			<td class="center">
 				<a class="icon icon-home" href="./"></a>
 				<span class="sep"></span>
-				<span>最新帖</span>
+				<span>最新主题</span>
 				<!--{hook index_index_nav_center_after.htm}-->
 			</td>
 			<td align="right">
-						<!--{include header_user.inc.htm}-->
+				<!--{include header_user.inc.htm}-->
+				<!--
 				<a href="?post-thread-fid-$fid-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{fullicon: true}" onclick="return false;" id="create_thread" ><span class="icon icon-post-newthread"></span> 发新帖</a>
+				-->
 			</td>
 			<td class="right"></td>
 		</tr>
-	</table>
+	</tbody></table>
 	
 	<!--{hook index_index_nav_after.htm}-->
 	
 	<table width="100%">
-		<tr>
+		<tbody><tr>
 			<td width="50%" valign="top">
 				<div class="div">
-					<div class="header">最新主题</div>
+					<div class="header">最新主题 <font color="red"> &nbsp;&nbsp;(点击评论 快速查看)</font></div>
 					<div class="body threadlist">
 						<!--{loop $threadlist $thread}-->
+                        <!--{php $u = isset($userlist_lq[$thread['uid']]) ? $userlist_lq[$thread['uid']] : array('uid'=>0, 'username'=>'', 'groupname'=>'', 'avatar_small'=>'');}-->
 						<table width="100%" cellspacing="0" cellpadding="0" tid="$thread[tid]" class="thread" lastpost="$thread[lastpost]" style="table-layout: fixed;">
-							<tr height="32">
+							<tbody><tr height="38">
 								<td valign="middle" class="subject">
-								
+								    <!--
 									<a href="?thread-index-fid-$thread[fid]-tid-$thread[tid].htm" target="_blank" title="点击图标，新窗口打开" class="thread_icon" style="margin-right: 1px;" rel="nofollow">	
 										<span class="icon $thread[icon]" tid="$thread[tid]" lastpost="$thread[lastpost]"></span>
 									</a>
-									
+                                    -->
 									<a href="?forum-index-fid-$thread[fid].htm" target="_blank" class="grey" rel="nofollow">【$thread[forumname]】</a>
-									
-									<a href="?thread-index-fid-$thread[fid]-tid-$thread[tid].htm" class="subject_link $thread[color]" title="$thread[subject]" rel="nofollow">$thread[subject_fmt]</a>
-									
+			
+									<a href="?thread-index-fid-$thread[fid]-tid-$thread[tid].htm" class="subject_link $thread[color]" title="$thread[subject]" rel="nofollow" target="_blank">$thread[subject_fmt]</a>
+							
 									<!--{hook thread_list_line_inc_subject_after.htm}-->
 									
 									<!--{if $thread[lastpage] > 1}-->
@@ -51,55 +94,153 @@
 									<!--{/if}-->
 									
 									<!--{hook thread_list_line_inc_lastpage_after.htm}-->
-									
+									<!--
 									<span class="grey middle"><a href="?you-profile-uid-$thread[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[username]" rel="nofollow">$thread[username]</a></span>
+									-->
+									<a href="?you-profile-uid-$thread[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[username]" rel="nofollow"><span class="avatar_small border bg1" {if="" $u[avatar_small]}="" style="background-image:url($u[avatar_small])" {="" if}=""></span></a>
+
+									<span class="grey middle">(<a href="?you-profile-uid-$thread[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[username]" rel="nofollow">$thread[username_fmt]</a>)</span>
+                                    <!--
 									<span class="tiny {if $thread[color] == 'thread-new'}new{else}grey2{/if}">$thread[dateline_fmt]</span>
-									
+									-->
+									<a href="?comment-index-fid-$thread[fid]-tid-$thread[tid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[subject]" rel="nofollow"><span class="comments-count">$thread[posts_fmt]</span></a>
 									
 								</td>
 							</tr>
-						</table>
-						<hr />
+						</tbody></table>
+						<hr>
 						<!--{/loop}-->
 						<div class="page" style="text-align: center; margin-top: 8px;"><a href="?index-new.htm">更多新主题...</a></div>
 					</div>
 				</div>
 			</td>
 			<td width="50%" valign="top">
+			    <div class="div">
+					<div class="header">活跃用户</div>
+					<div class="body threadlist">
+					<table width="100%" cellspacing="0" cellpadding="0" class="thread" style="table-layout: fixed;">
+					<tbody><tr>
+					<!--{loop $userlist1 $u}-->
+					<td class="member-list">
+                        <div class="pic">
+                           <a href="?you-profile-uid-$u[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$u[username]" rel="nofollow"><span class="avatar_middle border bg1" {if="" $u[avatar_middle]}="" style="background-image:url($u[avatar_middle])" {="" if}=""></span></a>
+                         </div>
+
+                         <div class="name">
+                            <a href="?you-profile-uid-$u[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$u[username]" rel="nofollow">$u[username_fmt]</a>
+                         </div>
+					</td>
+					<!--{/loop}-->
+					</tr>
+					<tr>
+					<!--{loop $userlist2 $u}-->
+					<td class="member-list">
+                        <div class="pic">
+                           <a href="?you-profile-uid-$u[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$u[username]" rel="nofollow"><span class="avatar_middle border bg1" {if="" $u[avatar_middle]}="" style="background-image:url($u[avatar_middle])" {="" if}=""></span></a>
+                         </div>
+
+                         <div class="name">
+                            <a href="?you-profile-uid-$u[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$u[username]" rel="nofollow">$u[username_fmt]</a>
+                         </div>
+					</td>
+					<!--{/loop}-->
+					</tr>
+					</tbody></table>
+					</div>
+					</div>
+				
+
+				<div class="div">
+					<div class="header">
+					    <div style="float:left;">图文帖子</div>
+					    <div style="font-size:12px;float:right;"><a href="?index-tuwen.htm" $_checked[forum_tuwen]="" id="menu_forum_list"><font color="#1597F2">查看更多&gt;&gt;</font></a></div>
+					</div>
+					<div class="body threadlist">
+					<table width="100%" cellspacing="0" cellpadding="0" class="thread" style="table-layout: fixed;">
+					<tbody><tr>
+					<!--{loop $postlist1 $post}-->
+					<!--{php $img = $imglist[$post[pid]];}-->
+					<td class="member-list">
+                        <div class="pic">
+                           <a href="?thread-index-fid-$post[fid]-tid-$post[tid].htm" target="_blank" rel="nofollow" title="$post[message_fmt]">
+						   <img src="$img" height="66" style="margin-left: 3px;" {if="" trim($post[message_fmt])}="" alt="$post[message_fmt]" {="" if}="">
+						   </a>
+                         </div>
+					</td>
+					<!--{/loop}-->
+					</tr>
+					<tr>
+					<!--{loop $postlist2 $post}-->
+					<!--{php $img = $imglist[$post[pid]];}-->
+					<td class="member-list">
+                        <div class="pic">
+                           <a href="?thread-index-fid-$post[fid]-tid-$post[tid].htm" target="_blank" rel="nofollow" title="$post[message_fmt]">	
+						   <img src="$img" height="66" style="margin-left: 3px;" {if="" trim($post[message_fmt])}="" alt="$post[message_fmt]" {="" if}="">
+						   </a>
+                         </div>
+					</td>
+					<!--{/loop}-->
+					</tr>
+					<tr>
+					<!--{loop $postlist3 $post}-->
+					<!--{php $img = $imglist[$post[pid]];}-->
+					<td class="member-list">
+                        <div class="pic">
+                           <a href="?thread-index-fid-$post[fid]-tid-$post[tid].htm" target="_blank" rel="nofollow" title="$post[message_fmt]">	
+						   <img src="$img" height="66" style="margin-left: 3px;" {if="" trim($post[message_fmt])}="" alt="$post[message_fmt]" {="" if}="">
+						   </a>
+                         </div>
+					</td>
+					<!--{/loop}-->
+					</tr>
+					</tbody></table>
+					</div>
+					</div>
+				
+
 				<div class="div">
 					<div class="header">精华主题</div>
 					<div class="body threadlist">
 						<!--{loop $digestlist $thread}-->
+						<!--{php $du = isset($diuserlist_lq[$thread['uid']]) ? $diuserlist_lq[$thread['uid']] : array('uid'=>0, 'username'=>'', 'groupname'=>'', 'avatar_small'=>'');}-->
 						<table width="100%" cellspacing="0" cellpadding="0" tid="$thread[tid]" class="thread" lastpost="$thread[lastpost]" style="table-layout: fixed;">
-							<tr height="32">
+							<tbody><tr height="38">
 								<td valign="middle" class="subject">
-								
+								    <!--
 									<a href="?thread-index-fid-$thread[fid]-tid-$thread[tid].htm" target="_blank" title="点击图标，新窗口打开" class="thread_icon" style="margin-right: 1px;" rel="nofollow">	
 										<span class="icon $thread[icon]" tid="$thread[tid]" lastpost="$thread[lastpost]"></span>
 									</a>
+									-->
 									
 									<a href="?forum-index-fid-$thread[fid].htm" target="_blank" class="grey" rel="nofollow">【$thread[forumname]】</a>
 									
-									<a href="?thread-index-fid-$thread[fid]-tid-$thread[tid].htm" class="subject_link $thread[color]" title="$thread[subject]" rel="nofollow">$thread[subject_fmt]</a>
+									<a href="?thread-index-fid-$thread[fid]-tid-$thread[tid].htm" class="subject_link $thread[color]" title="$thread[subject]" rel="nofollow" target="_blank">$thread[subject_fmt]</a>
 									<!--{if $thread['color'] == 'thread-hot'}--><span class="icon icon-post-fire"></span><!--{/if}-->
 									
 									<!--{if $thread[lastpage] > 1}-->
 									<a href="?thread-index-fid-$thread[fid]-tid-$thread[tid]-page-$thread[lastpage].htm" class="grey2 small" rel="nofollow"><span class="icon icon-lastpage"></span>$thread[lastpage]</a>
 									<!--{/if}-->
-									
+									<!--
 									<span class="grey middle"><a href="?you-profile-uid-$thread[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[username]" rel="nofollow">$thread[username]</a></span>
+									-->
+									<a href="?you-profile-uid-$thread[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[username]" rel="nofollow"><span class="avatar_small border bg1" {if="" $du[avatar_small]}="" style="background-image:url($du[avatar_small])" {="" if}=""></span></a>
+
+									<span class="grey middle">(<a href="?you-profile-uid-$thread[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[username]" rel="nofollow">$thread[username_fmt]</a>)</span>
+                                    <!--
 									<span class="tiny grey2">$thread[dateline_fmt]</span>
+									-->
+									<a href="?comment-index-fid-$thread[fid]-tid-$thread[tid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$thread[subject]" rel="nofollow"><span class="comments-count">$thread[posts_fmt]</span></a>
 								</td>
 							</tr>
-						</table>
-						<hr />
+						</tbody></table>
+						<hr>
 						<!--{/loop}-->
 						<div class="page" style="text-align: center; margin-top: 8px;"><a href="?index-digest.htm">更多精华...</a></div>
 					</div>
 				</div>
 			</td>
 		</tr>
-	</table>
+	</tbody></table>
 	
 	<!--{hook index_thread_list_after.htm}-->
 	

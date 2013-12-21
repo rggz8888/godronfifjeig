@@ -1,0 +1,128 @@
+<!--{json width:"400",height:"400",title:"$thread_com[subject_fmt]"}-->
+
+<style type="text/css">
+.comment {
+	POSITION: fixed; BORDER-LEFT: #d9dce0 1px solid; BACKGROUND-COLOR: #e9f0f8; WIDTH: 300px; MARGIN-LEFT: 660px; border-radius: 0 5px 5px 0; -moz-border-radius: 0 5px 5px 0
+}
+.comments-items {
+	POSITION: relative; PADDING-BOTTOM: 10px; OVERFLOW-X: hidden; OVERFLOW-Y: auto; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; MARGIN-BOTTOM: 10px; TOP: 0px; PADDING-TOP: 10px
+}
+.comment-item {
+	POSITION: relative; PADDING-BOTTOM: 8px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; OVERFLOW: hidden; BORDER-TOP: #f2f2f2 1px solid; TOP: 0px; PADDING-TOP: 8px; LEFT: 0px
+}
+.comment-item-s {
+	PADDING-BOTTOM: 0px
+}
+.comment-item .icon {
+	MARGIN-TOP: 1px; FLOAT: left
+}
+.comment-item .icon-s {
+	MARGIN-TOP: 1px; FLOAT: left
+}
+.comment-item .content {
+	POSITION: relative; LINE-HEIGHT: 1.4em; MARGIN-LEFT: 70px; TOP: 0px; LEFT: 0px
+}
+.comment-item .content-s {
+	POSITION: relative; LINE-HEIGHT: 1.4em; MARGIN-LEFT: 30px; TOP: 0px; LEFT: 0px
+}
+.comment-item .icon IMG {
+	WIDTH: 48px; HEIGHT: 48px; VERTICAL-ALIGN: middle; border-radius: 3px 3px 3px 3px; -moz-border-radius: 3px 3px 3px 3px
+}
+.comment-item .icon-s IMG {
+	WIDTH: 22px; HEIGHT: 22px; VERTICAL-ALIGN: middle
+}
+.comment-item .content P {
+	OVERFLOW-X: hidden; OVERFLOW-Y: auto; WORD-WRAP: break-word
+}
+.comment-item .content-s P {
+	OVERFLOW-X: hidden; OVERFLOW-Y: auto; WORD-WRAP: break-word
+}
+.comment-item .content P A {
+	COLOR: #808080
+}
+.comment-item .content-s P A {
+	COLOR: #808080
+}
+.comment-item .comment-time {
+	COLOR: #b3b3b3; FONT-SIZE: 12px; MARGIN-RIGHT: 5px
+}
+.comment-item .comment-time .to {
+	COLOR: gray
+}
+.comment-item .comment-time .talk {
+	COLOR: gray
+}
+.reply_list .comment-text {
+	LINE-HEIGHT: 22px
+}
+.comment-item .content-s P img{
+  max-height:50px;
+  _height: expression((this.offsetHeight > 50) ? "50px" : this.offsetHeight + "px" );
+}
+.comment-item .content P A.username {
+	COLOR: #778087; FONT-WEIGHT: normal
+}
+.comment-item .content-s P A.username {
+	COLOR: #778087; FONT-WEIGHT: normal
+}
+.comment-item .content P A.username:hover {
+	BACKGROUND: #b3b3b3; COLOR: #fff
+}
+.comment-item .content-s P A.username:hover {
+	BACKGROUND: #b3b3b3; COLOR: #fff
+}
+</style>
+
+<!--{if $comment}-->
+<!--{loop $comment $com}-->
+<!--{php $u = isset($userlist_com[$com['uid']]) ? $userlist_com[$com['uid']] : array('uid'=>0, 'username'=>'', 'groupname'=>'', 'avatar_small'=>'');}-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" class="post_table">
+<tr>
+<td>
+<div class="comment-item comment-item-s">  
+    <div class="icon-s">
+	    <a href="?you-profile-uid-$u[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$u[username]" rel="nofollow"><span class="avatar_small border bg1" {if $u[avatar_small]} style="background-image: url($u[avatar_small])"{/if}></span></a>
+    </div>
+    <div class="content-s">
+        <p>
+        <a href="?you-profile-uid-$u[uid]-ajax-1.htm" target="_blank" class="ajaxdialog" ajaxdialog="{position: 6, modal: false}" title="$u[username]" rel="nofollow"><span style="font-size:14px;">$u[username]</span></a>
+                <span class="comment-time">$com[dateline_fmt]</span>
+        </p>
+        <p>
+        <span class="comment-text">$com[message_text]</span>
+        </p>
+    </div>
+</div>
+</td>
+</tr>
+</table>
+<!--{/loop}-->
+<!--{else}-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" class="post_table">
+<tr>
+<td align="center">
+<font color=red>暂无评论！！！ 欢迎点评！！！</font>
+</td>
+</tr>
+</table>
+<!--{/if}-->
+</br>
+<!--{if $_user[uid] == 0}-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" class="post_table">
+<tr>
+<td align="center">
+<a href="?user-login-ajax-1.htm" class="ajaxdialog" onclick="return false" rel="nofollow"><b><font size=3> 登录 </font></b></a>&nbsp;&nbsp;&nbsp;
+<a href="?user-create-ajax-1.htm" class="ajaxdialog" onclick="return false" rel="nofollow"><b><font size=3> 注册 </font></b></a>&nbsp;&nbsp;&nbsp;
+<a href="?thread-index-fid-$thread_com[fid]-tid-$thread_com[tid].htm#quick_post_form" target="_blank" rel="nofollow"><b><font size=3> 发表评论 </font></b></a>
+</td>
+</tr>
+</table>
+<!--{else}-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" class="post_table">
+<tr>
+<td align="center">
+<a href="?thread-index-fid-$thread_com[fid]-tid-$thread_com[tid].htm#quick_post_form" target="_blank" rel="nofollow"><b><font size=3> 发表评论 </font></b></a>
+</td>
+</tr>
+</table>
+<!--{/if}-->
