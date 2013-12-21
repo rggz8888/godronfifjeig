@@ -12,7 +12,7 @@ if($post['imagenum'] > 0) {
 		}
 	}
 }elseif(preg_match ("<img.*src=[\"](.*?)[\"].*?>",$message,$match)){
-	if(strstr($match[1],"img.baidu.com/hi")||strstr($match[1],"js/editor/")) $post['coverimg']=0;
+	if(strstr($match[1],"img.baidu.com/hi")||strstr($match[1],"xn_editor/editor/")) $post['coverimg']=0;
 	else $post['coverimg'] = $match[1];
 	}
 $this->post->update($post);
