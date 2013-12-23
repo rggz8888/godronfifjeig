@@ -1,3 +1,29 @@
+<!--[if lt IE 9]> 
+<style type="text/css">
+.pic{
+    position: relative;
+    margin: 0 auto;
+    width: 990px;
+    overflow: hidden;
+}
+.pic .item{
+    position: absolute;
+    margin-bottom: 10px;
+    padding:5px 8px;
+    width: 450px;
+    left: -9999px;
+    top: -9999px;
+    line-height:18px;
+    border: 1px solid #999;
+    background-color: #ccc;
+    overflow: hidden;
+}
+.pic .item img{
+	height:550px;
+}
+</style>
+<![endif]-->
+
 <div class="div">
 	<div class="header" style="font-weight: normal;">
 		<table width="100%" cellspacing="0" cellpadding="0" style="word-break: break-all" >
@@ -44,7 +70,7 @@
 		<!--{/if}-->
 		<!--{hook thread_list_threadlist_before.htm}-->
 		<div class="c_inner">
-		<div class="pic">	
+		<div class="pic" id="pic">	
 						
 		<!--{loop $threadlist $thread}-->
 			<!--{require pic_thread_list_line.inc.htm}-->

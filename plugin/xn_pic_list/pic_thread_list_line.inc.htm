@@ -1,5 +1,6 @@
 <div class="item">
 <a href="?thread-index-fid-$thread[fid]-tid-$thread[tid].htm" class="subject_link $thread[color]" title="$thread[subject]" target="_blank">
+<!--{php $u = isset($userlist_forum[$thread['uid']]) ? $userlist_forum[$thread['uid']] : array('uid'=>0, 'username'=>'', 'groupname'=>'', 'avatar_small'=>'');}-->
 <!--{if $thread[coverimg]}-->
 <img src="$thread[coverimg]" border="0">
 <h3>
