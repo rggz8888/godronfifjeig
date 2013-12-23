@@ -14,9 +14,10 @@ if($isfirst) {
 				break;
 			}
 		}
-	}else if(preg_match ("<img.*src=[\"](.*?)[\"].*?>",$message,$match)){
-$thread['coverimg'] = "$match[1]";
-}
+	}elseif(preg_match ("<[img|IMG].*[src|SRC]=[\"](.*?)[\"].*?>",$message,$match)){
+	if(strstr($match[1],"img.baidu.com/hi")||strstr($match[1],"xn_editor/editor/")) $thread['coverimg']='';
+	else $thread['coverimg'] = $match[1];
+	}
 //$message = htmlspecialchars(strip_tags($firstpost['message'],"<br><p><i><b><span><a>"));
 //$message = str_replace(array('&nbsp;', '&amp;', '&quot;', '&#039;', ' &lt;', '&gt;'), array(' ', '&', '\"', '\'', '<','>'), $message);
 //$message = $firstpost['message'];
