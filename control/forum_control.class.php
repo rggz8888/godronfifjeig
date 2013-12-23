@@ -52,8 +52,6 @@ class forum_control extends common_control {
 		$this->_seo_description = $forum['brief'];
 		
 		// hook forum_index_page_before.php
-		if($fid==3)$pagesize=200;
-		else
 		$pagesize = $this->conf['forum_index_pagesize'];
 		$page = misc::page();
 		misc::setcookie($this->conf['cookie_pre'].'page', $page, $_SERVER['time'] + 86400 * 7, $this->conf['cookie_path'], $this->conf['cookie_domain']);
